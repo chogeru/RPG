@@ -35,6 +35,9 @@
     <ClCompile Include="UI\Slash.cpp">
       <Filter>UI</Filter>
     </ClCompile>
+    <ClCompile Include="Maptip\Map.cpp">
+      <Filter>Maptip</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Base">
@@ -51,6 +54,9 @@
     </Filter>
     <Filter Include="Game">
       <UniqueIdentifier>{3634d9e1-4eaf-4ce4-84a1-5f4805877f2b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Maptip">
+      <UniqueIdentifier>{acaa9ed3-8329-4c80-b5c5-af5b44a787bf}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -86,6 +92,9 @@
     </ClInclude>
     <ClInclude Include="UI\Slash.h">
       <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Maptip\Map.h">
+      <Filter>Maptip</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
