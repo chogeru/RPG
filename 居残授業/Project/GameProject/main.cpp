@@ -4,6 +4,7 @@
 #define SCREEN_HEIGHT 720
 //ファイルの読み込み
 #include"Base/Base.h"
+#include"UI/Title.h";
 
 /////////////////////////////////////////
 // できればmain.cppはあまり触らない　///
@@ -62,12 +63,13 @@ void Init(void)
 	//-----------------------------------------------------
 	//画像の出力
 	////
+	//タイトル
+	ADD_RESOURCE("Title", CImage::CreateImage("Image/Title.png"));
 
 
 
 
-
-
+	Base::Add(new Title());
 }
 
 
