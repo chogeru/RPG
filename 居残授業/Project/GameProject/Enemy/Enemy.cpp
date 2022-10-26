@@ -1,8 +1,8 @@
 #include "Enemy.h"
-#include "AnimData.h"
-#include "Field.h"
-#include "Slash.h"
-#include "Effect.h"
+#include "../UI/AnimData.h"
+#include "../UI/Field.h"
+#include "../UI/Slash.h"
+#include "../UI/Effect.h"
 
 Enemy::Enemy(const CVector2D& p, bool flip) :
 	Base(eType_Enemy) {

@@ -1,9 +1,9 @@
 #include "Game.h"
-#include "Field.h"
-#include "Player.h"
-#include "Enemy.h"
-#include "Goal.h"
-#include "../Title/Title.h"
+#include "../UI/Field.h"
+#include "../Player/Player.h"
+#include "../Enemy/Enemy.h"
+#include "../UI/Goal.h"
+#include "../UI/Title.h"
 
 Game::Game() :Base(eType_Scene)
 {

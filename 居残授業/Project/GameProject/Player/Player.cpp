@@ -1,8 +1,8 @@
 #include "Player.h"
-#include "AnimData.h"
-#include "Field.h"
-#include "Slash.h"
-#include "Effect.h"
+#include "../UI/Slash.h"
+#include "../UI/Effect.h"
+#include"../UI/Field.h"
+#include"../UI/AnimData.h"
 Player::Player(const CVector2D& p, bool flip) :
 	Base(eType_Player) {
 	//âÊëúï°êª

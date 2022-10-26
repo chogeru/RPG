@@ -3,7 +3,7 @@
 #define SCREEN_WIDTH 1280
 #define SCREEN_HEIGHT 720
 //ファイルの読み込み
-
+#include"Base/Base.h"
 
 /////////////////////////////////////////
 // できればmain.cppはあまり触らない　///
