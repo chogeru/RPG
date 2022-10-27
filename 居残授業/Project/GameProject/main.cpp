@@ -21,11 +21,7 @@ void MainLoop(void) {
 	//--------------------------------------------------------------
 	//
 	////
-	// タスクマネージャー更新処理
-	TaskManager::Instance()->Update();
-	// タスクマネージャー描画処理
-	TaskManager::Instance()->Draw();
-
+	
 
 }
 void Init(void)
