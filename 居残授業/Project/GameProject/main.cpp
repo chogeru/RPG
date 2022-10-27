@@ -4,7 +4,7 @@
 #define SCREEN_HEIGHT 720
 //ファイルの読み込み
 #include"Base/Base.h"
-
+#include"UI/TaskManager.h"
 /////////////////////////////////////////
 // できればmain.cppはあまり触らない　///
 ///////////////////////////////////////
@@ -21,7 +21,10 @@ void MainLoop(void) {
 	//--------------------------------------------------------------
 	//
 	////
-
+	// タスクマネージャー更新処理
+	TaskManager::Instance()->Update();
+	// タスクマネージャー描画処理
+	TaskManager::Instance()->Draw();
 
 
 }
