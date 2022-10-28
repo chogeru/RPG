@@ -4,8 +4,12 @@
 #define SCREEN_HEIGHT 720
 //ファイルの読み込み
 #include"Base/Base.h"
+<<<<<<< HEAD
 #include"UI/Title.h";
 
+=======
+#include"UI/TaskManager.h"
+>>>>>>> e16d2d9b366c5b29d9e1739b4c092162a6516606
 /////////////////////////////////////////
 // できればmain.cppはあまり触らない　///
 ///////////////////////////////////////
@@ -26,7 +30,10 @@ void MainLoop(void) {
 	Base::UpdateAll();
 	Base::CollisionAll();
 	Base::DrawAll();
+<<<<<<< HEAD
 
+=======
+>>>>>>> e16d2d9b366c5b29d9e1739b4c092162a6516606
 
 }
 void Init(void)
