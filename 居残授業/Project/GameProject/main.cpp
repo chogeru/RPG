@@ -5,8 +5,13 @@
 //ファイルの読み込み
 #include"Base/Base.h"
 #include"UI/Title.h"
+<<<<<<< HEAD
 #include"Player/kamano.h"
 #include"UI/AnimData.h"
+=======
+
+//
+>>>>>>> ad3dd814e5a8ef3210cb391e7ab0343b31c72f05
 /////////////////////////////////////////
 // できればmain.cppはあまり触らない　///
 ///////////////////////////////////////
