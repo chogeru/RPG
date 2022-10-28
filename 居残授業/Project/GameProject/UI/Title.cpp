@@ -1,5 +1,6 @@
 #include "Title.h"
 #include "../Game/Game.h"
+#include"../Maptip/Map.h"
 Title::Title():Base(eType_Scene),
 m_title_text("C:\\Windows\\Fonts\\msgothic.ttc", 64)
 {
@@ -9,7 +10,7 @@ m_title_text("C:\\Windows\\Fonts\\msgothic.ttc", 64)
 Title::~Title()
 {
 	//タイトル破棄時にゲームシーンへ移行
-	Base::Add(new Game());
+	Base::Add(new Map());
 }
 
 void Title::Update()
