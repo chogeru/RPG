@@ -22,7 +22,10 @@ void MainLoop(void) {
 	//--------------------------------------------------------------
 	//
 	////
-
+	Base::CheckKillAll();
+	Base::UpdateAll();
+	Base::CollisionAll();
+	Base::DrawAll();
 
 
 }
