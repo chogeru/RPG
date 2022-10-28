@@ -186,7 +186,7 @@ static TexAnim playerExtAttack02[] = {
 	{ 167,2 },
 	{ 168,2 },
 };
-static TexAnim playerExtAttack02End[] = {
+static TexAnim ExtAttack02End[] = {
 	{ 169,16 },
 	{ 170,4 },
 	{ 171,4 },
@@ -220,7 +220,7 @@ TexAnimData player_anim_data[] = {
 	ANIMDATA(playerExtAttack01),
 	ANIMDATA(playerExtAttack01End),
 	ANIMDATA(playerExtAttack02),
-	ANIMDATA(playerExtAttack02End),
+	//ANIMDATA(playerExtAttack02End),
 	ANIMDATA(playerStep),
 };
 
@@ -388,45 +388,62 @@ TexAnimData enemy_anim_data[] = {
 };
 
 
+/*static TexAnim playerIdle[] = {
+	{ 1,0 },
+	
+};*/
 
 
-static TexAnim _effect_blood[] = {
-	{ 0,1 },
-	{ 1,1 },
-	{ 2,1 },
-	{ 3,1 },
-};
-TexAnimData effect_blood_anim_data[] = {
-	ANIMDATA(_effect_blood),
-};
-static TexAnim _effect_smoke[] = {
-	{ 0,2 },
-	{ 1,2 },
-	{ 2,2 },
-	{ 3,2 },
-	{ 4,2 },
-};
-TexAnimData effect_smoke_anim_data[] = {
-	ANIMDATA(_effect_smoke),
-};
 
-static TexAnim _effect_bomb[] = {
-	{ 0,2 },
-	{ 1,2 },
-	{ 2,2 },
-	{ 3,2 },
-	{ 4,2 },
+
+
+
+static TexAnim(kamanoLeft)[] = {
+	
+	{ 2,8 },
+	{ 6,8 },
+	{ 10,8 },
 };
-TexAnimData effect_bomb_anim_data[] = {
-	ANIMDATA(_effect_smoke),
+static TexAnim(kamanoRight)[] = {
+
+	{ 1,8 },
+	{ 5,8 },
+	{ 9,8 },
+	
 };
-static TexAnim _effect_slash[] = {
-	{ 0,4 },
+/*static TexAnim kamanoUp[] = {
+	{3,8},
+	{7,8},
+	{11,8},
+	};
+	*/
+/*static TexAnim kamanoDown[] = {
+
+
+	
+	{0,8},
+	{4,8},
+	{8,8},
+
+
+};*/
+/*static TexAnim playerWakeup[] = {
+	{ 112,4 },
+	
+};*/
+
+
+
+/*static TexAnim kamanoStep[] = {
 	{ 1,4 },
-	{ 2,4 },
-	{ 3,4 },
-	{ 4,4 },
-};
-TexAnimData effect_slash_anim_data[] = {
-	ANIMDATA(_effect_slash),
+	{ 5,4 },
+	{ 9,4 },
+};*/
+TexAnimData kamano_anim_data[] = {
+	//ANIMDATA(kamanoIdle),
+	//ANIMDATA(kamanoUp),
+	//ANIMDATA(kamanoDown),
+	ANIMDATA(kamanoLeft),
+	ANIMDATA(kamanoRight),
+	//ANIMDATA(kamanoStep),
 };

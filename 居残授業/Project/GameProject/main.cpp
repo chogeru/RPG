@@ -5,8 +5,8 @@
 //ファイルの読み込み
 #include"Base/Base.h"
 #include"UI/Title.h"
-
-
+#include"Player/kamano.h"
+#include"UI/AnimData.h"
 /////////////////////////////////////////
 // できればmain.cppはあまり触らない　///
 ///////////////////////////////////////
@@ -72,8 +72,8 @@ void Init(void)
 
 	ADD_RESOURCE("Map1", CImage::CreateImage("Image/Map1.png"));
 
-
-
+	ADD_RESOURCE("kamano", CImage::CreateImage("Image/kamano.png",kamano_anim_data,64,64));
+	ADD_RESOURCE("hayashi", CImage::CreateImage("Image/hayashi.png", kamano_anim_data, 64, 64));
 	Base::Add(new Title());
 }
 

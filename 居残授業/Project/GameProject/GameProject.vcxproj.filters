@@ -38,6 +38,12 @@
     <ClCompile Include="Maptip\Map.cpp">
       <Filter>Maptip</Filter>
     </ClCompile>
+    <ClCompile Include="Player\kamano.cpp">
+      <Filter>Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Player\hayashi.cpp">
+      <Filter>Player</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Base">
@@ -95,6 +101,12 @@
     </ClInclude>
     <ClInclude Include="Maptip\Map.h">
       <Filter>Maptip</Filter>
+    </ClInclude>
+    <ClInclude Include="Player\kamano.h">
+      <Filter>Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Player\hayashi.h">
+      <Filter>Player</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

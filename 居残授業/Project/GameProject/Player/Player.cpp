@@ -149,11 +149,11 @@ void Player::Update() {
 		break;
 	}
 	//落ちていたら落下中状態へ移行
-	if (m_is_ground && m_vec.y > GRAVITY * 4)
+	/*if (m_is_ground && m_vec.y > GRAVITY * 4)
 		m_is_ground = false;
 	//重力による落下
 	m_vec.y += GRAVITY;
-	m_pos += m_vec;
+	m_pos += m_vec;*/
 
 
 	//アニメーション更新
