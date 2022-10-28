@@ -70,6 +70,7 @@ void Init(void)
 	//ƒ^ƒCƒgƒ‹
 	ADD_RESOURCE("Title", CImage::CreateImage("Image/Title.png"));
 
+	ADD_RESOURCE("Map1", CImage::CreateImage("Image/Map1.png"));
 
 
 
