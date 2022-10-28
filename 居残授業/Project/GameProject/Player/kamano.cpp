@@ -32,7 +32,7 @@ kamano::kamano(const CVector2D& p, bool flip) :
 }void kamano::StateIdle()
 {
 	//移動量
-	const float move_speed = 6;
+	const float move_speed = 8;
 	//移動フラグ
 	bool move_flag = false;
 	//ジャンプ力
@@ -42,30 +42,26 @@ kamano::kamano(const CVector2D& p, bool flip) :
 	if (HOLD(CInput::eLeft)) {
 		//移動量を設定
 		m_pos.x += -move_speed;
-		//反転フラグ
-		m_flip = true;
+		m_img.ChangeAnimation(0);
 		move_flag = true;
 	}
 	if (HOLD(CInput::eUp)) {
 		//移動量を設定
 		m_pos.y += -move_speed;
-		//反転フラグ
-		m_flip = true;
+		m_img.ChangeAnimation(2);
 		move_flag = true;
 	}
 	if (HOLD(CInput::eDown)) {
 		//移動量を設定
 		m_pos.y -= -move_speed;
-		//反転フラグ
-		m_flip = true;
+		m_img.ChangeAnimation(3);
 		move_flag = true;
 	}
 	//右移動
 	if (HOLD(CInput::eRight)) {
 		//移動量を設定
 		m_pos.x += move_speed;
-		//反転フラグ
-		m_flip = false;
+		m_img.ChangeAnimation(1);
 		move_flag = true;
 	}
 	//ジャンプ
@@ -85,27 +81,16 @@ kamano::kamano(const CVector2D& p, bool flip) :
 			m_attack_no++;
 		}
 
-	}//ジャンプ中なら
-	if (!m_is_ground) {
-		if (m_vec.y < 0)
-			//上昇アニメーション
-			m_img.ChangeAnimation(eAnimJumpUp, false);
-		else
-			//下降アニメーション
-			m_img.ChangeAnimation(eAnimJumpDown, false);
 	}
-	//移動中なら
+	
+	
+	if (move_flag)
+	{
+		m_img.m_animSpeed = 1;
+	}
 	else
 	{
-		if (move_flag) {
-			//走るアニメーション
-			m_img.ChangeAnimation(eAnimRun);
-		}
-		else {
-			//待機アニメーション
-			m_img.ChangeAnimation(eAnimIdle);
-		}
-
+		m_img.m_animSpeed = 0;
 	}
 
 

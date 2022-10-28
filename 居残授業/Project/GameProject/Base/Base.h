@@ -13,6 +13,7 @@ enum {
 	eType_Scene,
 	eType_kamao,
 	eType_hayashi,
+	eType_Wall,
 };
 
 

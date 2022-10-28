@@ -399,34 +399,33 @@ TexAnimData enemy_anim_data[] = {
 
 
 static TexAnim(kamanoLeft)[] = {
-	
-	{ 2,8 },
-	{ 6,8 },
-	{ 10,8 },
-};
-static TexAnim(kamanoRight)[] = {
-
 	{ 1,8 },
 	{ 5,8 },
 	{ 9,8 },
 	
 };
-/*static TexAnim kamanoUp[] = {
+static TexAnim(kamanoRight)[] = {
+
+	{ 2,8 },
+	{ 6,8 },
+	{ 10,8 },
+	
+};
+static TexAnim kamanoUp[] = {
 	{3,8},
 	{7,8},
 	{11,8},
 	};
-	*/
-/*static TexAnim kamanoDown[] = {
+static TexAnim kamanoDown[] = {
 
 
-	
-	{0,8},
-	{4,8},
-	{8,8},
+
+		{0,8},
+		{4,8},
+		{8,8},
 
 
-};*/
+	};
 /*static TexAnim playerWakeup[] = {
 	{ 112,4 },
 	
@@ -441,9 +440,10 @@ static TexAnim(kamanoRight)[] = {
 };*/
 TexAnimData kamano_anim_data[] = {
 	//ANIMDATA(kamanoIdle),
-	//ANIMDATA(kamanoUp),
-	//ANIMDATA(kamanoDown),
+	
 	ANIMDATA(kamanoLeft),
 	ANIMDATA(kamanoRight),
+	ANIMDATA(kamanoUp),
+	ANIMDATA(kamanoDown),
 	//ANIMDATA(kamanoStep),
 };

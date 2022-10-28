@@ -75,7 +75,7 @@ void Init(void)
 	ADD_RESOURCE("Title", CImage::CreateImage("Image/Title.png"));
 
 	ADD_RESOURCE("Map1", CImage::CreateImage("Image/Map1.png"));
-
+	ADD_RESOURCE("uddo", CImage::CreateImage("Image/uddo.png"));
 	ADD_RESOURCE("kamano", CImage::CreateImage("Image/kamano.png",kamano_anim_data,64,64));
 	ADD_RESOURCE("hayashi", CImage::CreateImage("Image/hayashi.png", kamano_anim_data, 64, 64));
 	Base::Add(new Title());
