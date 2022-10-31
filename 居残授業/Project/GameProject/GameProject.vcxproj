@@ -15,7 +15,8 @@
     <ClCompile Include="Enemy\Enemy.cpp" />
     <ClCompile Include="Game\Game.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Maptip\Dor.cpp" />
+    <ClCompile Include="Maptip\Dordown.cpp" />
+    <ClCompile Include="Maptip\Dorup.cpp" />
     <ClCompile Include="Maptip\Map.cpp" />
     <ClCompile Include="Maptip\Wall.cpp" />
     <ClCompile Include="Player\hayashi.cpp" />
@@ -35,7 +36,8 @@
     <ClInclude Include="Base\Base.h" />
     <ClInclude Include="Enemy\Enemy.h" />
     <ClInclude Include="Game\Game.h" />
-    <ClInclude Include="Maptip\Dor.h" />
+    <ClInclude Include="Maptip\Dordown.h" />
+    <ClInclude Include="Maptip\Dorup.h" />
     <ClInclude Include="Maptip\Map.h" />
     <ClInclude Include="Maptip\Wall.h" />
     <ClInclude Include="Player\hayashi.h" />

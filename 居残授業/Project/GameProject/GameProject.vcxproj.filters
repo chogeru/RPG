@@ -53,7 +53,10 @@
     <ClCompile Include="UI\Gameover.cpp">
       <Filter>UI</Filter>
     </ClCompile>
-    <ClCompile Include="Maptip\Dor.cpp">
+    <ClCompile Include="Maptip\Dorup.cpp">
+      <Filter>Maptip</Filter>
+    </ClCompile>
+    <ClCompile Include="Maptip\Dordown.cpp">
       <Filter>Maptip</Filter>
     </ClCompile>
   </ItemGroup>
@@ -129,7 +132,10 @@
     <ClInclude Include="UI\Gameover.h">
       <Filter>UI</Filter>
     </ClInclude>
-    <ClInclude Include="Maptip\Dor.h">
+    <ClInclude Include="Maptip\Dorup.h">
+      <Filter>Maptip</Filter>
+    </ClInclude>
+    <ClInclude Include="Maptip\Dordown.h">
       <Filter>Maptip</Filter>
     </ClInclude>
   </ItemGroup>
