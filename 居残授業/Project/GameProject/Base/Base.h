@@ -14,6 +14,7 @@ enum {
 	eType_kamao,
 	eType_hayashi,
 	eType_Wall,
+	eType_itihara,
 };
 
 
