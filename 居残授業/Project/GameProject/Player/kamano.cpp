@@ -23,6 +23,8 @@ kamano::kamano(const CVector2D& p, bool flip) :
 	m_damage_no = -1;
 	//
 	m_hp = 100;
+	//ÉXÉNÉçÅ[Éãê›íË
+	m_scroll.x = m_pos.x - 1280 / 2;
 
 
 }void kamano::StateIdle()
@@ -88,7 +90,8 @@ kamano::kamano(const CVector2D& p, bool flip) :
 	{
 		m_img.m_animSpeed = 0;
 	}
-
+	m_scroll.x = m_pos.x - 1280 / 2;
+	m_scroll.y = m_pos.y - 600;
 
 }
 void kamano::StateAttack()

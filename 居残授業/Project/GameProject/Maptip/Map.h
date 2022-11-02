@@ -8,6 +8,7 @@
 #define MAP_TIP_SIZE	 64
 
 class Map : public Base {
+
 private:
 	CImage m_img;
 	float m_ground_y;
