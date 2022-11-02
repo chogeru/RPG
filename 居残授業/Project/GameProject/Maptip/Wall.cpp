@@ -1,7 +1,7 @@
 #include "Wall.h"
 Wall::Wall(const CVector2D& pos) :Base(eType_Wall) {
 
-	m_img = COPY_RESOURCE("uddo", CImage);
+	m_img = COPY_RESOURCE("Wall", CImage);
 	m_pos = pos;
 	m_rect = CRect(-64, -64, 64, 64);
 }

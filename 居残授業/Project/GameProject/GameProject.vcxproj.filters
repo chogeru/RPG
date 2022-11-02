@@ -59,6 +59,9 @@
     <ClCompile Include="Maptip\Dordown.cpp">
       <Filter>Maptip</Filter>
     </ClCompile>
+    <ClCompile Include="Maptip\Wallhed.cpp">
+      <Filter>Maptip</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Base">
@@ -138,5 +141,9 @@
     <ClInclude Include="Maptip\Dordown.h">
       <Filter>Maptip</Filter>
     </ClInclude>
+    <ClInclude Include="Maptip\Wallhed.h">
+      <Filter>Maptip</Filter>
+    </ClInclude>
+    <ClInclude Include="h.h" />
   </ItemGroup>
 </Project>

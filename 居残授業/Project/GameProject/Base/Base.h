@@ -15,6 +15,8 @@ enum {
 	eType_hayashi,
 	eType_Wall,
 	eType_itihara,
+	eType_Dorup,
+	eType_Dordown,
 };
 
 
