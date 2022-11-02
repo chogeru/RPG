@@ -18,3 +18,7 @@
 #include "../UI/Field.h"
 #include "../UI/Slash.h"
 #include "../UI/Effect.h"
+#include "../Player/Player.h"
+#include "../Enemy/Enemy.h"
+#include "../UI/Goal.h"
+#include "../UI/Title.h"

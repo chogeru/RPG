@@ -1,8 +1,5 @@
 #include"hayashi.h"
-#include"../UI/Slash.h"
-#include "../UI/Effect.h"
-#include"../UI/Field.h"
-#include"../UI/AnimData.h"
+#include"../h.h"
 hayashi::hayashi(const CVector2D& p, bool flip) :
 	Base(eType_Player) {
 	//‰æ‘œ•¡»

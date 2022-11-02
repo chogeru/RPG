@@ -1,10 +1,5 @@
 #include "Game.h"
-#include "../UI/Field.h"
-#include "../Player/Player.h"
-#include "../Enemy/Enemy.h"
-#include "../UI/Goal.h"
-#include "../UI/Title.h"
-
+#include"../h.h"
 Game::Game() :Base(eType_Scene)
 {
 	Base::Add(new Field());
