@@ -1,8 +1,12 @@
 #include "Map.h"
 #include"../h.h"
 static int stage1data[MAP_HEIGHT][MAP_WIDTH] = {
-
-
+	/*	switch (eType_Player == eType_Dordown) {
+			
+		case eType_Dor 1:
+			if 
+			{
+			*/
 { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 },
 { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 },
 { 0,0,0,0,0,0,0,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,0,0,0,0,0,0 },
@@ -35,7 +39,8 @@ static int stage1data[MAP_HEIGHT][MAP_WIDTH] = {
 { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 },
 { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 },
 
-
+		/*}
+break;*/
 
 
 
@@ -203,14 +208,14 @@ Map::Map() : Base(eType_Field)
 			case 6:
 				Base::Add(new Dordown(CVector2D(x, y)));
 				break;
-			case 7:
+			case 9:
 				Base::Add(new Wall(CVector2D(x, y)));
 				break;
 			case 8:
 				Base::Add(new Wallhed(CVector2D(x, y)));
 				break;
 
-			case 9:
+			case 7:
 				Base::Add(new kaiga(CVector2D(x, y),true));
 				break;
 			}
@@ -233,16 +238,21 @@ void Map::Draw()
 
 	int x1 = m_scroll.x / MAP_TIP_SIZE;
 	if (x1 < 0) x1 = 0;
-	int	x2 = x1 + 31;
+	int	x2 = x1 + 16;
 	if (x2 > MAP_WIDTH - 1) x2 = MAP_WIDTH - 1;
 
+	int y1 = m_scroll.y / MAP_TIP_SIZE;
+	if (y1 < 0) y1 = 0;
+	int	y2 = y1 + 16;
+	if (y2 > MAP_HEIGHT - 1) y2 = MAP_HEIGHT - 1;
 	//マップチップによる表示の繰り返しac
 
 	for (int i = 0; i < MAP_HEIGHT; i++) {
 		for (int j = x1; j < x2; j++) {
 			if (stage1data[i][j] == 0)continue;
 			int& t = stage1data[i][j];
-
+			if (stage1data[i][j] == 0)continue;
+			
 			m_img.SetRect(32, 0, 32 + 32, 32);
 			//表示サイズ設定
 			m_img.SetSize(MAP_TIP_SIZE, MAP_TIP_SIZE);

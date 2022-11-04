@@ -1,9 +1,9 @@
 #pragma once
 #include"../Base/Base.h"
 //マップの横のチップ数
-#define MAP_WIDTH		4000
+#define MAP_WIDTH		800
 //マップの縦のチップ数
-#define MAP_HEIGHT		2200
+#define MAP_HEIGHT		800
 //マップチップの大きさ
 #define MAP_TIP_SIZE	 64
 
@@ -12,6 +12,7 @@ class Map : public Base {
 private:
 	CImage m_img;
 	float m_ground_y;
+	float m_ground_x;
 public:
 	Map();
 	void Draw();
@@ -27,5 +28,7 @@ public:
 	float GetGroundY() {
 		return m_ground_y;
 	}
-
+	float GetGroundX() {
+		return m_ground_x;
+	}
 };

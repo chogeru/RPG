@@ -2,7 +2,7 @@
 #include"../Base/Base.h"
 #include"../h.h"
 kamano::kamano(const CVector2D& p, bool flip) :
-	Base(eType_Player) {
+	Base(eType_kamano) {
 	//画像複製
 	m_img = COPY_RESOURCE("kamano", CImage);
 	//再生アニメーション設定

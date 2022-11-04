@@ -81,6 +81,7 @@ void Init(void)
 	ADD_RESOURCE("Wallhed", CImage::CreateImage("Image/Wallhed.png"));
 	ADD_RESOURCE("itihara", CImage::CreateImage("Image/itihara.png", kamano_anim_data, 64, 64));
 	ADD_RESOURCE("kamano", CImage::CreateImage("Image/kamano.png",kamano_anim_data,64,64));
+	ADD_RESOURCE("kamano1", CImage::CreateImage("Image/kamano1.png", kamano_anim_data, 64, 64));
 	ADD_RESOURCE("hayashi", CImage::CreateImage("Image/hayashi.png", kamano_anim_data, 64, 64));
 	Base::Add(new Title());
 }

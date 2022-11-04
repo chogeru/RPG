@@ -1,7 +1,7 @@
 #include"hayashi.h"
 #include"../h.h"
 hayashi::hayashi(const CVector2D& p, bool flip) :
-	Base(eType_Player) {
+	Base(eType_hayashi) {
 	//画像複製
 	m_img = COPY_RESOURCE("hayashi", CImage);
 	//再生アニメーション設定
