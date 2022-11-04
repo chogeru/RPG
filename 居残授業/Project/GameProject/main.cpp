@@ -73,6 +73,7 @@ void Init(void)
 	////
 	//ƒ^ƒCƒgƒ‹
 	ADD_RESOURCE("Title", CImage::CreateImage("Image/Title.png"));
+	ADD_RESOURCE("kaiga", CImage::CreateImage("Image/kaiga.png"));
 	ADD_RESOURCE("Dorup", CImage::CreateImage("Image/Dorup.png"));
 	ADD_RESOURCE("Dordown", CImage::CreateImage("Image/Dordown.png"));
 	ADD_RESOURCE("Map1", CImage::CreateImage("Image/Map1.png"));

@@ -1,5 +1,6 @@
 #pragma once
 //ÉwÉbÉ_Å[ÇÕÇ±Ç±Ç…Ç‹Ç∆ÇﬂÇÈbyÇÕÇ‚Çµ
+#include "../Maptip/Map.h"
 #include"Base/Base.h"
 #include"Player/Player.h"
 #include"Enemy/Enemy.h"
@@ -22,3 +23,4 @@
 #include "../Enemy/Enemy.h"
 #include "../UI/Goal.h"
 #include "../UI/Title.h"
+#include"../Enemy/kaiga.h"

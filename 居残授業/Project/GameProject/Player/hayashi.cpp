@@ -21,7 +21,7 @@ hayashi::hayashi(const CVector2D& p, bool flip) :
 	//ダメージ番号
 	m_damage_no = -1;
 	//
-	m_hp = 100;
+	m_hp = 3;
 	//スクロール設定
 	m_scroll.x = m_pos.x - 1280 / 2;
 

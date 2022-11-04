@@ -17,6 +17,7 @@ enum {
 	eType_itihara,
 	eType_Dorup,
 	eType_Dordown,
+	eType_kaiga,
 };
 
 
@@ -34,6 +35,8 @@ public:
 	CVector2D m_vec;
 	//削除フラグ
 	bool m_kill;
+	//移動前の座標
+	CVector2D m_pos_old;
 	//オブジェクトのリスト
 	static std::list<Base*> m_list;
 	//矩形

@@ -44,9 +44,6 @@
     <ClCompile Include="Maptip\Wall.cpp">
       <Filter>Maptip</Filter>
     </ClCompile>
-    <ClCompile Include="Enemy\Enemy.cpp">
-      <Filter>Enemy</Filter>
-    </ClCompile>
     <ClCompile Include="Player\itihara.cpp">
       <Filter>Player</Filter>
     </ClCompile>
@@ -61,6 +58,12 @@
     </ClCompile>
     <ClCompile Include="Maptip\Wallhed.cpp">
       <Filter>Maptip</Filter>
+    </ClCompile>
+    <ClCompile Include="Enemy\kaiga.cpp">
+      <Filter>Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Enemy\Enemy.cpp">
+      <Filter>Enemy</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -126,9 +129,6 @@
     <ClInclude Include="Maptip\Wall.h">
       <Filter>Maptip</Filter>
     </ClInclude>
-    <ClInclude Include="Enemy\Enemy.h">
-      <Filter>Enemy</Filter>
-    </ClInclude>
     <ClInclude Include="Player\itihara.h">
       <Filter>Player</Filter>
     </ClInclude>
@@ -145,5 +145,11 @@
       <Filter>Maptip</Filter>
     </ClInclude>
     <ClInclude Include="h.h" />
+    <ClInclude Include="Enemy\kaiga.h">
+      <Filter>Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemy\Enemy.h">
+      <Filter>Enemy</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
