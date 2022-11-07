@@ -1,29 +1,27 @@
-//ƒQ[ƒ€ŒW‹@”\‚ÌƒCƒ“ƒNƒ‹[ƒh
+ï»¿//ã‚²ãƒ¼ãƒ ä¿‚æ©Ÿèƒ½ã®ã‚¤ãƒ³ã‚¯ãƒ«ãƒ¼ãƒ‰
 #include <GLLibrary.h>
 #define SCREEN_WIDTH 1280
 #define SCREEN_HEIGHT 720
-//ƒtƒ@ƒCƒ‹‚Ì“Ç‚İ‚İ
+//ãƒ•ã‚¡ã‚¤ãƒ«ã®èª­ã¿è¾¼ã¿
 #include"Base/Base.h"
-#include"UI/Title.h"
-#include"Player/kamano.h"
-#include"UI/AnimData.h"
+#include"h.h"
 
 
 //
 
 /////////////////////////////////////////
-// ‚Å‚«‚ê‚Îmain.cpp‚Í‚ ‚Ü‚èG‚ç‚È‚¢@///
+// ã§ãã‚Œã°main.cppã¯ã‚ã¾ã‚Šè§¦ã‚‰ãªã„ã€€///
 ///////////////////////////////////////
-//‚Ü‚½AƒR[ƒh‚ğ‘‚­Û‚ÍˆÓ–¡‚ª•ª‚©‚é‚æ‚¤’ß•ª‚ğâ‘Î‚É‘‚¢‚Ä‚­‚¾‚³‚¢
+//ã¾ãŸã€ã‚³ãƒ¼ãƒ‰ã‚’æ›¸ãéš›ã¯æ„å‘³ãŒåˆ†ã‹ã‚‹ã‚ˆã†æ³¨é‡ˆåˆ†ã‚’çµ¶å¯¾ã«æ›¸ã„ã¦ãã ã•ã„
 
 //--------------------------------------------
-//ƒOƒ[ƒoƒ‹•Ï”—Ìˆæ
+//ã‚°ãƒ­ãƒ¼ãƒãƒ«å¤‰æ•°é ˜åŸŸ
 //--------------------------------------------
 
 void MainLoop(void) {
 	//--------------------------------------------------------------
-	//ƒQ[ƒ€’†‚Ì“®‚«‚Í‚±‚±‚É‘‚­
-	//ƒQ[ƒ€’†‚Í‚±‚ÌŠÖ”_‚ğ1•bŠÔ‚É60‰ñŒÄ‚Ño‚µ‚Ä‚¢‚é
+	//ã‚²ãƒ¼ãƒ ä¸­ã®å‹•ãã¯ã“ã“ã«æ›¸ã
+	//ã‚²ãƒ¼ãƒ ä¸­ã¯ã“ã®é–¢æ•°_ã‚’1ç§’é–“ã«60å›å‘¼ã³å‡ºã—ã¦ã„ã‚‹
 	//--------------------------------------------------------------
 	//
 	////
@@ -31,21 +29,21 @@ void MainLoop(void) {
 	Base::UpdateAll();
 	Base::CollisionAll();
 	Base::DrawAll();
-
-
+	FONT_T()->Draw(0, 32, 1, 1, 1, "ç¬¬ï¼”éšå±¤");
+	FONT_T()->Draw(0, 64, 1, 1, 1, "ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ï¼šéŒé‡ï¼šHP3");
 }
 void Init(void)
 {
 
 	CFPS::SetFPS(60);
-	//ƒtƒŒ[ƒ€§Œä‰Šú‰»
+	//ãƒ•ãƒ¬ãƒ¼ãƒ åˆ¶å¾¡åˆæœŸåŒ–
 	CFPS::Init();
-	//ƒ{ƒ^ƒ“‚Ìİ’è
+	//ãƒœã‚¿ãƒ³ã®è¨­å®š
 	CInput::Init();
 	CInput::SetButton(0, CInput::eButton1, 'Z');
-	CInput::SetButton(0, CInput::eButton2, 'X');
-	CInput::SetButton(0, CInput::eButton3, 'C');
-	CInput::SetButton(0, CInput::eButton4, 'V');
+	CInput::SetButton(0, CInput::eButton2, 'w');
+	CInput::SetButton(0, CInput::eButton3, 'a');
+	CInput::SetButton(0, CInput::eButton4, 's');
 	CInput::SetButton(0, CInput::eButton5, VK_SPACE);
 	CInput::SetButton(0, CInput::eButton10, VK_RETURN);
 	CInput::SetButton(0, CInput::eUp, VK_UP);
@@ -66,12 +64,12 @@ void Init(void)
 	CSound::GetInstance();
 
 	//-----------------------------------------------------
-	//‰Šú‰»‚Ì–½—ß‚ğ‘‚­
-	//ƒQ[ƒ€‹N“®‚Éˆê“x‚¾‚¯ŒÄ‚Î‚ê‚é
+	//åˆæœŸåŒ–ã®å‘½ä»¤ã‚’æ›¸ã
+	//ã‚²ãƒ¼ãƒ èµ·å‹•æ™‚ã«ä¸€åº¦ã ã‘å‘¼ã°ã‚Œã‚‹
 	//-----------------------------------------------------
-	//‰æ‘œ‚Ìo—Í
+	//ç”»åƒã®å‡ºåŠ›
 	////
-	//ƒ^ƒCƒgƒ‹
+	//ã‚¿ã‚¤ãƒˆãƒ«
 	ADD_RESOURCE("Title", CImage::CreateImage("Image/Title.png"));
 	ADD_RESOURCE("kaiga", CImage::CreateImage("Image/kaiga.png"));
 	ADD_RESOURCE("Dorup", CImage::CreateImage("Image/Dorup.png"));
@@ -84,6 +82,16 @@ void Init(void)
 	ADD_RESOURCE("kamano1", CImage::CreateImage("Image/kamano1.png", kamano_anim_data, 64, 64));
 	ADD_RESOURCE("hayashi", CImage::CreateImage("Image/hayashi.png", kamano_anim_data, 64, 64));
 	Base::Add(new Title());
+	//ãƒ•ã‚©ãƒ³ãƒˆä½œæˆ
+	CFont* font = new CFont("Fonts/HuiFont29.ttf", 32);
+	//ä¼šè©±ãƒ†ã‚­ã‚¹ãƒˆèª­ã¿è¾¼ã¿
+	Base::Add(new Text("talk.txt", font));
+	//Base::Add(new Select());
+
+
+
+
+
 }
 
 
@@ -98,9 +106,9 @@ static void ResizeCallback(GLFWwindow* window, int w, int h)
 {
 	glViewport(0, 0, w, h);
 
-	//‰æ–Ê‰ğ‘œ“x•Ï“®
+	//ç”»é¢è§£åƒåº¦å¤‰å‹•
 	CCamera::GetCamera()->SetSize((float)w, (float)h);
-	//‰æ–Ê‰ğ‘œ“xŒÅ’è
+	//ç”»é¢è§£åƒåº¦å›ºå®š
 	//CCamera::GetCamera()->SetSize(SCREEN_WIDTH, SCREEN_HEIGHT);
 
 	CCamera::GetCamera()->Viewport(0, 0, w, h);
@@ -132,8 +140,8 @@ static void error_callback(int error, const char* description)
 	printf("Error: %s\n", description);
 }
 
-//ƒtƒ‹ƒXƒNƒŠ[ƒ“?ƒEƒCƒ“ƒhƒEƒ‚[ƒh‚ÌØ‚è‘Ö‚¦
-//Alt+Enter‚ÅØ‚è‘Ö‚¦‚é
+//ãƒ•ãƒ«ã‚¹ã‚¯ãƒªãƒ¼ãƒ³?ã‚¦ã‚¤ãƒ³ãƒ‰ã‚¦ãƒ¢ãƒ¼ãƒ‰ã®åˆ‡ã‚Šæ›¿ãˆ
+//Alt+Enterã§åˆ‡ã‚Šæ›¿ãˆã‚‹
 void CheckFullScreen() {
 	static int key_enter = 0;
 	int key_enter_buf = key_enter;
@@ -143,7 +151,7 @@ void CheckFullScreen() {
 }
 
 int __main(int* argcp, char** argv) {
-	// ƒƒ‚ƒŠƒŠ[ƒNŒŸo
+	// ãƒ¡ãƒ¢ãƒªãƒªãƒ¼ã‚¯æ¤œå‡º
 	//	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF | _CRTDBG_CHECK_ALWAYS_DF);
 	//_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
 
@@ -190,11 +198,11 @@ int __main(int* argcp, char** argv) {
 
 	glEnable(GL_DEPTH_TEST);
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-	glEnable(GL_BLEND);//ƒuƒŒƒ“ƒh‚Ì—LŒø‰»
+	glEnable(GL_BLEND);//ãƒ–ãƒ¬ãƒ³ãƒ‰ã®æœ‰åŠ¹åŒ–
 	glEnable(GL_CULL_FACE);
 	glCullFace(GL_BACK);
 
-	//ŒÅ’èƒVƒF[ƒ_[—p
+	//å›ºå®šã‚·ã‚§ãƒ¼ãƒ€ãƒ¼ç”¨
 	glEnable(GL_LIGHTING);
 	glEnable(GL_LIGHT0);
 
@@ -206,7 +214,7 @@ int __main(int* argcp, char** argv) {
 
 
 		CInput::Update();
-		//Šeƒoƒbƒtƒ@[‚ğƒNƒŠƒA
+		//å„ãƒãƒƒãƒ•ã‚¡ãƒ¼ã‚’ã‚¯ãƒªã‚¢
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 		MainLoop();
