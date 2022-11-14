@@ -11,12 +11,18 @@ enum {
 	eType_Effect,
 	eType_UI,
 	eType_Scene,
-	eType_kamao,
+	eType_kamano,
 	eType_hayashi,
 	eType_Wall,
 	eType_itihara,
 	eType_Dorup,
 	eType_Dordown,
+	eType_kaiga,
+	eType_Player_Bullet,
+	eType_Enemy_Bullet,
+	eTyppe_trapbullet,
+	eType_EnemyManager,
+
 };
 
 
@@ -34,14 +40,19 @@ public:
 	CVector2D m_vec;
 	//削除フラグ
 	bool m_kill;
+	//移動前の座標
+	CVector2D m_pos_old;
 	//オブジェクトのリスト
 	static std::list<Base*> m_list;
 	//矩形
 	CRect	m_rect;	
-
+	//回転値
+	float m_ang;
 	//スクロール値
 	static CVector2D m_scroll;
-
+	//ヒットID
+	int	m_hit_id;
+	
 public:
 	static CVector2D GetScreenPos(const CVector2D& pos);
 	//type オブジェクトの種類

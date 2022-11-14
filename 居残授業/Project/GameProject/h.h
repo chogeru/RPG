@@ -1,5 +1,7 @@
 #pragma once
 //ÉwÉbÉ_Å[ÇÕÇ±Ç±Ç…Ç‹Ç∆ÇﬂÇÈbyÇÕÇ‚Çµ
+//#include "../Maptip/Map.h"
+#include "Maptip/Map.h"
 #include"Base/Base.h"
 #include"Player/Player.h"
 #include"Enemy/Enemy.h"
@@ -14,7 +16,9 @@
 #include "UI/Field.h"
 #include "UI/Slash.h"
 #include "UI/Effect.h"
-#include "../UI/AnimData.h"
+#include"Enemy/EnemyManager.h"
+#include"Enemy/trapbullet.h"
+/*#include "../UI/AnimData.h"
 #include "../UI/Field.h"
 #include "../UI/Slash.h"
 #include "../UI/Effect.h"
@@ -22,3 +26,13 @@
 #include "../Enemy/Enemy.h"
 #include "../UI/Goal.h"
 #include "../UI/Title.h"
+#include"../Enemy/kaiga.h"
+#include "../Game/Text.h"*/
+#include "Player/Player.h"
+#include "Enemy/Enemy.h"
+#include "UI/Goal.h"
+#include "UI/Title.h"
+#include"Enemy/kaiga.h"
+#include "Game/Text.h"
+#include"Game/SaveLoad.h"
+#include"Game/Select.h"

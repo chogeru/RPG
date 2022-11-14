@@ -12,8 +12,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Base\Base.cpp" />
+    <ClCompile Include="Enemy\Bullet.cpp" />
     <ClCompile Include="Enemy\Enemy.cpp" />
+    <ClCompile Include="Enemy\EnemyManager.cpp" />
+    <ClCompile Include="Enemy\kaiga.cpp" />
     <ClCompile Include="Game\Game.cpp" />
+    <ClCompile Include="Game\Text.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Maptip\Dordown.cpp" />
     <ClCompile Include="Maptip\Dorup.cpp" />
@@ -35,8 +39,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Base\Base.h" />
+    <ClInclude Include="Enemy\Bullet.h" />
     <ClInclude Include="Enemy\Enemy.h" />
+    <ClInclude Include="Enemy\EnemyManager.h" />
+    <ClInclude Include="Enemy\kaiga.h" />
     <ClInclude Include="Game\Game.h" />
+    <ClInclude Include="Game\Text.h" />
     <ClInclude Include="h.h" />
     <ClInclude Include="Maptip\Dordown.h" />
     <ClInclude Include="Maptip\Dorup.h" />

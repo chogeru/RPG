@@ -1,7 +1,7 @@
 #include"itihara.h"
 #include"../h.h"
 itihara::itihara(const CVector2D& p, bool flip) :
-	Base(eType_Player) {
+	Base(eType_itihara) {
 	//画像複製
 	m_img = COPY_RESOURCE("itihara", CImage);
 	//再生アニメーション設定
@@ -21,7 +21,7 @@ itihara::itihara(const CVector2D& p, bool flip) :
 	//ダメージ番号
 	m_damage_no = -1;
 	//
-	m_hp = 100;
+	m_hp = 3;
 	//スクロール設定
 	m_scroll.x = m_pos.x - 1280 / 2;
 

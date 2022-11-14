@@ -21,7 +21,7 @@ Player::Player(const CVector2D& p, bool flip) :
 	//ƒ_ƒ[ƒW”Ô†
 	m_damage_no = -1;
 	//
-	m_hp = 100;
+	m_hp = 3;
 
 
 }void Player::StateIdle()

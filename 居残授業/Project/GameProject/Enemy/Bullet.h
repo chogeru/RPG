@@ -1,12 +1,11 @@
 #pragma once
 #include "../Base/Base.h"
 
-class Enemy : public Base {
+class Bullet : public Base {
 	CImage m_img;
-	int m_cnt;
-	bool m_flip;
+	float m_speed;
 public:
-	Enemy(const CVector2D& pos);
+	Bullet(int type, const CVector2D& pos, float ang, float speed);
 	void Update();
 	void Draw();
 	void Collision(Base* b);
