@@ -23,6 +23,18 @@ void kaiga::StateIdle()
 				m_flip = false;
 				move_flag = true;
 			}
+			else
+				if (player->m_pos.y > m_pos.y + 32) {
+					m_pos.y += move_speed;
+					m_flip = false;
+					move_flag = true;
+				}
+				else
+					if (player->m_pos.y > m_pos.y - 32) {
+						m_pos.y += move_speed;
+						m_flip = false;
+						move_flag = true;
+					}
 		/*else {
 			m_state = eState_Attack;
 			m_attack_no++;

@@ -70,6 +70,8 @@ void Init(void)
 	//画像の出力
 	////
 	//タイトル
+	ADD_RESOURCE("Bullet", CImage::CreateImage("Image/Bullet.png"));
+	ADD_RESOURCE("Enemy", CImage::CreateImage("Image/Enemy.png"));
 	ADD_RESOURCE("Title", CImage::CreateImage("Image/Title.png"));
 	ADD_RESOURCE("kaiga", CImage::CreateImage("Image/kaiga.png"));
 	ADD_RESOURCE("Dorup", CImage::CreateImage("Image/Dorup.png"));
@@ -87,6 +89,7 @@ void Init(void)
 	//会話テキスト読み込み
 	Base::Add(new Text("talk.txt", font));
 	//Base::Add(new Select());
+	Base::Add(new EnemyManager());
 
 
 

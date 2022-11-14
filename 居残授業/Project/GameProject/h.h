@@ -16,6 +16,8 @@
 #include "UI/Field.h"
 #include "UI/Slash.h"
 #include "UI/Effect.h"
+#include"Enemy/EnemyManager.h"
+#include"Enemy/trapbullet.h"
 /*#include "../UI/AnimData.h"
 #include "../UI/Field.h"
 #include "../UI/Slash.h"

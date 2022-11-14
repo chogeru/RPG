@@ -68,6 +68,12 @@
     <ClCompile Include="Game\Text.cpp">
       <Filter>Game</Filter>
     </ClCompile>
+    <ClCompile Include="Enemy\EnemyManager.cpp">
+      <Filter>Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Enemy\Bullet.cpp">
+      <Filter>Enemy</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Base">
@@ -156,6 +162,12 @@
     </ClInclude>
     <ClInclude Include="Game\Text.h">
       <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemy\EnemyManager.h">
+      <Filter>Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemy\Bullet.h">
+      <Filter>Enemy</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

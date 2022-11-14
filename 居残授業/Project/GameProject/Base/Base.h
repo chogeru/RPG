@@ -21,6 +21,8 @@ enum {
 	eType_Player_Bullet,
 	eType_Enemy_Bullet,
 	eTyppe_trapbullet,
+	eType_EnemyManager,
+
 };
 
 
