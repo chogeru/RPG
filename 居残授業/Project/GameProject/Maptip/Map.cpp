@@ -216,7 +216,7 @@ Map::Map() : Base(eType_Field)
 				break;
 
 			case 9:
-				Base::Add(new kaiga(CVector2D(x, y),true));
+				Base::Add(new kaiga(CVector2D(x, y)));
 				break;
 			case 10:
 				Base::Add(new Enemy(CVector2D(x, y)));

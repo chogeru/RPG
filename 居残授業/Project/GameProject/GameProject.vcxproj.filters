@@ -74,6 +74,9 @@
     <ClCompile Include="Enemy\Bullet.cpp">
       <Filter>Enemy</Filter>
     </ClCompile>
+    <ClCompile Include="UI\Select.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Base">
@@ -168,6 +171,9 @@
     </ClInclude>
     <ClInclude Include="Enemy\Bullet.h">
       <Filter>Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Select.h">
+      <Filter>UI</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

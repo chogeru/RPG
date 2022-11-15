@@ -2,38 +2,14 @@
 #include"../Base/Base.h"
 #include"../h.h"
 
-class kaiga :public Base {
-public:
-	enum {
-		eState_Idle,
-		eState_Attack,
-		eState_Damage,
-		eState_Down,
-		eState_Wait,
-	};
-	int m_state;
-	int m_cnt;
+
+class kaiga : public Base {
 	CImage m_img;
-
+	int m_cnt;
 	bool m_flip;
-	bool m_is_ground;
-
-	int m_attack_no;
-	int m_damage_no;
-	int m_hp;
-
-
-	void StateWait();
-	void StateIdle();
-	void StateAttack();
-	void StateDamage();
-	void StateDown();
 public:
-	kaiga(const CVector2D& p, bool flip);
+	kaiga(const CVector2D& pos);
 	void Update();
 	void Draw();
 	void Collision(Base* b);
-
 };
-
-

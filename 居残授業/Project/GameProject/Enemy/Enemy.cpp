@@ -6,8 +6,8 @@ Enemy::Enemy(const CVector2D& pos)
 {
 	m_img = COPY_RESOURCE("Enemy", CImage);
 	m_pos = pos;
-	m_img.SetCenter(32, 32);
-	m_rad = 32;
+	m_img.SetCenter(0, 0);
+	m_img.SetSize(64, 64);
 }
 
 void Enemy::Update()
@@ -22,22 +22,22 @@ void Enemy::Update()
 		float dist = FLT_MAX;
 		Base* player = Base::FindObject(eType_Player);
 		if (player) {
-			if (player->m_pos.x < m_pos.x - 32) {
+			if (player->m_pos.x < m_pos.x - 0) {
 				m_pos.x += -movespeed;
 				m_flip = true;
 				move_flag = true;
 			}
-			else if (player->m_pos.x > m_pos.x + 32) {
+			else if(player->m_pos.x > m_pos.x + 0) {
 					m_pos.x += movespeed;
 					m_flip = false;
 					move_flag = true;
 				}
-			else if (player->m_pos.y > m_pos.y + 32) {
+			else if (player->m_pos.y > m_pos.y + 0) {
 				m_pos.y += movespeed;
 				m_flip = false;
 				move_flag = true;
 			}
-			else if (player->m_pos.y > m_pos.y - 32) {
+			else if (player->m_pos.y < m_pos.y - 0) {
 				m_pos.y += movespeed;
 				m_flip = false;
 				move_flag = true;
@@ -49,14 +49,7 @@ void Enemy::Update()
 					dist = v.LengthSq();
 				}
 			}
-			if (target) {
-				CVector2D vec = target->m_pos - m_pos;
-				m_ang = atan2(vec.x, vec.y);
-				if (m_cnt >= 120) {
-					Base::Add(new Bullet(eType_Enemy_Bullet, m_pos, m_ang, 4));
-					m_cnt = 0;
-				}
-			}
+			
 		}
 	}
 }
