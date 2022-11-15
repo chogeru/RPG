@@ -2,7 +2,7 @@
 #include"../Base/Base.h"
 #include"../h.h"
 kamano::kamano(const CVector2D& p, bool flip) :
-	Base(eType_kamano) {
+	Base(eType_Player) {
 	//画像複製
 	m_img = COPY_RESOURCE("kamano", CImage);
 	//再生アニメーション設定
@@ -10,7 +10,8 @@ kamano::kamano(const CVector2D& p, bool flip) :
 	//座標設定
 	m_pos = p;
 	//中心位置設定
-	m_img.SetCenter(128, 224);
+	//m_img.SetCenter(128, 224);
+	m_img.SetCenter(0, 0);
 	//反転フラグ
 	m_flip = flip;
 	//通常状態へ
