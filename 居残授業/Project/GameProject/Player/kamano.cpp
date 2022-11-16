@@ -31,7 +31,7 @@ kamano::kamano(const CVector2D& p, bool flip) :
 }void kamano::StateIdle()
 {
 	//移動量
-	const float move_speed = 8;
+	const float move_speed = 20;
 	//移動フラグ
 	bool move_flag = false;
 	//ジャンプ力

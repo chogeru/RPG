@@ -36,3 +36,4 @@
 #include "Game/Text.h"
 #include"Game/SaveLoad.h"
 #include"Game/Select.h"
+#include"Maptip/hondana.h"

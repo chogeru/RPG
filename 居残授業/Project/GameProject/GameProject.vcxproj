@@ -21,6 +21,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Maptip\Dordown.cpp" />
     <ClCompile Include="Maptip\Dorup.cpp" />
+    <ClCompile Include="Maptip\hondana.cpp" />
     <ClCompile Include="Maptip\Map.cpp" />
     <ClCompile Include="Maptip\Wall.cpp" />
     <ClCompile Include="Maptip\Wallhed.cpp" />
@@ -49,6 +50,7 @@
     <ClInclude Include="h.h" />
     <ClInclude Include="Maptip\Dordown.h" />
     <ClInclude Include="Maptip\Dorup.h" />
+    <ClInclude Include="Maptip\hondana.h" />
     <ClInclude Include="Maptip\Map.h" />
     <ClInclude Include="Maptip\Wall.h" />
     <ClInclude Include="Maptip\Wallhed.h" />

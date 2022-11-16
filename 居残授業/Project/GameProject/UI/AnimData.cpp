@@ -446,4 +446,23 @@ TexAnimData kamano_anim_data[] = {
 	ANIMDATA(kamanoUp),
 	ANIMDATA(kamanoDown),
 	//ANIMDATA(kamanoStep),
+
+	
+		
+
+
+
+};
+
+static TexAnim Title[] = {
+	{3,8},
+};
+TexAnimData Title_anim_data[] = {
+
+
+	ANIMDATA(Title)
+
+
+
+
 };

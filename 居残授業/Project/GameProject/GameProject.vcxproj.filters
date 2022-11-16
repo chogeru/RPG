@@ -77,6 +77,9 @@
     <ClCompile Include="UI\Select.cpp">
       <Filter>UI</Filter>
     </ClCompile>
+    <ClCompile Include="Maptip\hondana.cpp">
+      <Filter>Maptip</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Base">
@@ -174,6 +177,9 @@
     </ClInclude>
     <ClInclude Include="UI\Select.h">
       <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Maptip\hondana.h">
+      <Filter>Maptip</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -12,14 +12,10 @@ public:
 	//セーブデータ
 	static SaveData s_save_data;
 public:
-	/// <summary>
 	/// データ読み込み
-	/// </summary>
 	/// <param name="file">セーブデータファイル名</param>
 	static void Load(const char* file);
-	/// <summary>
 	/// データ書き込み
-	/// </summary>
 	/// <param name="file">セーブデータファイル名</param>
 	static void Save(const char* file);
 

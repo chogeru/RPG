@@ -29,8 +29,9 @@ void MainLoop(void) {
 	Base::UpdateAll();
 	Base::CollisionAll();
 	Base::DrawAll();
-	FONT_T()->Draw(0, 32, 1, 1, 1, "第４階層");
-	FONT_T()->Draw(0, 64, 1, 1, 1, "プレイヤー：鎌野：HP3");
+	FONT_T()->Draw(0, 32, 1, 1, 1, "第４階層                ||");
+	FONT_T()->Draw(0, 64, 1, 1, 1, "プレイヤー：鎌野：HP3   ||");
+	FONT_T()->Draw(0, 96, 1, 1, 1, "==========================");
 }
 void Init(void)
 {
@@ -44,6 +45,7 @@ void Init(void)
 	CInput::SetButton(0, CInput::eButton2, 'w');
 	CInput::SetButton(0, CInput::eButton3, 'a');
 	CInput::SetButton(0, CInput::eButton4, 's');
+	CInput::SetButton(0, CInput::eButton6, 'x');
 	CInput::SetButton(0, CInput::eButton5, VK_SPACE);
 	CInput::SetButton(0, CInput::eButton10, VK_RETURN);
 	CInput::SetButton(0, CInput::eUp, VK_UP);
@@ -78,6 +80,7 @@ void Init(void)
 	ADD_RESOURCE("Dordown", CImage::CreateImage("Image/Dordown.png"));
 	ADD_RESOURCE("Map1", CImage::CreateImage("Image/Map1.png"));
 	ADD_RESOURCE("Wall", CImage::CreateImage("Image/Wall.png"));
+	ADD_RESOURCE("hondana", CImage::CreateImage("Image/hondana.png"));
 	ADD_RESOURCE("Wallhed", CImage::CreateImage("Image/Wallhed.png"));
 	ADD_RESOURCE("itihara", CImage::CreateImage("Image/itihara.png", kamano_anim_data, 64, 64));
 	ADD_RESOURCE("kamano", CImage::CreateImage("Image/kamano.png",kamano_anim_data,64,64));
@@ -90,11 +93,7 @@ void Init(void)
 	Base::Add(new Text("talk.txt", font));
 	//Base::Add(new Select());
 	Base::Add(new EnemyManager());
-
-
-
-
-
+	
 }
 
 

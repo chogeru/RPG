@@ -22,6 +22,7 @@ enum {
 	eType_Enemy_Bullet,
 	eTyppe_trapbullet,
 	eType_EnemyManager,
+	eType_hondana,
 
 };
 

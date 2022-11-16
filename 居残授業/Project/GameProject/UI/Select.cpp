@@ -40,21 +40,26 @@ void Select::Update()
 }
 void Select::Draw()
 {
-	//SaveLoad選択表示
-	CVector2D pos[2] = {
-		CVector2D(100,200),
-		CVector2D(100,300),
-	};
-	//ここを変えると、表示される文字が変更されるよ～
-	const char* text[2] = {
-		"Save",
-		"Load"
-	};
-	for (int i = 0; i < 2; i++) {
-		FONT_T()->Draw(pos[i].x, pos[i].y, 1, 1, 1, text[i]);
+	if (HOLD(CInput::eButton6)) {
+		//SaveLoad選択表示
+		CVector2D pos[2] = {
+			CVector2D(100,200),
+			CVector2D(100,300),
+
+
+		};
+
+		//ここを変えると、表示される文字が変更されるよ～
+		const char* text[2] = {
+			"Save",
+			"Load"
+		};
+		for (int i = 0; i < 2; i++) {
+			FONT_T()->Draw(pos[i].x, pos[i].y, 1, 1, 1, text[i]);
+		}
+		//カーソル
+		FONT_T()->Draw(pos[m_select].x - 64, pos[m_select].y, 1, 1, 1, ">");
+		//テストデータの表示
+		FONT_T()->Draw(0, 128, 1, 0, 0, "m_MapData[%d] m_PlayerData[%d]", m_MapData, m_PlayerData);
 	}
-	//カーソル
-	FONT_T()->Draw(pos[m_select].x-64, pos[m_select].y, 1, 1, 1, ">");
-	//テストデータの表示
-	FONT_T()->Draw(0, 128, 1, 0, 0, "m_MapData[%d] m_PlayerData[%d]",m_MapData,m_PlayerData);
 }
