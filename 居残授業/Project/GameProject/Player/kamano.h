@@ -6,6 +6,9 @@ private:
 	//ó‘Ô
 	enum {
 		eState_Idle,
+		eState_Attack,
+		eState_Damage,
+		eState_Down,
 	};
 	//ó‘Ô•Ï”
 	int m_state;
@@ -25,11 +28,13 @@ private:
 	CRect	m_rect;
 	//Šeó‘Ô‚Å‚Ì‹““®
 	void StateIdle();
-	
+	void StateAttack();
+	void StateDamage();
+	void StateDown();
+
 public:
 	kamano(const CVector2D& p, bool flip);
 	void Update();
 	void Draw();
 	void Collision(Base* b);
 };
-
