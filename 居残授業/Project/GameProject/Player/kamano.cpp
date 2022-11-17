@@ -27,7 +27,7 @@ kamano::kamano(const CVector2D& p, bool flip):
 }void kamano::StateIdle()
 {
 	//移動量
-	const float move_speed = 8;
+	const float move_speed = 20;
 	//移動フラグ
 	bool move_flag = false;
 	//ジャンプ力
@@ -152,6 +152,7 @@ void kamano::Update() {
 	m_vec.y += GRAVITY;
 	m_pos += m_vec;
 	*/
+	m_pos_old = m_pos;
 
 	//アニメーション更新
 	m_img.UpdateAnimation();
@@ -171,6 +172,23 @@ void kamano::Draw() {
 }
 void kamano::Collision(Base* b)
 {
+	switch (b->m_type) {
+	case eType_Field:
+		if (Map* m = dynamic_cast<Map*>(b)) {
+			int t = m->CollisionMap(CVector2D(m_pos.x, m_pos_old.y));
+			if (t != 0)
+				m_pos.x = m_pos_old.x;
+			t = m->CollisionMap(CVector2D(m_pos_old.x, m_pos.y));
+			if (t != 0)
+				m_pos.y = m_pos_old.y;
+
+		}
+		break;
+
+	}
+
+
+
 	switch (b->m_type) {
 		//ゴール判定
 	case eType_Goal:

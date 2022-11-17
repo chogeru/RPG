@@ -93,7 +93,9 @@ void Init(void)
 	Base::Add(new Text("talk.txt", font));
 	//Base::Add(new Select());
 	Base::Add(new EnemyManager());
-	
+	SOUND("BGM_Game")->Load("Sound/BGM/BGM_Game.wav");
+	SOUND("BGM_Game")->Play(true);
+
 }
 
 

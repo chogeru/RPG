@@ -15,7 +15,7 @@ Enemy::Enemy(const CVector2D& pos)
 
 void Enemy::Update()
 {
-	const float movespeed = 10;
+	const float movespeed = 15;
 	bool move_flag = false;
 
 	auto list = Base::FindObjects(eType_Player);
