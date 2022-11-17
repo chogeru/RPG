@@ -9,10 +9,9 @@ kamano::kamano(const CVector2D& p, bool flip) :
 	//座標設定
 	m_pos = p;
 	//中心位置設定
-	m_img.SetCenter(0, 0);
-	//反転フラグ
-	m_flip = flip;
-	//通常状態へ
+	m_img.SetCenter(32, 32);
+	
+
 	m_state = eState_Idle;
 	//着地フラグ
 	m_is_ground = true;
@@ -21,7 +20,7 @@ kamano::kamano(const CVector2D& p, bool flip) :
 	//ダメージ番号
 	m_damage_no = -1;
 	//
-	m_hp = 3;
+	m_hp = 1;
 	//スクロール設定
 	m_scroll.x = m_pos.x - 1280 / 2;
 
@@ -38,7 +37,7 @@ kamano::kamano(const CVector2D& p, bool flip) :
 	if (HOLD(CInput::eLeft)) {
 		//移動量を設定
 		m_pos.x += -move_speed;
-		m_img.ChangeAnimation(0);
+		m_img.ChangeAnimation(1);
 		move_flag = true;
 	}
 	if (HOLD(CInput::eUp)) {
@@ -57,7 +56,7 @@ kamano::kamano(const CVector2D& p, bool flip) :
 	if (HOLD(CInput::eRight)) {
 		//移動量を設定
 		m_pos.x += move_speed;
-		m_img.ChangeAnimation(1);
+		m_img.ChangeAnimation(0);
 		move_flag = true;
 	}
 	//ジャンプ
@@ -164,9 +163,9 @@ void kamano::Update() {
 
 void kamano::Draw() {
 	//位置設定
+	// 
+	m_img.SetSize(64, 64);
 	m_img.SetPos(GetScreenPos(m_pos));
-	//反転設定
-	m_img.SetFlipH(m_flip);
 	//描画
 	m_img.Draw();
 }
