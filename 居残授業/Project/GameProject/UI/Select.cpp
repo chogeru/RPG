@@ -1,5 +1,6 @@
 #include "Select.h"
 #include "Save.h"
+
 Select::Select():Base(eType_UI)
 {
 	m_select = eSave;
@@ -12,11 +13,11 @@ void Select::Update()
 	
 	m_MapData++;
 	//‘I‘ð//
-	if (PUSH(CInput::eUp)) {
+	if (PUSH(CInput::eButton2)) {
 		m_select--;
 		if (m_select < 0) m_select = 0;
 	}
-	if (PUSH(CInput::eDown)) {
+	if (PUSH(CInput::eButton4)) {
 		m_select++;
 		if (m_select > 1) m_select = 1;
 	}
