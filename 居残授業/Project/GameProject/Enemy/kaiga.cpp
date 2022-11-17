@@ -27,18 +27,18 @@ void kaiga::Update()
 				m_flip = true;
 				move_flag = true;
 			}
-			else if (player->m_pos.x > m_pos.x + 1) {
+			if (player->m_pos.x > m_pos.x + 1) {
 				m_pos.x += movespeed;
 				m_flip = false;
 				move_flag = true;
 			}
-			else if (player->m_pos.y > m_pos.y + 1) {
+			if (player->m_pos.y > m_pos.y - 1) {
 				m_pos.y += movespeed;
 				m_flip = false;
 				move_flag = true;
 			}
-			else if (player->m_pos.y < m_pos.y - 1) {
-				m_pos.y += movespeed;
+			if (player->m_pos.y < m_pos.y + 1) {
+				m_pos.y -= movespeed;
 				m_flip = false;
 				move_flag = true;
 			}
@@ -56,7 +56,7 @@ void kaiga::Update()
 
 void kaiga::Draw()
 {
-	m_img.SetPos(m_pos);
+	m_img.SetPos(GetScreenPos(m_pos));
 	m_img.Draw();
 }
 

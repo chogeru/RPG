@@ -9,7 +9,7 @@ Text::Text(const char* file, CFont* font)
 	//ファイルを開く "r"テキスト読み込みモード
 	fopen_s(&fp, file, "r");
 	//開くのに失敗
-	if (!fp) return;
+	if (!fp) return; 9;
 	m_line = 0;
 	m_line_size = 0;
 	//ファイルの末尾まで繰り返す

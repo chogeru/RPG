@@ -1,6 +1,6 @@
 #include"kamano.h"
 #include"../h.h"
-kamano::kamano(const CVector2D& p, bool flip) :
+kamano::kamano(const CVector2D& p, bool flip):
 	Base(eType_Player) {
 	//画像複製
 	m_img = COPY_RESOURCE("kamano", CImage);
@@ -9,7 +9,7 @@ kamano::kamano(const CVector2D& p, bool flip) :
 	//座標設定
 	m_pos = p;
 	//中心位置設定
-	m_img.SetCenter(32, 32);
+	m_img.SetCenter(0, 0);
 	
 
 	m_state = eState_Idle;
@@ -20,7 +20,7 @@ kamano::kamano(const CVector2D& p, bool flip) :
 	//ダメージ番号
 	m_damage_no = -1;
 	//
-	m_hp = 1;
+	m_hp = 0;
 	//スクロール設定
 	m_scroll.x = m_pos.x - 1280 / 2;
 

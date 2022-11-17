@@ -20,7 +20,6 @@ void Enemy::Update()
 
 	auto list = Base::FindObjects(eType_Player);
 	if (list.size() > 0) {
-		//ˆê”Ô‹ß‚¢ƒvƒŒƒCƒ„[‚ð’T‚·
 		Base* target = nullptr;
 		float dist = FLT_MAX;
 		Base* player = Base::FindObject(eType_Player);
@@ -30,18 +29,18 @@ void Enemy::Update()
 				m_flip = true;
 				move_flag = true;
 			}
-			else if(player->m_pos.x > m_pos.x + 0) {
+			if(player->m_pos.x > m_pos.x + 0) {
 					m_pos.x += movespeed;
 					m_flip = false;
 					move_flag = true;
 				}
-			else if (player->m_pos.y > m_pos.y + 0) {
+			if (player->m_pos.y > m_pos.y - 0) {
 				m_pos.y += movespeed;
 				m_flip = false;
 			move_flag = true;
 			}
-			else if (player->m_pos.y < m_pos.y - 0) {
-				m_pos.y += movespeed;
+			if (player->m_pos.y < m_pos.y + 0) {
+				m_pos.y -= movespeed;
 				m_flip = false;
 				move_flag = true;
 			}
@@ -59,11 +58,19 @@ void Enemy::Update()
 
 void Enemy::Draw()
 {
-	m_img.SetPos(m_pos);
+	m_img.SetPos(GetScreenPos(m_pos));
 	m_img.Draw();
 }
 
 void Enemy::Collision(Base* b)
 {
+	switch (b->m_type) {
+	case eType_Player:
+		if (m_type == eType_Enemy && Base::CollisionCircle(this, b)) {
+			SetKill();
+			b->SetKill();
+		}
+		break;
+	}
 }
 
