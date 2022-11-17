@@ -60,7 +60,7 @@ kamano::kamano(const CVector2D& p, bool flip) :
 		move_flag = true;
 	}
 	//ジャンプ
-	if (m_is_ground && PUSH(CInput::eButton2)) {
+	/*if (m_is_ground && PUSH(CInput::eButton2)) {
 		m_vec.y = -jump_pow;
 		m_is_ground = false;
 	}
@@ -76,7 +76,7 @@ kamano::kamano(const CVector2D& p, bool flip) :
 			m_attack_no++;
 		}
 
-	}
+	}*/
 	//動いているアニメーション
 	if (move_flag)
 	{

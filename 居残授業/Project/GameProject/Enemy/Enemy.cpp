@@ -6,7 +6,7 @@ Enemy::Enemy(const CVector2D& pos)
 
 		m_img = COPY_RESOURCE("Enemy", CImage);
 		m_img.ChangeAnimation(0);
-		m_img.SetCenter(0, 0);
+		m_img.SetCenter(32, 32);
 		m_img.SetSize(64, 64);
 		m_rect = CRect(0, 0, 0, 0);
 		m_damage_no = -10000;
