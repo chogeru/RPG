@@ -21,7 +21,7 @@ void Select::Update()
 		m_select++;
 		if (m_select > 1) m_select = 1;
 	}
-	if (PUSH(CInput::eButton1)) {
+	if (PUSH(CInput::eButton5)) {
 		switch (m_select) {
 		case eSave:
 			m_PlayerData++;
