@@ -9,8 +9,8 @@ kamano::kamano(const CVector2D& p, bool flip):
 	//座標設定
 	m_pos = p;
 	//中心位置設定
-	m_img.SetCenter(0, 0);
-	
+	m_img.SetCenter(32, 32);
+	m_rect = CRect(-32, -32, 32, 32);
 
 	m_state = eState_Idle;
 	//着地フラグ
@@ -169,6 +169,7 @@ void kamano::Draw() {
 	m_img.SetPos(GetScreenPos(m_pos));
 	//描画
 	m_img.Draw();
+	DrawRect();
 }
 void kamano::Collision(Base* b)
 {
