@@ -20,7 +20,8 @@ kamano::kamano(const CVector2D& p, bool flip):
 	//ダメージ番号
 	m_damage_no = -1;
 	//
-	m_hp = 0;
+	m_hp = 500;
+	m_hp = 1;
 	//スクロール設定
 	m_scroll.x = m_pos.x - 1280 / 2;
 
@@ -174,6 +175,18 @@ void kamano::Draw() {
 void kamano::Collision(Base* b)
 {
 	switch (b->m_type) {
+	case eType_Goal:
+		if (Base::CollisionRect(this, b)) {
+
+			
+			b->SetKill();
+
+			//Base::Add(new Gameover());
+		
+		}
+		break;
+	}
+	switch (b->m_type) {
 	case eType_Field:
 		if (Map* m = dynamic_cast<Map*>(b)) {
 			int t = m->CollisionMap(CVector2D(m_pos.x, m_pos_old.y));
@@ -191,8 +204,8 @@ void kamano::Collision(Base* b)
 
 
 	switch (b->m_type) {
-		//ゴール判定
-	case eType_Goal:
+	
+	case eType_Enemy:
 		if (Base::CollisionRect(this, b)) {
 			SetKill();
 		}

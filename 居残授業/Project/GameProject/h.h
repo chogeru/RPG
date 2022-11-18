@@ -18,6 +18,7 @@
 #include "UI/Effect.h"
 #include"Enemy/EnemyManager.h"
 #include"Enemy/trapbullet.h"
+#include"UI/Gameover.h"
 /*#include "../UI/AnimData.h"
 #include "../UI/Field.h"
 #include "../UI/Slash.h"
