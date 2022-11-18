@@ -1,7 +1,6 @@
-#include "kamano.h"
-#include"../Base/Base.h"
+#include"kamano.h"
 #include"../h.h"
-kamano::kamano(const CVector2D& p, bool flip) :
+kamano::kamano(const CVector2D& p, bool flip):
 	Base(eType_Player) {
 	//画像複製
 	m_img = COPY_RESOURCE("kamano", CImage);
@@ -10,11 +9,9 @@ kamano::kamano(const CVector2D& p, bool flip) :
 	//座標設定
 	m_pos = p;
 	//中心位置設定
-	//m_img.SetCenter(128, 224);
-	m_img.SetCenter(0, 0);
-	//反転フラグ
-	m_flip = flip;
-	//通常状態へ
+	m_img.SetCenter(32, 32);
+	m_rect = CRect(-32, -32, 32, 32);
+
 	m_state = eState_Idle;
 	//着地フラグ
 	m_is_ground = true;
@@ -23,10 +20,9 @@ kamano::kamano(const CVector2D& p, bool flip) :
 	//ダメージ番号
 	m_damage_no = -1;
 	//
-	m_hp = 3;
+	m_hp = 0;
 	//スクロール設定
 	m_scroll.x = m_pos.x - 1280 / 2;
-
 
 }void kamano::StateIdle()
 {
@@ -41,7 +37,7 @@ kamano::kamano(const CVector2D& p, bool flip) :
 	if (HOLD(CInput::eLeft)) {
 		//移動量を設定
 		m_pos.x += -move_speed;
-		m_img.ChangeAnimation(0);
+		m_img.ChangeAnimation(1);
 		move_flag = true;
 	}
 	if (HOLD(CInput::eUp)) {
@@ -60,11 +56,11 @@ kamano::kamano(const CVector2D& p, bool flip) :
 	if (HOLD(CInput::eRight)) {
 		//移動量を設定
 		m_pos.x += move_speed;
-		m_img.ChangeAnimation(1);
+		m_img.ChangeAnimation(0);
 		move_flag = true;
 	}
 	//ジャンプ
-	if (m_is_ground && PUSH(CInput::eButton2)) {
+	/*if (m_is_ground && PUSH(CInput::eButton2)) {
 		m_vec.y = -jump_pow;
 		m_is_ground = false;
 	}
@@ -80,20 +76,20 @@ kamano::kamano(const CVector2D& p, bool flip) :
 			m_attack_no++;
 		}
 
-	}
-	
-	
+	}*/
+	//動いているアニメーション
 	if (move_flag)
 	{
 		m_img.m_animSpeed = 1;
 	}
+	//止まっているアニメーション
 	else
 	{
 		m_img.m_animSpeed = 0;
 	}
+
 	m_scroll.x = m_pos.x - 1280 / 2;
 	m_scroll.y = m_pos.y - 600;
-
 }
 void kamano::StateAttack()
 {
@@ -156,6 +152,7 @@ void kamano::Update() {
 	m_vec.y += GRAVITY;
 	m_pos += m_vec;
 	*/
+	m_pos_old = m_pos;
 
 	//アニメーション更新
 	m_img.UpdateAnimation();
@@ -167,14 +164,32 @@ void kamano::Update() {
 
 void kamano::Draw() {
 	//位置設定
+	// 
+	m_img.SetSize(64, 64);
 	m_img.SetPos(GetScreenPos(m_pos));
-	//反転設定
-	m_img.SetFlipH(m_flip);
 	//描画
 	m_img.Draw();
+	DrawRect();
 }
 void kamano::Collision(Base* b)
 {
+	switch (b->m_type) {
+	case eType_Field:
+		if (Map* m = dynamic_cast<Map*>(b)) {
+			int t = m->CollisionMap(CVector2D(m_pos.x, m_pos_old.y));
+			if (t != 0)
+				m_pos.x = m_pos_old.x;
+			t = m->CollisionMap(CVector2D(m_pos_old.x, m_pos.y));
+			if (t != 0)
+				m_pos.y = m_pos_old.y;
+
+		}
+		break;
+
+	}
+
+
+
 	switch (b->m_type) {
 		//ゴール判定
 	case eType_Goal:
@@ -204,20 +219,20 @@ void kamano::Collision(Base* b)
 			}
 		}
 		break;
-	/*case eType_Field:
-		//Field型へキャスト、型変換できたら
-		if (Field* f = dynamic_cast<Field*>(b)) {
-			//地面より下にいったら
-			if (m_pos.y > f->GetGroundY()) {
-				//地面の高さに戻す
-				m_pos.y = f->GetGroundY();
-				//落下速度リセット
-				m_vec.y = 0;
-				//接地フラグON
-				m_is_ground = true;
+		/*case eType_Field:
+			//Field型へキャスト、型変換できたら
+			if (Field* f = dynamic_cast<Field*>(b)) {
+				//地面より下にいったら
+				if (m_pos.y > f->GetGroundY()) {
+					//地面の高さに戻す
+					m_pos.y = f->GetGroundY();
+					//落下速度リセット
+					m_vec.y = 0;
+					//接地フラグON
+					m_is_ground = true;
+				}
 			}
-		}
-		break;*/
+			break;*/
 	}
 
 }
