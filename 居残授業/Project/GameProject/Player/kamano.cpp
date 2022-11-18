@@ -181,7 +181,7 @@ void kamano::Collision(Base* b)
 			
 			b->SetKill();
 
-			//Base::Add(new Gameover());
+			Base::Add(new Gameover());
 		
 		}
 		break;
@@ -208,6 +208,7 @@ void kamano::Collision(Base* b)
 	case eType_Enemy:
 		if (Base::CollisionRect(this, b)) {
 			SetKill();
+			Base::Add(new Gameover());
 		}
 		break;
 		//攻撃エフェクトとの判定

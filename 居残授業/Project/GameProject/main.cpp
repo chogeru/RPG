@@ -86,6 +86,7 @@ void Init(void)
 	ADD_RESOURCE("kamano", CImage::CreateImage("Image/kamano.png",kamano_anim_data,64,64));
 	ADD_RESOURCE("kamano1", CImage::CreateImage("Image/kamano1.png", kamano_anim_data, 64, 64));
 	ADD_RESOURCE("hayashi", CImage::CreateImage("Image/hayashi.png", kamano_anim_data, 64, 64));
+	ADD_RESOURCE("Gameover",CImage::CreateImage("Image/画伯集.png", Gameover_anim_data, 1920, 1080));
 	Base::Add(new Title());
 	//フォント作成
 	CFont* font = new CFont("Fonts/HuiFont29.ttf", 32);

@@ -1,6 +1,7 @@
 #include "Gameover.h"
 #include "../Game/Game.h"
 #include"../Maptip/Map.h"
+#include"../h.h"
 Gameover::Gameover() :Base(eType_Scene),
 m_Gameover_text("C:\\Windows\\Fonts\\msgothic.ttc", 64)
 {
@@ -10,16 +11,22 @@ m_Gameover_text("C:\\Windows\\Fonts\\msgothic.ttc", 64)
 Gameover::~Gameover()
 {
 	//ゲームオーバー終了後ゲーム画面に以降します
-	Base::Add(new Map());
+	//Base::Add(new Map());
+	Base::Add(new Title());
 
 }
 
 void Gameover::Update()
 {
+	m_img.ChangeAnimation(eState_Gameover);
+	//アニメーション更新
+	m_img.UpdateAnimation();
 	//ボタン１でシーンが終わる
 	if (PUSH(CInput::eButton1)) {
 		m_kill = true;
 	}
+	//アニメーション終了チェック
+	if (m_img.CheckAnimationEnd());
 }
 
 void Gameover::Draw()
