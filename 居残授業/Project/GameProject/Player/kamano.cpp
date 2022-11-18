@@ -178,10 +178,9 @@ void kamano::Collision(Base* b)
 	case eType_Goal:
 		if (Base::CollisionRect(this, b)) {
 
-			
 			b->SetKill();
 
-			Base::Add(new Gameover());
+		
 		
 		}
 		break;

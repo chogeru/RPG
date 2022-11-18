@@ -7,22 +7,43 @@ Game::Game() :Base(eType_Scene)
 
 Game::~Game()
 {
-	//全てのオブジェクトを破棄
-	Base::KillAll();
-	//タイトルシーンへ
-	Base::Add(new Title());
+	int game_state = 0;
+	switch (game_state) {
+	case 0:
+		//ポーズ中の更新処理
+		if (PUSH(CInput::eButton1))
+			game_state = 1;
+		break;
+	case 1:
+		//ゲーム中の更新処理
+		break;
+
+		//全てのオブジェクトを破棄
+		Base::KillAll();
+		//タイトルシーンへ
+		Base::Add(new Title());
+	}
 }
 
 void Game::Update()
 {
-	//ゴールが無ければゲームシーン終了
 	if (!Base::FindObject(eType_Goal)) {
-		SetKill();
+		Base::Add(new Title());
+		if (PUSH(CInput::eButton1))
+			SetKill();
 	}
 
-	//プレイヤー死亡　ボタン１でゲームシーン終了
-	if (!Base::FindObject(eType_Player) && PUSH(CInput::eButton1)) {
-		m_kill = true;
+
+	if (!Base::FindObject(eType_Goal)) {
+		//全てのオブジェクトを破棄
+		Base::KillAll();
+		//タイトルシーンへ
+		Base::Add(new Title());
+
+	}
+	if (!Base::FindObject(eType_Scene))
+	{
+		Base::Add(new Map());
 	}
 }
 

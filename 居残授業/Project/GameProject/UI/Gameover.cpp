@@ -10,9 +10,10 @@ m_Gameover_text("C:\\Windows\\Fonts\\msgothic.ttc", 64)
 
 Gameover::~Gameover()
 {
-	//ゲームオーバー終了後ゲーム画面に以降します
-	//Base::Add(new Map());
-	Base::Add(new Title());
+	//全てのオブジェクトを破棄
+	Base::KillAll();
+	//ゲームシーンへ
+	Base::Add(new Game());
 
 }
 
@@ -23,15 +24,19 @@ void Gameover::Update()
 	m_img.UpdateAnimation();
 	//ボタン１でシーンが終わる
 	if (PUSH(CInput::eButton1)) {
-		m_kill = true;
+		SetKill();
 	}
 	//アニメーション終了チェック
 	if (m_img.CheckAnimationEnd());
+	{
+
+	}
 }
 
 void Gameover::Draw()
 {
 	m_img.Draw();
+
 	m_img.SetSize(1920, 1080);
 	//文字表示だお
 	m_Gameover_text.Draw(64, 256, 0, 0, 0, "GAMEOVER");
