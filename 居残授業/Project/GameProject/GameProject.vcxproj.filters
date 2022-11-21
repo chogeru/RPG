@@ -32,9 +32,6 @@
     <ClCompile Include="UI\Slash.cpp">
       <Filter>UI</Filter>
     </ClCompile>
-    <ClCompile Include="Maptip\Map.cpp">
-      <Filter>Maptip</Filter>
-    </ClCompile>
     <ClCompile Include="Player\kamano.cpp">
       <Filter>Player</Filter>
     </ClCompile>
@@ -78,6 +75,15 @@
       <Filter>UI</Filter>
     </ClCompile>
     <ClCompile Include="Maptip\hondana.cpp">
+      <Filter>Maptip</Filter>
+    </ClCompile>
+    <ClCompile Include="Maptip\AreaChange.cpp">
+      <Filter>Maptip</Filter>
+    </ClCompile>
+    <ClCompile Include="Maptip\fmfmap.cpp">
+      <Filter>Maptip</Filter>
+    </ClCompile>
+    <ClCompile Include="Maptip\Map.cpp">
       <Filter>Maptip</Filter>
     </ClCompile>
   </ItemGroup>
@@ -132,9 +138,6 @@
     <ClInclude Include="UI\Slash.h">
       <Filter>UI</Filter>
     </ClInclude>
-    <ClInclude Include="Maptip\Map.h">
-      <Filter>Maptip</Filter>
-    </ClInclude>
     <ClInclude Include="Player\kamano.h">
       <Filter>Player</Filter>
     </ClInclude>
@@ -179,6 +182,15 @@
       <Filter>UI</Filter>
     </ClInclude>
     <ClInclude Include="Maptip\hondana.h">
+      <Filter>Maptip</Filter>
+    </ClInclude>
+    <ClInclude Include="Maptip\AreaChange.h">
+      <Filter>Maptip</Filter>
+    </ClInclude>
+    <ClInclude Include="Maptip\fmfmap.h">
+      <Filter>Maptip</Filter>
+    </ClInclude>
+    <ClInclude Include="Maptip\Map.h">
       <Filter>Maptip</Filter>
     </ClInclude>
   </ItemGroup>
