@@ -5,7 +5,11 @@
 Gameover::Gameover() :Base(eType_Scene),
 m_Gameover_text("C:\\Windows\\Fonts\\msgothic.ttc", 64)
 {
+	
 	m_img = COPY_RESOURCE("Gameover", CImage);
+	m_img.ChangeAnimation(eState_Gameover);
+	m_img.UpdateAnimation();
+	m_img.CheckAnimationEnd();
 }
 
 Gameover::~Gameover()
