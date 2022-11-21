@@ -23,7 +23,7 @@ enum {
 	eTyppe_trapbullet,
 	eType_EnemyManager,
 	eType_hondana,
-
+	
 };
 
 
@@ -84,6 +84,8 @@ public:
 
 	static Base* FindObject(int type);
 	static std::list<Base*> FindObjects(int type);
-
+	void ResetPos(const CVector2D& pos) {
+		m_pos = m_pos_old = pos;
+	}
 };
 

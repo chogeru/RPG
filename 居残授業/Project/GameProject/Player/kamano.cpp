@@ -9,8 +9,8 @@ kamano::kamano(const CVector2D& p, bool flip):
 	//座標設定
 	m_pos = p;
 	//中心位置設定
-	m_img.SetCenter(0, 0);
-	
+	m_img.SetCenter(32, 32);
+	m_rect = CRect(-32, -32, 32, 32);
 
 	m_state = eState_Idle;
 	//着地フラグ
@@ -20,14 +20,15 @@ kamano::kamano(const CVector2D& p, bool flip):
 	//ダメージ番号
 	m_damage_no = -1;
 	//
-	m_hp = 0;
+	m_hp = 500;
+	m_hp = 1;
 	//スクロール設定
 	m_scroll.x = m_pos.x - 1280 / 2;
 
 }void kamano::StateIdle()
 {
 	//移動量
-	const float move_speed = 8;
+	const float move_speed = 20;
 	//移動フラグ
 	bool move_flag = false;
 	//ジャンプ力
@@ -152,6 +153,7 @@ void kamano::Update() {
 	m_vec.y += GRAVITY;
 	m_pos += m_vec;
 	*/
+	m_pos_old = m_pos;
 
 	//アニメーション更新
 	m_img.UpdateAnimation();
@@ -168,14 +170,44 @@ void kamano::Draw() {
 	m_img.SetPos(GetScreenPos(m_pos));
 	//描画
 	m_img.Draw();
+	DrawRect();
 }
 void kamano::Collision(Base* b)
 {
 	switch (b->m_type) {
-		//ゴール判定
 	case eType_Goal:
 		if (Base::CollisionRect(this, b)) {
+
+			b->SetKill();
+
+		
+		
+		}
+		break;
+	}
+	switch (b->m_type) {
+	case eType_Field:
+		if (Map* m = dynamic_cast<Map*>(b)) {
+			int t = m->CollisionMap(CVector2D(m_pos.x, m_pos_old.y));
+			if (t != 0)
+				m_pos.x = m_pos_old.x;
+			t = m->CollisionMap(CVector2D(m_pos_old.x, m_pos.y));
+			if (t != 0)
+				m_pos.y = m_pos_old.y;
+
+		}
+		break;
+
+	}
+
+
+
+	switch (b->m_type) {
+	
+	case eType_Enemy:
+		if (Base::CollisionRect(this, b)) {
 			SetKill();
+			Base::Add(new Gameover());
 		}
 		break;
 		//攻撃エフェクトとの判定

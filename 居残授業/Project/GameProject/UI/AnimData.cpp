@@ -466,3 +466,14 @@ TexAnimData Title_anim_data[] = {
 
 
 };
+static TexAnim _Gameover[] = {
+	{0,2},
+	{1,2},
+	{2,2},
+	{3,2},
+	{4,2},
+	{5,8},
+};
+TexAnimData  Gameover_anim_data[] = {
+    ANIMDATA(_Gameover),
+};

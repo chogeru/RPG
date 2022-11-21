@@ -8,14 +8,14 @@ Enemy::Enemy(const CVector2D& pos)
 		m_img.ChangeAnimation(0);
 		m_img.SetCenter(32, 32);
 		m_img.SetSize(64, 64);
-		m_rect = CRect(0, 0, 0, 0);
+		m_rect = CRect(-30,-30, 30, 30);
 		m_damage_no = -10000;
 		m_hp = 50;
 }
 
 void Enemy::Update()
 {
-	const float movespeed = 10;
+	const float movespeed = 15;
 	bool move_flag = false;
 
 	auto list = Base::FindObjects(eType_Player);
@@ -60,6 +60,7 @@ void Enemy::Draw()
 {
 	m_img.SetPos(GetScreenPos(m_pos));
 	m_img.Draw();
+	DrawRect();
 }
 
 void Enemy::Collision(Base* b)

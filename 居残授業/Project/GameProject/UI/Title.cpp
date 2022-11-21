@@ -10,7 +10,7 @@ m_title_text("C:\\Windows\\Fonts\\msgothic.ttc", 64)
 Title::~Title()
 {
 	//タイトル破棄時にゲームシーンへ移行
-	Base::Add(new Map());
+	//Base::Add(new Map());
 }
 
 void Title::Update()
