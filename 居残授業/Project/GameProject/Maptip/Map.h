@@ -12,7 +12,7 @@
 class Map : public Base, CFmfMap {
 private:
 
-	CImage m_map_tip[2];		//画像オブジェクト
+	CImage m_map_tip[40];		//画像オブジェクト
 	CImage m_backGround;
 public:
 	/// <summary>

@@ -4,13 +4,14 @@
 
 Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 	//レイヤー0
-	m_map_tip[0] = COPY_RESOURCE("Yuka", CImage);
+	m_map_tip[0] = COPY_RESOURCE("mmm", CImage);
 	//レイヤー1
-	m_map_tip[1] = COPY_RESOURCE("Kabe", CImage);
+	//m_map_tip[1] = COPY_RESOURCE("mmm", CImage);
+	
 	switch (nextArea) {
 	case 1:
 		//fmfからマップデータを読み込む
-		Open("Map/玄関.fmf");
+		Open("Map/1階メインホール.fmf");
 		//廊下　右へ
 		Base::Add(new AreaChange(2,					//次のマップの番号
 			CRect(m_fmfHeader.byChipWidth * 33,		//エリアチェンジの判定
