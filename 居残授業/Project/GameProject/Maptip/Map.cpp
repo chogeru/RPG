@@ -31,7 +31,7 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 		break;
 
 	case 2:
-		Open("Map/廊下 右.fmf");
+		Open("Map/2階メインホール.fmf");
 		//廊下　右上へ
 		Base::Add(new AreaChange(3,
 			CRect(m_fmfHeader.byChipWidth * 16,
@@ -51,7 +51,7 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 		break;
 
 	case 3:
-		Open("Map/廊下 右上.fmf");
+		Open("Map/2階メインホール.fmf");
 		//廊下　右へ
 		Base::Add(new AreaChange(2,
 			CRect(m_fmfHeader.byChipWidth * 9,
@@ -81,7 +81,7 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 		break;
 
 	case 4:
-		Open("Map/廊下 左.fmf");
+		Open("Map/3階メインホール.fmf");
 		//左上
 		Base::Add(new AreaChange(5,
 			CRect(m_fmfHeader.byChipWidth * 1,
@@ -102,7 +102,7 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 		break;
 
 	case 5:
-		Open("Map/廊下 左上.fmf");
+		Open("Map/4階メインホール.fmf");
 		//左へ
 		Base::Add(new AreaChange(4,
 			CRect(m_fmfHeader.byChipWidth * 9,
@@ -131,7 +131,7 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 		break;
 
 	case 6:
-		Open("Map/廊下 上.fmf");
+		Open("Map/5階メインホール.fmf");
 		//左上
 		Base::Add(new AreaChange(5,
 			CRect(m_fmfHeader.byChipWidth * 1,
@@ -152,7 +152,7 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 		break;
 
 	case 7:
-		Open("Map/2階 左.fmf");
+		Open("Map/6階メインホール.fmf");
 		//左上
 		Base::Add(new AreaChange(5,
 			CRect(m_fmfHeader.byChipWidth * 10,
