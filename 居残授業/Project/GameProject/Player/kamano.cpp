@@ -29,8 +29,8 @@ kamano::kamano(const CVector2D& p, bool flip):
 	//座標設定
 	m_pos_old = m_pos = CVector2D();
 	//中心位置設定
-	m_img.SetCenter(32, 32);
-    m_rect = CRect(-32, -32, 32, 32);
+	m_img.SetCenter(31, 31);
+    m_rect = CRect(-31, -31, 31, 31);
 	
 	m_state = eState_Idle;
 	//着地フラグ
@@ -105,14 +105,6 @@ kamano::kamano(const CVector2D& p, bool flip):
 }
 
 
-
-void kamano::StateDown()
-{
-	m_img.ChangeAnimation(eAnimDown, false);
-	if (m_img.CheckAnimationEnd()) {
-		m_kill = true;
-	}
-}
 void kamano::Update() {
 	switch (m_state) {
 		//通常状態
@@ -190,16 +182,17 @@ void kamano::Collision(Base* b)
 			}
 		}
 		break;
+	}
+}
 
-
-	case eType_Enemy:
+/*	case eType_Enemy:
 		if (Base::CollisionRect(this, b)) {
 			SetKill();
 			Base::Add(new Gameover());
 		}
 		break;
-
+		
 	}
 
-}
+}*/
 
