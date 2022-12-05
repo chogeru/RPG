@@ -46,6 +46,9 @@ void Init(void)
 	CInput::SetButton(0, CInput::eButton3, 'a');
 	CInput::SetButton(0, CInput::eButton4, 's');
 	CInput::SetButton(0, CInput::eButton6, 'x');
+	CInput::SetButton(0, CInput::eChangeK, 'K');
+	CInput::SetButton(0, CInput::eChangeH, 'H');
+	CInput::SetButton(0, CInput::eChangeI, 'I');
 	CInput::SetButton(0, CInput::eButton5, VK_SPACE);
 	CInput::SetButton(0, CInput::eButton10, VK_RETURN);
 	CInput::SetButton(0, CInput::eUp, VK_UP);
@@ -89,6 +92,7 @@ void Init(void)
 	ADD_RESOURCE("hayashi", CImage::CreateImage("Image/hayashi.png", kamano_anim_data, 64, 64));
 	ADD_RESOURCE("Gameover",CImage::CreateImage("Image/画伯集.png", Gameover_anim_data, 1920, 1080));
 	Base::Add(new Title());
+	Base::Add(new kamano(CVector2D(2,2),false));
 	Base::Add(new Map(1, CVector2D(16 * 20, 16 * 23)));
 
 

@@ -6,7 +6,7 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 	//レイヤー0
 	m_map_tip[0] = COPY_RESOURCE("mmm", CImage);
 	//レイヤー1
-	//m_map_tip[1] = COPY_RESOURCE("mmm", CImage);
+	m_map_tip[1] = COPY_RESOURCE("mmm", CImage);
 	
 	switch (nextArea) {
 	case 1:
@@ -14,10 +14,10 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 		Open("Map/1階メインホール.fmf");
 		//廊下　右へ
 		Base::Add(new AreaChange(2,					//次のマップの番号
-			CRect(m_fmfHeader.byChipWidth * 33,		//エリアチェンジの判定
-				m_fmfHeader.byChipHeight * 14,		//左上
-				m_fmfHeader.byChipWidth * 10,		//横サイズ
-				m_fmfHeader.byChipHeight * 13),		//縦サイズ
+			CRect(m_fmfHeader.byChipWidth * 49,		//横（数値が高いほど右に行く）
+				m_fmfHeader.byChipHeight * 9,		//高さ（数値が低いほど上に行く）
+				m_fmfHeader.byChipWidth * 4,		//横サイズ（当たり判定）
+				m_fmfHeader.byChipHeight * 2),		//縦サイズ（当たり判定）
 			CVector2D(m_fmfHeader.byChipWidth * 1,	//次のマップの最初のプレイヤーの場所
 				m_fmfHeader.byChipHeight * 20)));
 		//廊下　左へ

@@ -4,7 +4,7 @@
 #include "fmfmap.h"
 
 //透明チップ番号
-#define NULL_TIP 255
+#define NULL_TIP 121
 
 /// <summary>
 /// マップチップによるマップクラス
