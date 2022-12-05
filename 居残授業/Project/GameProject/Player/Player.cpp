@@ -66,16 +66,8 @@ Player::Player(const CVector2D& p, bool flip) :
 			m_attack_no++;
 		}
 
-	}//ジャンプ中なら
-	if (!m_is_ground) {
-		if (m_vec.y < 0)
-			//上昇アニメーション
-			m_img.ChangeAnimation(eAnimJumpUp, false);
-		else
-			//下降アニメーション
-			m_img.ChangeAnimation(eAnimJumpDown, false);
 	}
-	//移動中なら
+
 	else
 	{
 		if (move_flag) {

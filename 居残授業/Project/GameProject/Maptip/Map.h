@@ -4,7 +4,7 @@
 #include "fmfmap.h"
 
 //透明チップ番号
-#define NULL_TIP 255
+#define NULL_TIP 121
 
 /// <summary>
 /// マップチップによるマップクラス
@@ -12,7 +12,7 @@
 class Map : public Base, CFmfMap {
 private:
 
-	CImage m_map_tip[2];		//画像オブジェクト
+	CImage m_map_tip[40];		//画像オブジェクト
 	CImage m_backGround;
 public:
 	/// <summary>

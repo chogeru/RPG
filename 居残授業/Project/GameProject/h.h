@@ -38,3 +38,6 @@
 #include"Game/SaveLoad.h"
 #include"Game/Select.h"
 #include"Maptip/hondana.h"
+#include"Maptip/fmfmap.h"
+#include"Maptip/AreaChange.h"
+

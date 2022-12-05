@@ -27,8 +27,6 @@
     <ClCompile Include="Maptip\Map.cpp" />
     <ClCompile Include="Maptip\Wall.cpp" />
     <ClCompile Include="Maptip\Wallhed.cpp" />
-    <ClCompile Include="Player\hayashi.cpp" />
-    <ClCompile Include="Player\itihara.cpp" />
     <ClCompile Include="Player\kamano.cpp" />
     <ClCompile Include="Player\Player.cpp" />
     <ClCompile Include="UI\AnimData.cpp" />
@@ -58,8 +56,6 @@
     <ClInclude Include="Maptip\Map.h" />
     <ClInclude Include="Maptip\Wall.h" />
     <ClInclude Include="Maptip\Wallhed.h" />
-    <ClInclude Include="Player\hayashi.h" />
-    <ClInclude Include="Player\itihara.h" />
     <ClInclude Include="Player\kamano.h" />
     <ClInclude Include="Player\Player.h" />
     <ClInclude Include="UI\AnimData.h" />

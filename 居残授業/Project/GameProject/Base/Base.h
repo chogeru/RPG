@@ -23,7 +23,7 @@ enum {
 	eTyppe_trapbullet,
 	eType_EnemyManager,
 	eType_hondana,
-	
+	eType_AreaChange,
 };
 
 
@@ -62,6 +62,7 @@ public:
 	virtual void Update();
 	virtual void Draw();
 	virtual void Collision(Base* b);
+	void KillByType(int type);
 	//削除フラグON
 	void SetKill() { m_kill = true; }
 	//全てのオブジェクトの更新

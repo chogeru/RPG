@@ -23,6 +23,15 @@ void Base::Draw() {
 void Base::Collision(Base* b)
 {
 }
+void Base::KillByType(int type)
+{
+	//指定の種類を全て削除
+	std::list<Base*> ret;
+	for (auto& b : m_list) {
+		if (b->m_type == type)
+			b->SetKill();
+	}
+}
 void Base::UpdateAll()
 {
 	//全てのオブジェクトの更新

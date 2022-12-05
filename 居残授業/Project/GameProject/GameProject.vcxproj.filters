@@ -35,14 +35,8 @@
     <ClCompile Include="Player\kamano.cpp">
       <Filter>Player</Filter>
     </ClCompile>
-    <ClCompile Include="Player\hayashi.cpp">
-      <Filter>Player</Filter>
-    </ClCompile>
     <ClCompile Include="Maptip\Wall.cpp">
       <Filter>Maptip</Filter>
-    </ClCompile>
-    <ClCompile Include="Player\itihara.cpp">
-      <Filter>Player</Filter>
     </ClCompile>
     <ClCompile Include="UI\Gameover.cpp">
       <Filter>UI</Filter>
@@ -141,14 +135,8 @@
     <ClInclude Include="Player\kamano.h">
       <Filter>Player</Filter>
     </ClInclude>
-    <ClInclude Include="Player\hayashi.h">
-      <Filter>Player</Filter>
-    </ClInclude>
     <ClInclude Include="Maptip\Wall.h">
       <Filter>Maptip</Filter>
-    </ClInclude>
-    <ClInclude Include="Player\itihara.h">
-      <Filter>Player</Filter>
     </ClInclude>
     <ClInclude Include="UI\Gameover.h">
       <Filter>UI</Filter>

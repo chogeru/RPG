@@ -1,17 +1,37 @@
 #include"kamano.h"
 #include"../h.h"
+
 kamano::kamano(const CVector2D& p, bool flip):
-	Base(eType_Player) {
+	Base(eType_kamano) {
 	//画像複製
 	m_img = COPY_RESOURCE("kamano", CImage);
+	switch (Chenge) {
+
+	case eType_kamano:
+		if (HOLD(CInput::eChangeK)) {
+			m_img = COPY_RESOURCE("kamano", CImage);
+		}
+		break;
+
+	case eType_hayashi:
+			if (HOLD(CInput::eChangeH)) {
+				m_img = COPY_RESOURCE("hayashi", CImage);
+			}
+			break;
+	case eType_itihara:
+		if (HOLD(CInput::eChangeI)) {
+			m_img = COPY_RESOURCE("itihara", CImage);
+		}
+		break;
+	}
 	//再生アニメーション設定
 	m_img.ChangeAnimation(0);
 	//座標設定
-	m_pos = p;
+	m_pos_old = m_pos = CVector2D();
 	//中心位置設定
 	m_img.SetCenter(32, 32);
-	m_rect = CRect(-32, -32, 32, 32);
-
+    m_rect = CRect(-32, -32, 32, 32);
+	
 	m_state = eState_Idle;
 	//着地フラグ
 	m_is_ground = true;
@@ -24,6 +44,9 @@ kamano::kamano(const CVector2D& p, bool flip):
 	m_hp = 1;
 	//スクロール設定
 	m_scroll.x = m_pos.x - 1280 / 2;
+	m_enable_area_change = true;
+	m_hit_area_change = false;
+
 
 }void kamano::StateIdle()
 {
@@ -60,24 +83,7 @@ kamano::kamano(const CVector2D& p, bool flip):
 		m_img.ChangeAnimation(0);
 		move_flag = true;
 	}
-	//ジャンプ
-	/*if (m_is_ground && PUSH(CInput::eButton2)) {
-		m_vec.y = -jump_pow;
-		m_is_ground = false;
-	}
-
-	//攻撃
-	if (PUSH(CInput::eButton1)) {
-		//攻撃状態へ移行
-
-	//攻撃
-		if (PUSH(CInput::eButton1)) {
-			//攻撃状態へ移行
-			m_state = eState_Attack;
-			m_attack_no++;
-		}
-
-	}*/
+	
 	//動いているアニメーション
 	if (move_flag)
 	{
@@ -91,35 +97,15 @@ kamano::kamano(const CVector2D& p, bool flip):
 
 	m_scroll.x = m_pos.x - 1280 / 2;
 	m_scroll.y = m_pos.y - 600;
-}
-void kamano::StateAttack()
-{
-	//攻撃アニメーションへ変更
-	m_img.ChangeAnimation(eAnimAttack01, false);
-	//3番目のパターンなら
-	if (m_img.GetIndex() == 3) {
-		if (m_flip) {
-			Base::Add(new Slash(m_pos + CVector2D(-64, -64), m_flip, eType_Player_Attack, m_attack_no));
-		}
-		else {
-			Base::Add(new Slash(m_pos + CVector2D(64, -64), m_flip, eType_Player_Attack, m_attack_no));
-		}
-	}
-	//アニメーションが終了したら
-	if (m_img.CheckAnimationEnd()) {
-		//通常状態へ移行
-		m_state = eState_Idle;
-	}
+	//一度エリアチェンジ範囲から離れないと再度エリアチェンジしない
+	//連続エリアチェンジ防止
+	if (!m_enable_area_change && !m_hit_area_change)
+		m_enable_area_change = true;
+	m_hit_area_change = false;
 }
 
 
-void kamano::StateDamage()
-{
-	m_img.ChangeAnimation(eAnimDamage, false);
-	if (m_img.CheckAnimationEnd()) {
-		m_state = eState_Idle;
-	}
-}
+
 void kamano::StateDown()
 {
 	m_img.ChangeAnimation(eAnimDown, false);
@@ -132,18 +118,6 @@ void kamano::Update() {
 		//通常状態
 	case eState_Idle:
 		StateIdle();
-		break;
-		//攻撃状態
-	case eState_Attack:
-		StateAttack();
-		break;
-		//ダメージ状態
-	case eState_Damage:
-		StateDamage();
-		break;
-		//ダウン状態
-	case eState_Down:
-		StateDown();
 		break;
 	}
 	//落ちていたら落下中状態へ移行
@@ -174,78 +148,57 @@ void kamano::Draw() {
 }
 void kamano::Collision(Base* b)
 {
+
 	switch (b->m_type) {
-	case eType_Goal:
+
+	case eType_AreaChange:
 		if (Base::CollisionRect(this, b)) {
-
-			b->SetKill();
-
-		
-		
+			//エリアチェンジに触れている
+			m_hit_area_change = true;
+			//エリアチェンジ可能なら
+			if (m_enable_area_change) {
+				if (AreaChange* a = dynamic_cast<AreaChange*>(b)) {
+					//マップとエリアチェンジオブジェクトを削除
+					KillByType(eType_Field);
+					KillByType(eType_AreaChange);
+					//次のマップを生成
+					Base::Add(new Map(a->m_nextArea, a->m_nextplayerpos));
+					//エリアチェンジ一時不許可
+					m_enable_area_change = false;
+				}
+			}
 		}
+
 		break;
-	}
-	switch (b->m_type) {
 	case eType_Field:
+		//マップとの判定
 		if (Map* m = dynamic_cast<Map*>(b)) {
-			int t = m->CollisionMap(CVector2D(m_pos.x, m_pos_old.y));
-			if (t != 0)
-				m_pos.x = m_pos_old.x;
-			t = m->CollisionMap(CVector2D(m_pos_old.x, m_pos.y));
-			if (t != 0)
-				m_pos.y = m_pos_old.y;
-
+			CVector2D pos;
+			//マップチップの判定（横）
+			int t = m->CollisionMap(CVector2D(m_pos.x, m_pos_old.y), m_rect, &pos);
+			//壁ならば
+			if (t != NULL_TIP) {
+				//壁際まで戻る
+				m_pos.x = pos.x;
+			}
+			//マップチップの判定（縦）
+			t = m->CollisionMap(CVector2D(m_pos_old.x, m_pos.y), m_rect, &pos);
+			//壁ならば
+			if (t != NULL_TIP) {
+				//壁際まで戻る
+				m_pos.y = pos.y;
+			}
 		}
 		break;
 
-	}
 
-
-
-	switch (b->m_type) {
-	
 	case eType_Enemy:
 		if (Base::CollisionRect(this, b)) {
 			SetKill();
 			Base::Add(new Gameover());
 		}
 		break;
-		//攻撃エフェクトとの判定
-	case eType_Enemy_Attack:
-		//Slash型へキャスト、型変換できたら
-		if (Slash* s = dynamic_cast<Slash*>(b)) {
-			if (m_damage_no != s->GetAttackNo() && Base::CollisionRect(this, s)) {
-				//同じ攻撃の連続ダメージ防止
-				m_damage_no = s->GetAttackNo();
-				m_hp -= 50;
-				if (m_hp <= 0) {
-					m_state = eState_Down;
-				}
-				else {
-					m_state = eState_Damage;
 
-				}
-				Base::Add(new Effect("Effect_Blood",
-					m_pos + CVector2D(0, -64), m_flip));
-
-				//Base::Add(new Effect("Effect_Blood", m_pos + CVector2D(0, -64), m_flip));
-			}
-		}
-		break;
-		/*case eType_Field:
-			//Field型へキャスト、型変換できたら
-			if (Field* f = dynamic_cast<Field*>(b)) {
-				//地面より下にいったら
-				if (m_pos.y > f->GetGroundY()) {
-					//地面の高さに戻す
-					m_pos.y = f->GetGroundY();
-					//落下速度リセット
-					m_vec.y = 0;
-					//接地フラグON
-					m_is_ground = true;
-				}
-			}
-			break;*/
 	}
 
 }
