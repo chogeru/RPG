@@ -1,7 +1,7 @@
 #include "Save.h"
 
 
-SaveLoad::SaveData SaveLoad::s_save_data;
+SaveLoad::SaveData SaveLoad::s_save_data = { 1,0 ,CVector2D(2 * 32, 2 * 32) };
 
 void SaveLoad::Load(const char* file)
 {

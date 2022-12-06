@@ -7,7 +7,8 @@ public:
 	//セーブデータ構造体
 	struct SaveData {
 		int MapData;		//マップのデータ
-		int PlayerData;		//プレイヤーのデータ
+		int PlayerData;//プレイヤーのデータ
+		CVector2D PlayerPos; //プレイヤー座標
 	};
 	//セーブデータ
 	static SaveData s_save_data;

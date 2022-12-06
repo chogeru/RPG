@@ -1,13 +1,14 @@
 
 #include"Map.h"
 #include"AreaChange.h"
+#include"../UI/Save.h"
 
 Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 	//レイヤー0
 	m_map_tip[0] = COPY_RESOURCE("mmm", CImage);
 	//レイヤー1
 	m_map_tip[1] = COPY_RESOURCE("mmm", CImage);
-	
+	SaveLoad::s_save_data.MapData = nextArea;
 	switch (nextArea) {
 	case 1:
 		//fmfからマップデータを読み込む

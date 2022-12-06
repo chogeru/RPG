@@ -65,9 +65,6 @@
     <ClCompile Include="Enemy\Bullet.cpp">
       <Filter>Enemy</Filter>
     </ClCompile>
-    <ClCompile Include="UI\Select.cpp">
-      <Filter>UI</Filter>
-    </ClCompile>
     <ClCompile Include="Maptip\hondana.cpp">
       <Filter>Maptip</Filter>
     </ClCompile>
@@ -165,9 +162,6 @@
     </ClInclude>
     <ClInclude Include="Enemy\Bullet.h">
       <Filter>Enemy</Filter>
-    </ClInclude>
-    <ClInclude Include="UI\Select.h">
-      <Filter>UI</Filter>
     </ClInclude>
     <ClInclude Include="Maptip\hondana.h">
       <Filter>Maptip</Filter>

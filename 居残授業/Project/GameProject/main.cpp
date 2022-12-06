@@ -45,6 +45,8 @@ void Init(void)
 	CInput::SetButton(0, CInput::eButton3, 'A');
 	CInput::SetButton(0, CInput::eButton4, 'S');
 	CInput::SetButton(0, CInput::eButton6, 'X');
+	CInput::SetButton(0, CInput::eButton7, '1');
+	CInput::SetButton(0, CInput::eButton8, '2');
 	CInput::SetButton(0, CInput::eButton5, VK_SPACE);
 	CInput::SetButton(0, CInput::eButton10, VK_RETURN);
 	CInput::SetButton(0, CInput::eUp, VK_UP);
