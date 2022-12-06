@@ -2,7 +2,8 @@
 #include"../h.h"
 Game::Game() :Base(eType_Scene)
 {
-	
+	Base::Add(new kamano(CVector2D(2 * 32, 2 * 32), false));
+	Base::Add(new Map(1, CVector2D(16 * 20, 16 * 23)));
 }
 
 Game::~Game()

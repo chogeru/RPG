@@ -4,33 +4,23 @@
 kamano::kamano(const CVector2D& p, bool flip):
 	Base(eType_kamano) {
 	//画像複製
-	m_img = COPY_RESOURCE("kamano", CImage);
-	switch (Chenge) {
-
-	case eType_kamano:
-		if (HOLD(CInput::eChangeK)) {
-			m_img = COPY_RESOURCE("kamano", CImage);
-		}
-		break;
-
-	case eType_hayashi:
-			if (HOLD(CInput::eChangeH)) {
-				m_img = COPY_RESOURCE("hayashi", CImage);
-			}
-			break;
-	case eType_itihara:
-		if (HOLD(CInput::eChangeI)) {
-			m_img = COPY_RESOURCE("itihara", CImage);
-		}
-		break;
-	}
+	Chara1 = 0;
+	m_img[0] = COPY_RESOURCE("kamano", CImage);
+	
 	//再生アニメーション設定
-	m_img.ChangeAnimation(0);
+	m_img[0].ChangeAnimation(0);
+	m_img[0].SetCenter(31, 31);
+	m_img[1] = COPY_RESOURCE("hayashi", CImage);
+	//再生アニメーション設定
+	m_img[1].ChangeAnimation(0);
+	m_img[1].SetCenter(31, 31);
+	m_img[2] = COPY_RESOURCE("itihara", CImage);
+	//再生アニメーション設定
+	m_img[2].ChangeAnimation(0);
+	m_img[2].SetCenter(31, 31);
 	//座標設定
-	m_pos_old = m_pos = CVector2D();
-	//中心位置設定
-	m_img.SetCenter(31, 31);
-    m_rect = CRect(-31, -31, 31, 31);
+	m_pos_old = m_pos =p;
+    m_rect = CRect(-25, -25, 25, 25);
 	
 	m_state = eState_Idle;
 	//着地フラグ
@@ -61,38 +51,38 @@ kamano::kamano(const CVector2D& p, bool flip):
 	if (HOLD(CInput::eLeft)) {
 		//移動量を設定
 		m_pos.x += -move_speed;
-		m_img.ChangeAnimation(1);
+		m_img[Chara1].ChangeAnimation(1);
 		move_flag = true;
 	}
 	if (HOLD(CInput::eUp)) {
 		//移動量を設定
 		m_pos.y += -move_speed;
-		m_img.ChangeAnimation(2);
+		m_img[Chara1].ChangeAnimation(2);
 		move_flag = true;
 	}
 	if (HOLD(CInput::eDown)) {
 		//移動量を設定
 		m_pos.y -= -move_speed;
-		m_img.ChangeAnimation(3);
+		m_img[Chara1].ChangeAnimation(3);
 		move_flag = true;
 	}
 	//右移動
 	if (HOLD(CInput::eRight)) {
 		//移動量を設定
 		m_pos.x += move_speed;
-		m_img.ChangeAnimation(0);
+		m_img[Chara1].ChangeAnimation(0);
 		move_flag = true;
 	}
 	
 	//動いているアニメーション
 	if (move_flag)
 	{
-		m_img.m_animSpeed = 1;
+		m_img[Chara1].m_animSpeed = 1;
 	}
 	//止まっているアニメーション
 	else
 	{
-		m_img.m_animSpeed = 0;
+		m_img[Chara1].m_animSpeed = 0;
 	}
 
 	m_scroll.x = m_pos.x - 1280 / 2;
@@ -106,6 +96,18 @@ kamano::kamano(const CVector2D& p, bool flip):
 
 
 void kamano::Update() {
+	m_pos_old = m_pos;
+
+		if (HOLD(CInput::eButton2)) {
+			Chara1 = 0;
+		}
+
+		if (HOLD(CInput::eButton3)) {
+			Chara1 = 1;
+		}
+		if (HOLD(CInput::eButton4)) {
+			Chara1 = 2;
+		}
 	switch (m_state) {
 		//通常状態
 	case eState_Idle:
@@ -119,10 +121,9 @@ void kamano::Update() {
 	m_vec.y += GRAVITY;
 	m_pos += m_vec;
 	*/
-	m_pos_old = m_pos;
 
 	//アニメーション更新
-	m_img.UpdateAnimation();
+	m_img[Chara1].UpdateAnimation();
 
 	//スクロール設定
 	m_scroll.x = m_pos.x - 1280 / 2;
@@ -132,10 +133,10 @@ void kamano::Update() {
 void kamano::Draw() {
 	//位置設定
 	// 
-	m_img.SetSize(64, 64);
-	m_img.SetPos(GetScreenPos(m_pos));
+	m_img[Chara1].SetSize(64, 64);
+	m_img[Chara1].SetPos(GetScreenPos(m_pos));
 	//描画
-	m_img.Draw();
+	m_img[Chara1].Draw();
 	DrawRect();
 }
 void kamano::Collision(Base* b)
