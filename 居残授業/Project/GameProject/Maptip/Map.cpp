@@ -32,7 +32,7 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 		break;
 
 	case 2:
-		Open("Map/2階メインホール.fmf");
+		Open("Map/小部屋メインベース.fmf");
 		//廊下　右上へ
 		Base::Add(new AreaChange(3,
 			CRect(m_fmfHeader.byChipWidth * 16,
