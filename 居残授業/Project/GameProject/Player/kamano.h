@@ -8,8 +8,8 @@ private:
 	};
 	//ó‘Ô•Ï”
 	int m_state;
-	int Chenge;
-	CImage m_img;
+	CImage m_img[3];
+	int Chara1;
 	bool	m_flip;
 	//’…’nƒtƒ‰ƒO
 	bool	m_is_ground;

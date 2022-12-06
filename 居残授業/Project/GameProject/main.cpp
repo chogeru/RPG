@@ -1,7 +1,7 @@
 ﻿//ゲーム係機能のインクルード
 #include <GLLibrary.h>
-#define SCREEN_WIDTH 1280
-#define SCREEN_HEIGHT 720
+#define SCREEN_WIDTH 1920
+#define SCREEN_HEIGHT 1080
 //ファイルの読み込み
 #include"Base/Base.h"
 #include"h.h"
@@ -29,9 +29,8 @@ void MainLoop(void) {
 	Base::UpdateAll();
 	Base::CollisionAll();
 	Base::DrawAll();
-	FONT_T()->Draw(0, 32, 1, 1, 1, "第４階層                ||");
-	FONT_T()->Draw(0, 64, 1, 1, 1, "プレイヤー：鎌野：HP3   ||");
-	FONT_T()->Draw(0, 96, 1, 1, 1, "==========================");
+	//FONT_T()->Draw(0, 32, 1, 1, 1, "no data");
+
 }
 void Init(void)
 {
@@ -42,13 +41,10 @@ void Init(void)
 	//ボタンの設定
 	CInput::Init();
 	CInput::SetButton(0, CInput::eButton1, 'Z');
-	CInput::SetButton(0, CInput::eButton2, 'w');
-	CInput::SetButton(0, CInput::eButton3, 'a');
-	CInput::SetButton(0, CInput::eButton4, 's');
-	CInput::SetButton(0, CInput::eButton6, 'x');
-	CInput::SetButton(0, CInput::eChangeK, 'K');
-	CInput::SetButton(0, CInput::eChangeH, 'H');
-	CInput::SetButton(0, CInput::eChangeI, 'I');
+	CInput::SetButton(0, CInput::eButton2, 'W');
+	CInput::SetButton(0, CInput::eButton3, 'A');
+	CInput::SetButton(0, CInput::eButton4, 'S');
+	CInput::SetButton(0, CInput::eButton6, 'X');
 	CInput::SetButton(0, CInput::eButton5, VK_SPACE);
 	CInput::SetButton(0, CInput::eButton10, VK_RETURN);
 	CInput::SetButton(0, CInput::eUp, VK_UP);
@@ -92,16 +88,14 @@ void Init(void)
 	ADD_RESOURCE("hayashi", CImage::CreateImage("Image/hayashi.png", kamano_anim_data, 64, 64));
 	ADD_RESOURCE("Gameover",CImage::CreateImage("Image/画伯集.png", Gameover_anim_data, 1920, 1080));
 	Base::Add(new Title());
-	Base::Add(new kamano(CVector2D(2,2),false));
-	Base::Add(new Map(1, CVector2D(16 * 20, 16 * 23)));
+	
 
 
 	//フォント作成
 	CFont* font = new CFont("Fonts/HuiFont29.ttf", 32);
 	//会話テキスト読み込み
-	Base::Add(new Text("talk.txt", font));
-	//Base::Add(new Select());
-	Base::Add(new EnemyManager());
+	/**ase::Add(new Text("talk.txt", font));
+	Base::Add(new EnemyManager());*/
 	SOUND("BGM_Game")->Load("Sound/BGM/BGM_Game.wav");
 	SOUND("BGM_Game")->Play(true);
 

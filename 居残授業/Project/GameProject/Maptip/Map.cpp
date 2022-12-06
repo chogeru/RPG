@@ -15,17 +15,17 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 		//廊下　右へ
 		Base::Add(new AreaChange(2,					//次のマップの番号
 			CRect(m_fmfHeader.byChipWidth * 49,		//横（数値が高いほど右に行く）
-				m_fmfHeader.byChipHeight * 9,		//高さ（数値が低いほど上に行く）
+				m_fmfHeader.byChipHeight * 7,		//高さ（数値が低いほど上に行く）
 				m_fmfHeader.byChipWidth * 4,		//横サイズ（当たり判定）
-				m_fmfHeader.byChipHeight * 2),		//縦サイズ（当たり判定）
+				m_fmfHeader.byChipHeight * 6),		//縦サイズ（当たり判定）
 			CVector2D(m_fmfHeader.byChipWidth * 1,	//次のマップの最初のプレイヤーの場所
 				m_fmfHeader.byChipHeight * 20)));
 		//廊下　左へ
-		Base::Add(new AreaChange(4,
-			CRect(m_fmfHeader.byChipWidth * 1,
-				m_fmfHeader.byChipHeight * 14,
-				m_fmfHeader.byChipWidth * 1,
-				m_fmfHeader.byChipHeight * 13),
+		Base::Add(new AreaChange(2,
+			CRect(m_fmfHeader.byChipWidth * 45,
+				m_fmfHeader.byChipHeight * 41,
+				m_fmfHeader.byChipWidth * 4,
+				m_fmfHeader.byChipHeight * 8),
 			CVector2D(m_fmfHeader.byChipWidth * 31,
 				m_fmfHeader.byChipHeight * 20)));
 		break;
