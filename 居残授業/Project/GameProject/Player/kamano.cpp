@@ -10,14 +10,17 @@ kamano::kamano(const CVector2D& p, bool flip):
 	//再生アニメーション設定
 	m_img[0].ChangeAnimation(0);
 	m_img[0].SetCenter(31, 31);
+	
 	m_img[1] = COPY_RESOURCE("hayashi", CImage);
 	//再生アニメーション設定
 	m_img[1].ChangeAnimation(0);
 	m_img[1].SetCenter(31, 31);
+    
 	m_img[2] = COPY_RESOURCE("itihara", CImage);
 	//再生アニメーション設定
 	m_img[2].ChangeAnimation(0);
 	m_img[2].SetCenter(31, 31);
+	
 	//座標設定
 	m_pos_old = m_pos =p;
     m_rect = CRect(-25, -25, 25, 25);
@@ -40,13 +43,14 @@ kamano::kamano(const CVector2D& p, bool flip):
 
 }void kamano::StateIdle()
 {
-	//移動量
-	const float move_speed = 15;
+	//移動量/ 
+	const float move_speed = 10;
 	//移動フラグ
+
 	bool move_flag = false;
 	//ジャンプ力
-	const float jump_pow = 12;
-
+	
+	
 	//左移動
 	if (HOLD(CInput::eLeft)) {
 		//移動量を設定
@@ -100,7 +104,7 @@ kamano::kamano(const CVector2D& p, bool flip):
 	{
 		m_img[Chara1].m_animSpeed = 0;
 	}
-
+	
 	m_scroll.x = m_pos.x - 1280 / 2;
 	m_scroll.y = m_pos.y - 600;
 	//一度エリアチェンジ範囲から離れないと再度エリアチェンジしない
