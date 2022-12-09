@@ -41,7 +41,7 @@ public:
 	void Release();
 
 	static CFont* GetInstance(std::string name);
-	static void CreateInstance(std::string name, const char* font = "‚l‚rƒSƒVƒbƒN", int size = 24);
+	static void CreateInstance(std::string name, const char* font = "‚l‚rƒSƒVƒbƒN", int size = 2400);
 };
 
 #define FONT_T()	CFont::GetInstance("default")

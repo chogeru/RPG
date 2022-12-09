@@ -14,6 +14,7 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 		//fmfからマップデータを読み込む
 		Open("Map/1階メインホール.fmf");
 		//廊下↑
+
 		Base::Add(new AreaChange(2,					//次のマップの番号
 			CRect(m_fmfHeader.byChipWidth * 49,		//横（数値が高いほど右に行く）
 				m_fmfHeader.byChipHeight * 7,		//高さ（数値が低いほど上に行く）
@@ -154,6 +155,7 @@ Map::~Map() {
 	//fmfを閉じる
 	Close();
 }
+
 
 void Map::Draw() {
 	if (m_kill) return;

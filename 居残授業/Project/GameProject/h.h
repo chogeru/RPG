@@ -29,3 +29,6 @@
 #include"Maptip/hondana.h"
 #include"Maptip/fmfmap.h"
 #include"Maptip/AreaChange.h"
+#include"Enemy/Bullet.h"
+#include"UI/Canvas.h"
+#include"UI/Gauge.h"

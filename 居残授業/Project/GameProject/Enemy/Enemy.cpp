@@ -139,6 +139,7 @@ void Enemy::Collision(Base* b)
 		break;
 	}
 	switch (b->m_type) {
+	
 	case eType_kamano:
 		if (m_type == eType_Enemy && Base::CollisionCircle(this, b)) {
 			SetKill();

@@ -24,6 +24,8 @@ enum {
 	eType_EnemyManager,
 	eType_hondana,
 	eType_AreaChange,
+	eType_Canvas,
+	eType_Gauge,
 };
 
 

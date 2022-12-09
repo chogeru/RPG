@@ -23,7 +23,6 @@ public:
 	Map(int nextArea, const CVector2D& nextplayerpos);
 	~Map();
 	void Draw();
-
 	/// 指定した座標のチップ番号を取得
 	/// </summary>
 	/// <param name="pos">座標</param>

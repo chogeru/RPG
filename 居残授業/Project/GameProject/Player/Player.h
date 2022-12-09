@@ -1,6 +1,6 @@
 #pragma once
 #include "../Base/Base.h"
-
+class Gauge;
 class Player : public Base {
 private:
 	//ó‘Ô
@@ -12,7 +12,7 @@ private:
 	};
 	//ó‘Ô•Ï”
 	int m_state;
-
+	Gauge* m_gauge;
 	CImage m_img;
 	bool	m_flip;
 	//’…’nƒtƒ‰ƒO

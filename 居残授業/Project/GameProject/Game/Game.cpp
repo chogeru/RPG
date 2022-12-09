@@ -22,7 +22,7 @@ Game::~Game()
 		//全てのオブジェクトを破棄
 		Base::KillAll();
 		//タイトルシーンへ
-		Base::Add(new Title());
+		Base::Add(new Gameover());
 	}
 		
 
@@ -47,8 +47,6 @@ void Game::Update()
 		SetKill();
 		m_is_load = true;
 	}
-
-
 	
 
 }

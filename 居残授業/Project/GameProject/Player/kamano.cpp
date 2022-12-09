@@ -4,6 +4,7 @@
 kamano::kamano(const CVector2D& p, bool flip):
 	Base(eType_kamano) {
 	//画像複製
+
 	Chara1 = 0;
 	m_img[0] = COPY_RESOURCE("kamano", CImage);
 	
@@ -28,6 +29,7 @@ kamano::kamano(const CVector2D& p, bool flip):
 	m_state = eState_Idle;
 	//着地フラグ
 	m_is_ground = true;
+	Base::Add(m_gauge = new Gauge(0));
 	//攻撃番号
 	m_attack_no = rand();
 	//ダメージ番号
@@ -35,6 +37,7 @@ kamano::kamano(const CVector2D& p, bool flip):
 	//
 	m_hp = 500;
 	m_hp = 1;
+	m_rad=1;
 	//スクロール設定
 	m_scroll.x = m_pos.x - 1280 / 2;
 	m_enable_area_change = true;
@@ -49,7 +52,8 @@ kamano::kamano(const CVector2D& p, bool flip):
 
 	bool move_flag = false;
 	//ジャンプ力
-	
+	if (m_gauge)
+		m_gauge->SetKill();
 	
 	//左移動
 	if (HOLD(CInput::eLeft)) {
@@ -93,7 +97,19 @@ kamano::kamano(const CVector2D& p, bool flip):
 			move_flag = true;
 		}
 	}
-	
+	//使わない
+	/*Base* b = Base::FindObject(eType_kamano);
+	m_cnt++;
+	if (b) {
+		//ターゲットへのベクトル
+		CVector2D vec = b->m_pos - m_pos;
+		m_ang = atan2(vec.x, vec.y);
+	if (PUSH(CInput::eMouseL)) {
+		Base::Add(new Bullet(eType_Player_Bullet, m_pos, m_ang, 4));
+		m_cnt = 0;
+	}
+	}*/
+
 	//動いているアニメーション
 	if (move_flag)
 	{
@@ -204,6 +220,7 @@ void kamano::Collision(Base* b)
 		}
 		break;
 	}
+
 }
 
 /*	case eType_Enemy:

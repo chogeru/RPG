@@ -77,6 +77,12 @@
     <ClCompile Include="Maptip\Map.cpp">
       <Filter>Maptip</Filter>
     </ClCompile>
+    <ClCompile Include="UI\Canvas.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\Gauge.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Base">
@@ -174,6 +180,12 @@
     </ClInclude>
     <ClInclude Include="Maptip\Map.h">
       <Filter>Maptip</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Canvas.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Gauge.h">
+      <Filter>UI</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

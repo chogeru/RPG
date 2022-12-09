@@ -18,6 +18,7 @@ Player::Player(const CVector2D& p, bool flip) :
 	m_is_ground=true;
 	//UŒ‚”Ô†
 	m_attack_no = rand();
+	Base::Add(m_gauge = new Gauge(0));
 	//ƒ_ƒ[ƒW”Ô†
 	m_damage_no = -1;
 	//

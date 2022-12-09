@@ -29,7 +29,7 @@ void MainLoop(void) {
 	Base::UpdateAll();
 	Base::CollisionAll();
 	Base::DrawAll();
-	//FONT_T()->Draw(0, 32, 1, 1, 1, "no data");
+	FONT_T()->Draw(306, 62, 0, 1, 0, "Z:決定　Shiftキー:ダッシュ　←→:移動　X:ジャンプ　");
 
 }
 void Init(void)
@@ -75,6 +75,7 @@ void Init(void)
 	////
 	//タイトル
 	ADD_RESOURCE("mmm", CImage::CreateImage("Image/mmm.bmp"));
+	ADD_RESOURCE("isu", CImage::CreateImage("Image/isu.png"));
 	ADD_RESOURCE("Bullet", CImage::CreateImage("Image/Bullet.png"));
 	ADD_RESOURCE("Enemy", CImage::CreateImage("Image/Enemy.png", Enemy_anim_data, 64, 64));
 	ADD_RESOURCE("Title", CImage::CreateImage("Image/Title.png"));
@@ -91,7 +92,7 @@ void Init(void)
 	ADD_RESOURCE("hayashi", CImage::CreateImage("Image/hayashi.png", kamano_anim_data, 64, 64));
 	ADD_RESOURCE("Gameover",CImage::CreateImage("Image/画伯集.png", Gameover_anim_data, 1920, 1080));
 	Base::Add(new Title());
-	
+	Base::Add(new Canvas(CVector2D(SCREEN_WIDTH, SCREEN_HEIGHT)));
 
 
 	//フォント作成
