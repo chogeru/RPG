@@ -17,7 +17,7 @@ Gameover::~Gameover()
 	//全てのオブジェクトを破棄
 	Base::KillAll();
 	//ゲームシーンへ
-	Base::Add(new Game());
+	Base::Add(new Title());
 
 }
 

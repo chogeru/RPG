@@ -102,7 +102,7 @@ void Init(void)
 	Base::Add(new EnemyManager());
 	SOUND("BGM_Game")->Load("Sound/BGM/BGM_Game.wav");
 	SOUND("BGM_Game")->Play(true);
-
+	//SOUND("BGM_GameOver")->Load("")
 }
 
 
