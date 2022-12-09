@@ -27,7 +27,6 @@ private:
 	//CRect	m_rect;
 	//Šeó‘Ô‚Å‚Ì‹““®
 	void StateIdle();
-	void StateDown();
 
 public:
 	kamano(const CVector2D& p, bool flip);

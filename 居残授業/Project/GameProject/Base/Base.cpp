@@ -8,6 +8,11 @@ CVector2D Base::GetScreenPos(const CVector2D& pos)
 	return pos - m_scroll;
 	return pos + m_scroll;
 }
+CVector2D Base::GetScreenPos(const CVector2D& p, bool flip)
+{
+	return p - m_scroll;
+	return p + m_scroll;
+}
 Base::Base(int type) :m_type(type),m_kill(false), m_vec(0,0),m_pos(0,0), m_rad(0) {
 
 }

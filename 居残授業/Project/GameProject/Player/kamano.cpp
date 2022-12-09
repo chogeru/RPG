@@ -41,7 +41,7 @@ kamano::kamano(const CVector2D& p, bool flip):
 }void kamano::StateIdle()
 {
 	//移動量
-	const float move_speed = 20;
+	const float move_speed = 15;
 	//移動フラグ
 	bool move_flag = false;
 	//ジャンプ力
@@ -53,18 +53,30 @@ kamano::kamano(const CVector2D& p, bool flip):
 		m_pos.x += -move_speed;
 		m_img[Chara1].ChangeAnimation(1);
 		move_flag = true;
+		if (HOLD(CInput::eButton9)) {
+			m_pos.x += -move_speed * 0.8f;
+			move_flag = true;
+		}
 	}
 	if (HOLD(CInput::eUp)) {
 		//移動量を設定
 		m_pos.y += -move_speed;
 		m_img[Chara1].ChangeAnimation(2);
 		move_flag = true;
+		if (HOLD(CInput::eButton9)) {
+			m_pos.y += -move_speed * 0.8f;
+			move_flag = true;
+		}
 	}
 	if (HOLD(CInput::eDown)) {
 		//移動量を設定
 		m_pos.y -= -move_speed;
 		m_img[Chara1].ChangeAnimation(3);
 		move_flag = true;
+		if (HOLD(CInput::eButton9)) {
+			m_pos.y -= -move_speed * 0.8f;
+			move_flag = true;
+		}
 	}
 	//右移動
 	if (HOLD(CInput::eRight)) {
@@ -72,6 +84,10 @@ kamano::kamano(const CVector2D& p, bool flip):
 		m_pos.x += move_speed;
 		m_img[Chara1].ChangeAnimation(0);
 		move_flag = true;
+		if (HOLD(CInput::eButton9)) {
+			m_pos.x += move_speed * 0.8f;
+			move_flag = true;
+		}
 	}
 	
 	//動いているアニメーション

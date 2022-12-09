@@ -22,7 +22,7 @@ EnemyManager::EnemyManager():Base(eType_EnemyManager)
 
 void EnemyManager::Update()
 {
-	//全ての敵が出ていない
+	/*//全ての敵が出ていない
 	if (m_idx < mp_data->size) {
 		//時間経過
 		m_cnt++;
@@ -36,7 +36,8 @@ void EnemyManager::Update()
 			m_idx++;
 			m_cnt = 0;
 		}
-	}
+	}*/
+	
 }
 bool EnemyManager::isEnd() {
 	//全ての敵が出現済みならtrueを返す

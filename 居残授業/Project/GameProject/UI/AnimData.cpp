@@ -453,7 +453,49 @@ TexAnimData kamano_anim_data[] = {
 
 
 };
+static TexAnim(EnemyLeft)[] = {
+	{ 1,8 },
+	{ 5,8 },
+	{ 9,8 },
 
+};
+static TexAnim(EnemyRight)[] = {
+
+	{ 2,8 },
+	{ 6,8 },
+	{ 10,8 },
+
+};
+static TexAnim EnemyUp[] = {
+	{3,8},
+	{7,8},
+	{11,8},
+};
+static TexAnim EnemyDown[] = {
+
+
+
+		{0,8},
+		{4,8},
+		{8,8},
+
+
+};
+TexAnimData Enemy_anim_data[] = {
+	
+
+	ANIMDATA(EnemyLeft),
+	ANIMDATA(EnemyRight),
+	ANIMDATA(EnemyUp),
+	ANIMDATA(EnemyDown),
+	//ANIMDATA(kamanoStep),
+
+
+
+
+
+
+};
 static TexAnim Title[] = {
 	{3,8},
 };

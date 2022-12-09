@@ -47,6 +47,7 @@ void Init(void)
 	CInput::SetButton(0, CInput::eButton6, 'X');
 	CInput::SetButton(0, CInput::eButton7, '1');
 	CInput::SetButton(0, CInput::eButton8, '2');
+	CInput::SetButton(0, CInput::eButton9, VK_SHIFT);
 	CInput::SetButton(0, CInput::eButton5, VK_SPACE);
 	CInput::SetButton(0, CInput::eButton10, VK_RETURN);
 	CInput::SetButton(0, CInput::eUp, VK_UP);
@@ -75,7 +76,7 @@ void Init(void)
 	//タイトル
 	ADD_RESOURCE("mmm", CImage::CreateImage("Image/mmm.bmp"));
 	ADD_RESOURCE("Bullet", CImage::CreateImage("Image/Bullet.png"));
-	ADD_RESOURCE("Enemy", CImage::CreateImage("Image/Enemy.png"));
+	ADD_RESOURCE("Enemy", CImage::CreateImage("Image/Enemy.png", Enemy_anim_data, 64, 64));
 	ADD_RESOURCE("Title", CImage::CreateImage("Image/Title.png"));
 	ADD_RESOURCE("kaiga", CImage::CreateImage("Image/kaiga.png"));
 	ADD_RESOURCE("Dorup", CImage::CreateImage("Image/Dorup.png"));
@@ -96,8 +97,8 @@ void Init(void)
 	//フォント作成
 	CFont* font = new CFont("Fonts/HuiFont29.ttf", 32);
 	//会話テキスト読み込み
-	/**ase::Add(new Text("talk.txt", font));
-	Base::Add(new EnemyManager());*/
+	//Base::Add(new Text("talk.txt", font));
+	Base::Add(new EnemyManager());
 	SOUND("BGM_Game")->Load("Sound/BGM/BGM_Game.wav");
 	SOUND("BGM_Game")->Play(true);
 
