@@ -94,7 +94,7 @@ void Init(void)
 	Base::Add(new Title());
 	Base::Add(new Canvas(CVector2D(SCREEN_WIDTH, SCREEN_HEIGHT)));
 
-
+	
 	//フォント作成
 	CFont* font = new CFont("Fonts/HuiFont29.ttf", 32);
 	//会話テキスト読み込み
