@@ -12,7 +12,7 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 	switch (nextArea) {
 	case 1:
 		//fmfからマップデータを読み込む
-		Open("Map/1階メインホール.fmf");
+		Open("Map/1階メインホール裏.fmf");
 		//廊下↑
 
 		Base::Add(new AreaChange(2,					//次のマップの番号
