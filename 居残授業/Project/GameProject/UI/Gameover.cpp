@@ -5,7 +5,8 @@
 Gameover::Gameover() :Base(eType_Scene),
 m_Gameover_text("C:\\Windows\\Fonts\\msgothic.ttc", 64)
 {
-	
+	SOUND("BGM_Game")->Stop();
+	SOUND("BGM_GameOver")->Play(true);
 	m_img = COPY_RESOURCE("Gameover", CImage);
 	m_img.ChangeAnimation(eState_Gameover);
 	m_img.UpdateAnimation();
@@ -14,6 +15,7 @@ m_Gameover_text("C:\\Windows\\Fonts\\msgothic.ttc", 64)
 
 Gameover::~Gameover()
 {
+	
 	//全てのオブジェクトを破棄
 	Base::KillAll();
 	//ゲームシーンへ
@@ -29,6 +31,7 @@ void Gameover::Update()
 	//ボタン１でシーンが終わる
 	if (PUSH(CInput::eButton1)) {
 		SetKill();
+		SOUND("BGM_GameOver")->Stop();	
 	}
 	//アニメーション終了チェック
 	if (m_img.CheckAnimationEnd());

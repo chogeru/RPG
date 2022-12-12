@@ -1,8 +1,11 @@
 #include "Game.h"
 #include"../h.h"
 #include"../UI/Save.h"
+#include"../UI/Gameover.h"
 Game::Game() :Base(eType_Scene)
 {
+	SOUND("BGM_Title")->Stop();
+	SOUND("BGM_Game")->Play(true);
 	Base::Add(new kamano(SaveLoad::s_save_data.PlayerPos, false));
 	Base::Add(new Map(SaveLoad::s_save_data.MapData, CVector2D(16 * 20, 16 * 23)));
 	m_is_load = false;

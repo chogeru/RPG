@@ -101,8 +101,10 @@ void Init(void)
 	//Base::Add(new Text("talk.txt", font));
 	Base::Add(new EnemyManager());
 	SOUND("BGM_Game")->Load("Sound/BGM/BGM_Game.wav");
-	SOUND("BGM_Game")->Play(true);
-	//SOUND("BGM_GameOver")->Load("")
+	
+	SOUND("BGM_GameOver")->Load("Sound/BGM/go.wav");
+	SOUND("BGM_Title")->Load("Sound/BGM/Title true.wav");
+	SOUND("BGM_Title")->Play(true);
 }
 
 
