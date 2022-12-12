@@ -22,8 +22,8 @@ EnemyManager::EnemyManager():Base(eType_EnemyManager)
 
 void EnemyManager::Update()
 {
-	/*//全ての敵が出ていない
-	if (m_idx < mp_data->size) {
+	//全ての敵が出ていない
+	/*if (m_idx < mp_data->size) {
 		//時間経過
 		m_cnt++;
 
