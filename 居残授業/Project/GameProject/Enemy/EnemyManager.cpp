@@ -23,7 +23,7 @@ EnemyManager::EnemyManager():Base(eType_EnemyManager)
 void EnemyManager::Update()
 {
 	//‘S‚Ä‚Ì“G‚ªo‚Ä‚¢‚È‚¢
-	/*if (m_idx < mp_data->size) {
+	if (m_idx < mp_data->size) {
 		//ŠÔŒo‰ß
 		m_cnt++;
 
@@ -36,7 +36,7 @@ void EnemyManager::Update()
 			m_idx++;
 			m_cnt = 0;
 		}
-	}*/
+	}
 	
 }
 bool EnemyManager::isEnd() {

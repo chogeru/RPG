@@ -1,7 +1,7 @@
 #include "Enemy.h"
 #include"../h.h"
 
-Enemy::Enemy(const CVector2D& p, bool flip)
+Enemy::Enemy(const CVector2D& pos)
 	:Base(eType_Enemy)
 {
 

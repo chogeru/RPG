@@ -22,7 +22,7 @@ class Enemy : public Base {
 	//エリアチェンジオブジェクトに触れているフラグ
 	bool m_hit_area_change;
 public:
-	Enemy(const CVector2D& p, bool flip);
+	Enemy(const CVector2D& pos);
 	void Update();
 	void Draw();
 	void Collision(Base* b);
