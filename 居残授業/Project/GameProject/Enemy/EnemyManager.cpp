@@ -1,6 +1,6 @@
 #include "EnemyManager.h"
 #include "Enemy.h"
-
+#include"../h.h"
 //敵の出現データまとめ
 EnemyManager::EnemyData _stage1[] = {
 	{0,CVector2D(2000,10000),120},
@@ -43,3 +43,5 @@ bool EnemyManager::isEnd() {
 	//全ての敵が出現済みならtrueを返す
 	return (m_idx >= mp_data->size) ? true : false;
 }
+
+

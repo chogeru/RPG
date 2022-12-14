@@ -32,3 +32,5 @@
 #include"Enemy/Bullet.h"
 #include"UI/Canvas.h"
 #include"UI/Gauge.h"
+#include"Game/Game.h"
+#include"UI/Save.h"
