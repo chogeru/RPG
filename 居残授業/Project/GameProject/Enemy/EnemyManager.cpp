@@ -3,8 +3,9 @@
 #include"../h.h"
 //敵の出現データまとめ
 EnemyManager::EnemyData _stage1[] = {
-	{0,CVector2D(2000,10000),120},
-	
+	{0,CVector2D(100,100),120},
+		{0,CVector2D(100,100),120},
+		{0,CVector2D(100,100),60},
 
 };
 //敵の出現データまとめ

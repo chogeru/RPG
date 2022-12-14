@@ -37,7 +37,6 @@ public:
 	int m_type;
 	//座標データ
 	CVector2D m_pos;
-	CVector2D p;
 	//半径
 	float m_rad;
 	//移動ベクトル

@@ -1,7 +1,7 @@
 #include "Enemy.h"
 #include"../h.h"
 
-Enemy::Enemy(const CVector2D& pos)
+Enemy::Enemy(const CVector2D& p)
 	:Base(eType_Enemy)
 {
 
@@ -17,7 +17,7 @@ Enemy::Enemy(const CVector2D& pos)
 }
 void Enemy::StateIdle()
 {
-	const float movespeed = 12;
+	const float movespeed = 3;
 	bool move_flag = false;
 
 	auto list = Base::FindObjects(eType_kamano);
@@ -77,7 +77,7 @@ void Enemy::StateIdle()
 
 void Enemy::Update()
 {
-
+	m_pos_old = m_pos;
 	
 	switch (m_state) {
 		//通常状態
@@ -98,25 +98,6 @@ void Enemy::Collision(Base* b)
 {
 	switch (b->m_type) {
 
-	case eType_AreaChange:
-		if (Base::CollisionRect(this, b)) {
-			//エリアチェンジに触れている
-			m_hit_area_change = true;
-			//エリアチェンジ可能なら
-			if (m_enable_area_change) {
-				if (AreaChange* a = dynamic_cast<AreaChange*>(b)) {
-					//マップとエリアチェンジオブジェクトを削除
-					KillByType(eType_Field);
-					KillByType(eType_AreaChange);
-					//次のマップを生成
-					Base::Add(new Map(a->m_nextArea, a->m_nextplayerpos));
-					//エリアチェンジ一時不許可
-					m_enable_area_change = false;
-				}
-			}
-		}
-
-		break;
 	case eType_Field:
 		//マップとの判定
 		if (Map* m = dynamic_cast<Map*>(b)) {
@@ -137,8 +118,7 @@ void Enemy::Collision(Base* b)
 			}
 		}
 		break;
-	}
-	switch (b->m_type) {
+	
 	
 	case eType_kamano:
 		if (m_type == eType_Enemy && Base::CollisionRect(this, b)) {

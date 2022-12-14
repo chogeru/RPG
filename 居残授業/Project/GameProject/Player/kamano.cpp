@@ -190,8 +190,12 @@ void kamano::Collision(Base* b)
 					//マップとエリアチェンジオブジェクトを削除
 					KillByType(eType_Field);
 					KillByType(eType_AreaChange);
+					KillByType(eType_Enemy);
+					KillByType(eType_EnemyManager);
 					//次のマップを生成
 					Base::Add(new Map(a->m_nextArea, a->m_nextplayerpos));
+					Base::Add(new EnemyManager());
+
 					//エリアチェンジ一時不許可
 					m_enable_area_change = false;
 				}
