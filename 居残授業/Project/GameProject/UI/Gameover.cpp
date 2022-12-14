@@ -5,8 +5,8 @@
 Gameover::Gameover() :Base(eType_Scene),
 m_Gameover_text("C:\\Windows\\Fonts\\msgothic.ttc", 64)
 {
-	SOUND("BGM_Game")->Stop();
-	SOUND("BGM_GameOver")->Play(true);
+	SOUND("BGM_ura")->Stop();
+	SOUND("BGM_GameOver")->Play();
 	m_img = COPY_RESOURCE("Gameover", CImage);
 	m_img.ChangeAnimation(eState_Gameover);
 	m_img.UpdateAnimation();

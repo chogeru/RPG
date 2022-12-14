@@ -102,9 +102,10 @@ void Init(void)
 	Base::Add(new EnemyManager());
 	SOUND("BGM_Game")->Load("Sound/BGM/BGM_Game.wav");
 	
-	SOUND("BGM_GameOver")->Load("Sound/BGM/go.wav");
+	SOUND("BGM_GameOver")->Load("Sound/BGM/go2.wav");
 	SOUND("BGM_Title")->Load("Sound/BGM/Title true.wav");
 	SOUND("BGM_Title")->Play(true);
+	SOUND("BGM_ura")->Load("Sound/BGM/ura.wav");
 }
 
 
