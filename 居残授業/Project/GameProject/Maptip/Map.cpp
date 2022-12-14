@@ -1,7 +1,7 @@
 
 #include"Map.h"
 #include"AreaChange.h"
-#include"../UI/Save.h"
+#include"../h.h"
 
 Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 	//レイヤー0
@@ -9,6 +9,8 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 	//レイヤー1
 	m_map_tip[1] = COPY_RESOURCE("mmm", CImage);
 	SaveLoad::s_save_data.MapData = nextArea;
+	
+
 	switch (nextArea) {
 	case 1:
 		//fmfからマップデータを読み込む
@@ -22,6 +24,7 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 				m_fmfHeader.byChipHeight * 6),		//縦サイズ（当たり判定）
 			CVector2D(m_fmfHeader.byChipWidth * 1,	//次のマップの最初のプレイヤーの場所
 				m_fmfHeader.byChipHeight * 20)));
+		
 		//廊下↓
 		Base::Add(new AreaChange(2,
 			CRect(m_fmfHeader.byChipWidth * 45,
@@ -120,7 +123,7 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 				m_fmfHeader.byChipHeight * 20)));
 		break;
 		
-
+		
 	case 6:
 		Open("Map/6階メインホール.fmf");
 
@@ -145,12 +148,10 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 	
 	}
 
-	//プレイヤーの位置決定
-	if (Base* p = Base::FindObject(eType_Player)) {
-		p->ResetPos(nextplayerpos);
-	}
 	
 }
+
+
 Map::~Map() {
 	//fmfを閉じる
 	Close();
@@ -161,7 +162,7 @@ void Map::Draw() {
 	if (m_kill) return;
 
 	//1Fのズレをなくすため、描画の直前でスクロール値確定
-	if (Base* p = Base::FindObject(eType_Player)) {
+	if (Base* p = Base::FindObject(eType_kamano)) {
 		//スクロール設定
 		m_scroll.x = p->m_pos.x - 600;
 		m_scroll.y = p->m_pos.y - 500;

@@ -1,5 +1,6 @@
 #pragma once
 #include "../Base/Base.h"
+#include"../h.h"
 class EnemyManager : public Base{
 public:
 	//敵出現データ構造体

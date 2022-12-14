@@ -8,7 +8,10 @@ Game::Game() :Base(eType_Scene)
 	SOUND("BGM_ura")->Play(true);
 	Base::Add(new kamano(SaveLoad::s_save_data.PlayerPos, false));
 	Base::Add(new Map(SaveLoad::s_save_data.MapData, CVector2D(16 * 20, 16 * 23)));
+
 	m_is_load = false;
+
+
 }
 
 Game::~Game()
@@ -25,10 +28,12 @@ Game::~Game()
 		//全てのオブジェクトを破棄
 		Base::KillAll();
 		//タイトルシーンへ
-		Base::Add(new Gameover());
-	}
-		
+		Base::Add(new Title());
+		Base::Add(new EnemyManager());
 
+
+	}
+	
 
 	
 }

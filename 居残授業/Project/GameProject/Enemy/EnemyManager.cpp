@@ -1,6 +1,6 @@
 #include "EnemyManager.h"
 #include "Enemy.h"
-
+#include"../h.h"
 //敵の出現データまとめ
 EnemyManager::EnemyData _stage1[] = {
 	{0,CVector2D(2000,10000),120},
@@ -23,7 +23,7 @@ EnemyManager::EnemyManager():Base(eType_EnemyManager)
 void EnemyManager::Update()
 {
 	//全ての敵が出ていない
-	/*if (m_idx < mp_data->size) {
+	if (m_idx < mp_data->size) {
 		//時間経過
 		m_cnt++;
 
@@ -36,10 +36,12 @@ void EnemyManager::Update()
 			m_idx++;
 			m_cnt = 0;
 		}
-	}*/
+	}
 	
 }
 bool EnemyManager::isEnd() {
 	//全ての敵が出現済みならtrueを返す
 	return (m_idx >= mp_data->size) ? true : false;
 }
+
+
