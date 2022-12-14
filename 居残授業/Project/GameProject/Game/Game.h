@@ -4,6 +4,7 @@
 
 class Game : public Base {
 	bool m_is_load;
+
 public:
 	Game();
 	~Game();

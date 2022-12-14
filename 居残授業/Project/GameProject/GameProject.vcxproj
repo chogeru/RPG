@@ -12,27 +12,17 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Base\Base.cpp" />
-    <ClCompile Include="Enemy\Bullet.cpp" />
     <ClCompile Include="Enemy\Enemy.cpp" />
     <ClCompile Include="Enemy\EnemyManager.cpp" />
-    <ClCompile Include="Enemy\kaiga.cpp" />
     <ClCompile Include="Game\Game.cpp" />
     <ClCompile Include="Game\Text.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Maptip\AreaChange.cpp" />
-    <ClCompile Include="Maptip\Dordown.cpp" />
-    <ClCompile Include="Maptip\Dorup.cpp" />
     <ClCompile Include="Maptip\fmfmap.cpp" />
-    <ClCompile Include="Maptip\hondana.cpp" />
     <ClCompile Include="Maptip\Map.cpp" />
-    <ClCompile Include="Maptip\Wall.cpp" />
-    <ClCompile Include="Maptip\Wallhed.cpp" />
     <ClCompile Include="Player\kamano.cpp" />
-    <ClCompile Include="Player\Player.cpp" />
     <ClCompile Include="UI\AnimData.cpp" />
     <ClCompile Include="UI\Canvas.cpp" />
-    <ClCompile Include="UI\Effect.cpp" />
-    <ClCompile Include="UI\Field.cpp" />
     <ClCompile Include="UI\Gameover.cpp" />
     <ClCompile Include="UI\Gauge.cpp" />
     <ClCompile Include="UI\Goal.cpp" />
@@ -42,27 +32,17 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Base\Base.h" />
-    <ClInclude Include="Enemy\Bullet.h" />
     <ClInclude Include="Enemy\Enemy.h" />
     <ClInclude Include="Enemy\EnemyManager.h" />
-    <ClInclude Include="Enemy\kaiga.h" />
     <ClInclude Include="Game\Game.h" />
     <ClInclude Include="Game\Text.h" />
     <ClInclude Include="h.h" />
     <ClInclude Include="Maptip\AreaChange.h" />
-    <ClInclude Include="Maptip\Dordown.h" />
-    <ClInclude Include="Maptip\Dorup.h" />
     <ClInclude Include="Maptip\fmfmap.h" />
-    <ClInclude Include="Maptip\hondana.h" />
     <ClInclude Include="Maptip\Map.h" />
-    <ClInclude Include="Maptip\Wall.h" />
-    <ClInclude Include="Maptip\Wallhed.h" />
     <ClInclude Include="Player\kamano.h" />
-    <ClInclude Include="Player\Player.h" />
     <ClInclude Include="UI\AnimData.h" />
     <ClInclude Include="UI\Canvas.h" />
-    <ClInclude Include="UI\Effect.h" />
-    <ClInclude Include="UI\Field.h" />
     <ClInclude Include="UI\Gameover.h" />
     <ClInclude Include="UI\Gauge.h" />
     <ClInclude Include="UI\Goal.h" />
