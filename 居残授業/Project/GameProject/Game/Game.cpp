@@ -36,7 +36,7 @@ Game::~Game()
 	}*/
 	if (!Base::FindObject(eType_kamano)) {
 		KillAll();
-		Base::Add(new Gameover);
+		Base::Add(new  Gameover);
 		
 	}
 
