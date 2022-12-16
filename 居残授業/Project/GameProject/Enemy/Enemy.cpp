@@ -31,24 +31,28 @@ void Enemy::StateIdle()
 				m_flip = false;
 				m_img.ChangeAnimation(1);
 				move_flag = true;
+				
 			}
 			if (player->m_pos.x > m_pos.x + 0) {
 				m_pos.x += movespeed;
 				m_flip = false;
 				m_img.ChangeAnimation(0);
 				move_flag = true;
+				
 			}
 			if (player->m_pos.y > m_pos.y - 0) {
 				m_pos.y += movespeed;
 				m_flip = false;
 				m_img.ChangeAnimation(2);
 				move_flag = true;
+				
 			}
 			if (player->m_pos.y < m_pos.y + 0) {
 				m_pos.y -= movespeed;
 				m_flip = false;
 				m_img.ChangeAnimation(1);
 				move_flag = true;
+				
 			}
 			for (auto& b : list) {
 				CVector2D v = b->m_pos - m_pos;

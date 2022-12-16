@@ -453,25 +453,25 @@ TexAnimData kamano_anim_data[] = {
 
 
 };
-static TexAnim(EnemyLeft)[] = {
-	{ 2,2 },
+static TexAnim EnemyLeft[] = {
+	{2,2},
 	{6,2},
 };
-static TexAnim(EnemyRight)[] = {
+static TexAnim EnemyRight[] = {
 
-	{ 1,2 },
+	{1,2},
 	{5,2},
 };
 static TexAnim EnemyUp[] = {
-	{3,2},
-	{7,2},
+	{0,2},
+	{4,2},
 };
 static TexAnim EnemyDown[] = {
 
+	{3,2},
+	{7,2},
 
-
-		{0,2},
-	{4,2},
+		
 	
 
 
