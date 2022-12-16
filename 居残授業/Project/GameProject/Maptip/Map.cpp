@@ -21,18 +21,18 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 		//廊下↑
 
 		Base::Add(new AreaChange(2,					//次のマップの番号
-			CRect(m_fmfHeader.byChipWidth * 49,		//横（数値が高いほど右に行く）
+			CRect(m_fmfHeader.byChipWidth * 48,		//横（数値が高いほど右に行く）
 				m_fmfHeader.byChipHeight * 7,		//高さ（数値が低いほど上に行く）
-				m_fmfHeader.byChipWidth * 4,		//横サイズ（当たり判定）
+				m_fmfHeader.byChipWidth * 5,		//横サイズ（当たり判定）
 				m_fmfHeader.byChipHeight * 6),		//縦サイズ（当たり判定）
-			CVector2D(m_fmfHeader.byChipWidth * 49,	//次のマップの最初のプレイヤーの場所
+			CVector2D(m_fmfHeader.byChipWidth * 47,	//次のマップの最初のプレイヤーの場所
 				m_fmfHeader.byChipHeight * 7)));
 		
 		//廊下↓
 		Base::Add(new AreaChange(2,
 			CRect(m_fmfHeader.byChipWidth * 45,
 				m_fmfHeader.byChipHeight * 41,
-				m_fmfHeader.byChipWidth * 4,
+				m_fmfHeader.byChipWidth * 5,
 				m_fmfHeader.byChipHeight * 8),
 			CVector2D(m_fmfHeader.byChipWidth * 43,
 				m_fmfHeader.byChipHeight * 41)));
@@ -50,19 +50,19 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 		Open("Map/2階メインホール.fmf");
 		//廊下　右上へ
 		Base::Add(new AreaChange(3,
-			CRect(m_fmfHeader.byChipWidth * 49,
+			CRect(m_fmfHeader.byChipWidth * 48,
 				m_fmfHeader.byChipHeight * 7,
-				m_fmfHeader.byChipWidth * 4,
+				m_fmfHeader.byChipWidth * 5,
 				m_fmfHeader.byChipHeight * 6),
-			CVector2D(m_fmfHeader.byChipWidth * 49,
+			CVector2D(m_fmfHeader.byChipWidth * 47,
 				m_fmfHeader.byChipHeight * 7)));
 		//玄関へ
 		Base::Add(new AreaChange(1,
-			CRect(m_fmfHeader.byChipWidth * 49,
+			CRect(m_fmfHeader.byChipWidth * 48,
 				m_fmfHeader.byChipHeight * 41,
-				m_fmfHeader.byChipWidth * 4,
+				m_fmfHeader.byChipWidth * 5,
 				m_fmfHeader.byChipHeight * 8),
-			CVector2D(m_fmfHeader.byChipWidth * 49,
+			CVector2D(m_fmfHeader.byChipWidth * 47,
 				m_fmfHeader.byChipHeight * 41)));
 		break;
 
@@ -70,19 +70,19 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 		Open("Map/3階メインホール.fmf");
 		//廊下　右へ
 		Base::Add(new AreaChange(4,
-			CRect(m_fmfHeader.byChipWidth * 49,
+			CRect(m_fmfHeader.byChipWidth * 48,
 				m_fmfHeader.byChipHeight * 7,
-				m_fmfHeader.byChipWidth * 4,
+				m_fmfHeader.byChipWidth * 5,
 				m_fmfHeader.byChipHeight * 6),
-			CVector2D(m_fmfHeader.byChipWidth * 49,
+			CVector2D(m_fmfHeader.byChipWidth * 47,
 				m_fmfHeader.byChipHeight * 7)));
 
 		Base::Add(new AreaChange(2,
-			CRect(m_fmfHeader.byChipWidth * 49,
+			CRect(m_fmfHeader.byChipWidth * 48,
 				m_fmfHeader.byChipHeight * 41,
-				m_fmfHeader.byChipWidth * 4,
+				m_fmfHeader.byChipWidth * 5,
 				m_fmfHeader.byChipHeight * 8),
-			CVector2D(m_fmfHeader.byChipWidth * 49,
+			CVector2D(m_fmfHeader.byChipWidth * 47,
 				m_fmfHeader.byChipHeight * 41)));
 		break;
 
@@ -90,19 +90,19 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 		Open("Map/4階メインホール.fmf");
 		//左上
 		Base::Add(new AreaChange(5,
-			CRect(m_fmfHeader.byChipWidth * 49,
+			CRect(m_fmfHeader.byChipWidth * 48,
 				m_fmfHeader.byChipHeight * 7,
-				m_fmfHeader.byChipWidth * 4,
+				m_fmfHeader.byChipWidth * 5,
 				m_fmfHeader.byChipHeight * 6),
-			CVector2D(m_fmfHeader.byChipWidth * 49,
+			CVector2D(m_fmfHeader.byChipWidth * 47,
 				m_fmfHeader.byChipHeight * 7)));
 
 		Base::Add(new AreaChange(3,
-			CRect(m_fmfHeader.byChipWidth * 49,
+			CRect(m_fmfHeader.byChipWidth * 48,
 				m_fmfHeader.byChipHeight * 41,
-				m_fmfHeader.byChipWidth * 4,
+				m_fmfHeader.byChipWidth * 5,
 				m_fmfHeader.byChipHeight * 8),
-			CVector2D(m_fmfHeader.byChipWidth * 49,
+			CVector2D(m_fmfHeader.byChipWidth * 47,
 				m_fmfHeader.byChipHeight * 41)));
 		break;
 
@@ -110,19 +110,19 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 		Open("Map/5階メインホール.fmf");
 		//左へ
 		Base::Add(new AreaChange(6,
-			CRect(m_fmfHeader.byChipWidth * 49,
+			CRect(m_fmfHeader.byChipWidth * 48,
 				m_fmfHeader.byChipHeight * 7,
-				m_fmfHeader.byChipWidth * 4,
+				m_fmfHeader.byChipWidth * 5,
 				m_fmfHeader.byChipHeight * 6),
-			CVector2D(m_fmfHeader.byChipWidth * 49,
+			CVector2D(m_fmfHeader.byChipWidth * 47,
 				m_fmfHeader.byChipHeight * 7)));
 		
 		Base::Add(new AreaChange(4,
-			CRect(m_fmfHeader.byChipWidth * 49,
+			CRect(m_fmfHeader.byChipWidth * 48,
 				m_fmfHeader.byChipHeight * 41,
-				m_fmfHeader.byChipWidth * 4,
+				m_fmfHeader.byChipWidth * 5,
 				m_fmfHeader.byChipHeight * 8),
-			CVector2D(m_fmfHeader.byChipWidth * 49,
+			CVector2D(m_fmfHeader.byChipWidth * 47,
 				m_fmfHeader.byChipHeight * 41)));
 		break;
 		
@@ -139,11 +139,11 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 				m_fmfHeader.byChipHeight * 7)));*/
 
 		Base::Add(new AreaChange(5,
-			CRect(m_fmfHeader.byChipWidth * 49,
+			CRect(m_fmfHeader.byChipWidth * 48,
 				m_fmfHeader.byChipHeight * 41,
-				m_fmfHeader.byChipWidth * 4,
+				m_fmfHeader.byChipWidth * 5,
 				m_fmfHeader.byChipHeight * 8),
-			CVector2D(m_fmfHeader.byChipWidth * 49,
+			CVector2D(m_fmfHeader.byChipWidth * 47,
 				m_fmfHeader.byChipHeight * 41)));
 		break;
 
