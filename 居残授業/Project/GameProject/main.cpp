@@ -90,7 +90,7 @@ void Init(void)
 	ADD_RESOURCE("kamano", CImage::CreateImage("Image/kamano.png",kamano_anim_data,64,64));
 	//ADD_RESOURCE("kamano1", CImage::CreateImage("Image/kamano1.png", kamano_anim_data, 64, 64));
 	ADD_RESOURCE("hayashi", CImage::CreateImage("Image/hayashi.png", kamano_anim_data, 64, 64));
-	ADD_RESOURCE("Gameover", CImage::CreateImage("Image/Gameover.png"));
+	ADD_RESOURCE("Gameover", CImage::CreateImage("Image/hayasi_over.png"));
 	//ADD_RESOURCE("Gameclear", CImage::CreateImage("Image/Gameover.png"));
 	Base::Add(new Title());
 	Base::Add(new Canvas(CVector2D(SCREEN_WIDTH, SCREEN_HEIGHT)));
