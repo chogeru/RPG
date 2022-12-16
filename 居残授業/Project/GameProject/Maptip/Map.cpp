@@ -42,9 +42,16 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 				m_fmfHeader.byChipHeight * 7,
 				m_fmfHeader.byChipWidth * 2,
 				m_fmfHeader.byChipHeight * 2),
-			CVector2D(m_fmfHeader.byChipWidth * 10,
-				m_fmfHeader.byChipHeight * 10)));
+			CVector2D(m_fmfHeader.byChipWidth * 16,
+				m_fmfHeader.byChipHeight * 28)));
 
+		Base::Add(new AreaChange(11,
+			CRect(m_fmfHeader.byChipWidth * 7,
+				m_fmfHeader.byChipHeight * 7,
+				m_fmfHeader.byChipWidth * 2,
+				m_fmfHeader.byChipHeight * 2),
+			CVector2D(m_fmfHeader.byChipWidth * 16,
+				m_fmfHeader.byChipHeight * 28)));
 	
 	/*	Base::Add(new AreaChange(99,
 			CRect(m_fmfHeader.byChipWidth * 19,
@@ -158,13 +165,24 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 
 	case 10:
 		Open("Map/‹³Žº.fmf");
-		Base::Add(new AreaChange(2,
-			CRect(m_fmfHeader.byChipWidth * 2,
-				m_fmfHeader.byChipHeight * 7,
-				m_fmfHeader.byChipWidth * 2,
-				m_fmfHeader.byChipHeight * 2),
-			CVector2D(m_fmfHeader.byChipWidth * 43,
-				m_fmfHeader.byChipHeight * 41)));
+		Base::Add(new AreaChange(1,
+			CRect(m_fmfHeader.byChipWidth * 16,
+				m_fmfHeader.byChipHeight * 28,
+				m_fmfHeader.byChipWidth * 6,
+				m_fmfHeader.byChipHeight * 4),
+			CVector2D(m_fmfHeader.byChipWidth * 23,
+				m_fmfHeader.byChipHeight * 7)));
+		break;
+
+	case 11:
+		Open("Map/‹³Žº.fmf");
+		Base::Add(new AreaChange(1,
+			CRect(m_fmfHeader.byChipWidth * 16,
+				m_fmfHeader.byChipHeight * 28,
+				m_fmfHeader.byChipWidth * 6,
+				m_fmfHeader.byChipHeight * 4),
+			CVector2D(m_fmfHeader.byChipWidth * 8,
+				m_fmfHeader.byChipHeight * 7)));
 		break;
 	
 	}
