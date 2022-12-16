@@ -5,10 +5,11 @@
 Game::Game() :Base(eType_Scene)
 {
 	SOUND("BGM_Title")->Stop();
+	SOUND("BGM_Gameover")->Stop();
 	SOUND("BGM_ura")->Play(true);
 	Base::Add(new kamano(SaveLoad::s_save_data.PlayerPos, false));
 	Base::Add(new Map(SaveLoad::s_save_data.MapData, CVector2D(16 * 20, 16 * 23)));
-
+	Base::Add(new EnemyManager());
 	m_is_load = false;
 
 
@@ -24,7 +25,7 @@ Game::~Game()
 		Base::Add(new Game());
 		printf("%d\n", SaveLoad::s_save_data.MapData);
 	}
-	else {
+	/*else {
 		//全てのオブジェクトを破棄
 		Base::KillAll();
 		//タイトルシーンへ
@@ -32,14 +33,30 @@ Game::~Game()
 		Base::Add(new EnemyManager());
 
 
+	}*/
+	if (!Base::FindObject(eType_kamano)) {
+		KillAll();
+		Base::Add(new Gameover);
+		
 	}
-	
 
-	
-}
+	}
 
-void Game::Update()
+	void Game::Update()
 {
+	//ゴールがなければゲームシーン終了
+	//if(!Base::FindObject(eType_Goal))
+	 
+	
+		//if (GameOver_flag == false) {
+			
+		//}
+			
+		//GameOver_flag == true;
+		if (!Base::FindObject(eType_kamano))
+			SetKill();
+			
+		
 	if (!Base::FindObject(eType_Goal)) {
 		
 		if (PUSH(CInput::eButton1))

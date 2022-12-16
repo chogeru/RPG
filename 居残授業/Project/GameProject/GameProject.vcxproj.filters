@@ -53,6 +53,9 @@
     <ClCompile Include="UI\Gauge.cpp">
       <Filter>UI</Filter>
     </ClCompile>
+    <ClCompile Include="UI\Gameclear.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Base">
@@ -125,6 +128,9 @@
       <Filter>UI</Filter>
     </ClInclude>
     <ClInclude Include="UI\Gauge.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Gameclear.h">
       <Filter>UI</Filter>
     </ClInclude>
   </ItemGroup>

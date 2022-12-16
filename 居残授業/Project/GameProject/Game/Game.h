@@ -4,7 +4,7 @@
 
 class Game : public Base {
 	bool m_is_load;
-
+	bool GameOver_flag = 0;
 public:
 	Game();
 	~Game();

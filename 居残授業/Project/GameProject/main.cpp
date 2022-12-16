@@ -90,7 +90,8 @@ void Init(void)
 	ADD_RESOURCE("kamano", CImage::CreateImage("Image/kamano.png",kamano_anim_data,64,64));
 	ADD_RESOURCE("kamano1", CImage::CreateImage("Image/kamano1.png", kamano_anim_data, 64, 64));
 	ADD_RESOURCE("hayashi", CImage::CreateImage("Image/hayashi.png", kamano_anim_data, 64, 64));
-	ADD_RESOURCE("Gameover",CImage::CreateImage("Image/画伯集.png", Gameover_anim_data, 1920, 1080));
+	ADD_RESOURCE("Gameover", CImage::CreateImage("Image/Gameover.png"));
+	//ADD_RESOURCE("Gameclear", CImage::CreateImage("Image/Gameover.png"));
 	Base::Add(new Title());
 	Base::Add(new Canvas(CVector2D(SCREEN_WIDTH, SCREEN_HEIGHT)));
 
@@ -99,7 +100,7 @@ void Init(void)
 	CFont* font = new CFont("Fonts/HuiFont29.ttf", 32);
 	//会話テキスト読み込み
 	//Base::Add(new Text("talk.txt", font));
-	Base::Add(new EnemyManager());
+	
 	SOUND("BGM_Game")->Load("Sound/BGM/BGM_Game.wav");
 	
 	SOUND("BGM_GameOver")->Load("Sound/BGM/go2.wav");
