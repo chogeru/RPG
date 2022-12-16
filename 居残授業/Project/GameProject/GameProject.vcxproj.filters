@@ -112,9 +112,6 @@
     <ClInclude Include="Game\Text.h">
       <Filter>Game</Filter>
     </ClInclude>
-    <ClInclude Include="Enemy\EnemyManager.h">
-      <Filter>Enemy</Filter>
-    </ClInclude>
     <ClInclude Include="Maptip\AreaChange.h">
       <Filter>Maptip</Filter>
     </ClInclude>
@@ -132,6 +129,9 @@
     </ClInclude>
     <ClInclude Include="UI\Gameclear.h">
       <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemy\EnemyManager.h">
+      <Filter>Enemy</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
