@@ -57,11 +57,11 @@ Game::~Game()
 			SetKill();
 			
 		
-	if (!Base::FindObject(eType_Goal)) {
+	/*if (!Base::FindObject(eType_Goal)) {
 		
 		if (PUSH(CInput::eButton1))
 			SetKill();
-	}
+	}*/
 	
 	if (PUSH(CInput::eButton7)) {
 		Base* b = Base::FindObject(eType_kamano);
