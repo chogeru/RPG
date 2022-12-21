@@ -74,21 +74,14 @@ void Init(void)
 	//画像の出力
 	////
 	//タイトル
+	ADD_RESOURCE("Fuda", CImage::CreateImage("Image/Fuda.png"));
+	ADD_RESOURCE("Gameover", CImage::CreateImage("Image/gameover.png"));
 	ADD_RESOURCE("mmm", CImage::CreateImage("Image/mmm.bmp"));
-	ADD_RESOURCE("isu", CImage::CreateImage("Image/isu.png"));
-	ADD_RESOURCE("Bullet", CImage::CreateImage("Image/Bullet.png"));
 	ADD_RESOURCE("Enemy", CImage::CreateImage("Image/Enemy.png", Enemy_anim_data, 64, 64));
 	ADD_RESOURCE("Title", CImage::CreateImage("Image/Title.png"));
-	ADD_RESOURCE("kaiga", CImage::CreateImage("Image/kaiga.png"));
-	ADD_RESOURCE("Dorup", CImage::CreateImage("Image/Dorup.png"));
-	ADD_RESOURCE("Dordown", CImage::CreateImage("Image/Dordown.png"));
 	ADD_RESOURCE("Map1", CImage::CreateImage("Image/Map1.png"));
-	ADD_RESOURCE("Wall", CImage::CreateImage("Image/Wall.png"));
-	ADD_RESOURCE("hondana", CImage::CreateImage("Image/hondana.png"));
-	ADD_RESOURCE("Wallhed", CImage::CreateImage("Image/Wallhed.png"));
 	ADD_RESOURCE("itihara", CImage::CreateImage("Image/itihara.png", kamano_anim_data, 64, 64));
 	ADD_RESOURCE("kamano", CImage::CreateImage("Image/kamano.png",kamano_anim_data,64,64));
-	//ADD_RESOURCE("kamano1", CImage::CreateImage("Image/kamano1.png", kamano_anim_data, 64, 64));
 	ADD_RESOURCE("hayashi", CImage::CreateImage("Image/hayashi.png", kamano_anim_data, 64, 64));
 	//ADD_RESOURCE("Gameover", CImage::CreateImage("Image/hayasi_over.png"));
 	///ADD_RESOURCE("Gameover", CImage::CreateImage("Image/gameover_itihara.png"));

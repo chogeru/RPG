@@ -1,6 +1,6 @@
 #include "Gauge.h"
 Gauge::Gauge(int gauge_type):Base(eType_UI) {
-	m_img = COPY_RESOURCE("isu", CImage);
+	m_img = COPY_RESOURCE("Fuda", CImage);
 	m_par = 0;
 	m_gauge_type = gauge_type;
 

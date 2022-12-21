@@ -11,7 +11,7 @@ Game::Game() :Base(eType_Scene)
 	Base::Add(new Map(SaveLoad::s_save_data.MapData, CVector2D(16 * 20, 16 * 23)));
 	Base::Add(new EnemyManager());
 	m_is_load = false;
-
+	
 
 }
 

@@ -13,13 +13,12 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 	if (player) {
 		player->m_pos = nextplayerpos;
 	}
-
 	switch (nextArea) {
 	case 1:
 		//fmfからマップデータを読み込む
 		Open("Map/1階メインホール裏.fmf");
-		//廊下↑
-
+		//廊下↑                   //左が横移動数値、右が縦移動数値
+		Base::Add(new Fuda(CVector2D(580, 380)));
 		Base::Add(new AreaChange(2,					//次のマップの番号
 			CRect(m_fmfHeader.byChipWidth * 48,		//横（数値が高いほど右に行く）
 				m_fmfHeader.byChipHeight * 7,		//高さ（数値が低いほど上に行く）
@@ -52,7 +51,25 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 				m_fmfHeader.byChipHeight * 2),
 			CVector2D(m_fmfHeader.byChipWidth * 16,
 				m_fmfHeader.byChipHeight * 28)));
+
+		Base::Add(new AreaChange(12,
+			CRect(m_fmfHeader.byChipWidth * 9,
+				m_fmfHeader.byChipHeight * 41,
+				m_fmfHeader.byChipWidth * 2,
+				m_fmfHeader.byChipHeight * 2),
+			CVector2D(m_fmfHeader.byChipWidth * 16,
+				m_fmfHeader.byChipHeight * 28)));
+
+		Base::Add(new AreaChange(13,
+			CRect(m_fmfHeader.byChipWidth * 37,
+				m_fmfHeader.byChipHeight * 41,
+				m_fmfHeader.byChipWidth * 2,
+				m_fmfHeader.byChipHeight * 2),
+			CVector2D(m_fmfHeader.byChipWidth * 16,
+				m_fmfHeader.byChipHeight * 28)));
+
 	
+
 	/*	Base::Add(new AreaChange(99,
 			CRect(m_fmfHeader.byChipWidth * 19,
 				m_fmfHeader.byChipHeight * 49,
@@ -97,8 +114,23 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 				m_fmfHeader.byChipHeight * 2),
 			CVector2D(m_fmfHeader.byChipWidth * 16,
 				m_fmfHeader.byChipHeight * 28)));
-		break;
 
+		Base::Add(new AreaChange(17,
+			CRect(m_fmfHeader.byChipWidth * 9,
+				m_fmfHeader.byChipHeight * 41,
+				m_fmfHeader.byChipWidth * 2,
+				m_fmfHeader.byChipHeight * 2),
+			CVector2D(m_fmfHeader.byChipWidth * 16,
+				m_fmfHeader.byChipHeight * 28)));
+
+		Base::Add(new AreaChange(18,
+			CRect(m_fmfHeader.byChipWidth * 27,
+				m_fmfHeader.byChipHeight * 41,
+				m_fmfHeader.byChipWidth * 2,
+				m_fmfHeader.byChipHeight * 2),
+			CVector2D(m_fmfHeader.byChipWidth * 16,
+				m_fmfHeader.byChipHeight * 28)));
+		break;
 	case 3:
 		Open("Map/3階メインホール.fmf");
 		//廊下　右へ
@@ -133,6 +165,23 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 				m_fmfHeader.byChipHeight * 2),
 			CVector2D(m_fmfHeader.byChipWidth * 16,
 				m_fmfHeader.byChipHeight * 28)));
+
+		Base::Add(new AreaChange(22,
+			CRect(m_fmfHeader.byChipWidth * 9,
+				m_fmfHeader.byChipHeight * 41,
+				m_fmfHeader.byChipWidth * 2,
+				m_fmfHeader.byChipHeight * 2),
+			CVector2D(m_fmfHeader.byChipWidth * 16,
+				m_fmfHeader.byChipHeight * 28)));
+
+		Base::Add(new AreaChange(23,
+			CRect(m_fmfHeader.byChipWidth * 27,
+				m_fmfHeader.byChipHeight * 41,
+				m_fmfHeader.byChipWidth * 2,
+				m_fmfHeader.byChipHeight * 2),
+			CVector2D(m_fmfHeader.byChipWidth * 16,
+				m_fmfHeader.byChipHeight * 28)));
+
 		break;
 
 	case 4:
@@ -153,8 +202,42 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 				m_fmfHeader.byChipHeight * 8),
 			CVector2D(m_fmfHeader.byChipWidth * 47,
 				m_fmfHeader.byChipHeight * 41)));
-		break;
+		
 
+		Base::Add(new AreaChange(25,
+			CRect(m_fmfHeader.byChipWidth * 7,
+				m_fmfHeader.byChipHeight * 7,
+				m_fmfHeader.byChipWidth * 2,
+				m_fmfHeader.byChipHeight * 2),
+			CVector2D(m_fmfHeader.byChipWidth * 16,
+				m_fmfHeader.byChipHeight * 28)));
+
+		Base::Add(new AreaChange(26,
+			CRect(m_fmfHeader.byChipWidth * 22,
+				m_fmfHeader.byChipHeight * 7,
+				m_fmfHeader.byChipWidth * 2,
+				m_fmfHeader.byChipHeight * 2),
+			CVector2D(m_fmfHeader.byChipWidth * 16,
+				m_fmfHeader.byChipHeight * 28)));
+
+		Base::Add(new AreaChange(27,
+			CRect(m_fmfHeader.byChipWidth * 9,
+				m_fmfHeader.byChipHeight * 41,
+				m_fmfHeader.byChipWidth * 2,
+				m_fmfHeader.byChipHeight * 2),
+			CVector2D(m_fmfHeader.byChipWidth * 16,
+				m_fmfHeader.byChipHeight * 28)));
+
+		Base::Add(new AreaChange(28,
+			CRect(m_fmfHeader.byChipWidth * 27,
+				m_fmfHeader.byChipHeight * 41,
+				m_fmfHeader.byChipWidth * 2,
+				m_fmfHeader.byChipHeight * 2),
+			CVector2D(m_fmfHeader.byChipWidth * 16,
+				m_fmfHeader.byChipHeight * 28)));
+
+
+		break;
 	case 5:
 		Open("Map/5階メインホール.fmf");
 		//左へ
@@ -173,6 +256,38 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 				m_fmfHeader.byChipHeight * 8),
 			CVector2D(m_fmfHeader.byChipWidth * 47,
 				m_fmfHeader.byChipHeight * 41)));
+
+		Base::Add(new AreaChange(30,
+			CRect(m_fmfHeader.byChipWidth * 7,
+				m_fmfHeader.byChipHeight * 7,
+				m_fmfHeader.byChipWidth * 2,
+				m_fmfHeader.byChipHeight * 2),
+			CVector2D(m_fmfHeader.byChipWidth * 16,
+				m_fmfHeader.byChipHeight * 28)));
+
+		Base::Add(new AreaChange(31,
+			CRect(m_fmfHeader.byChipWidth * 22,
+				m_fmfHeader.byChipHeight * 7,
+				m_fmfHeader.byChipWidth * 2,
+				m_fmfHeader.byChipHeight * 2),
+			CVector2D(m_fmfHeader.byChipWidth * 16,
+				m_fmfHeader.byChipHeight * 28)));
+		Base::Add(new AreaChange(32,
+			CRect(m_fmfHeader.byChipWidth * 9,
+				m_fmfHeader.byChipHeight * 41,
+				m_fmfHeader.byChipWidth * 2,
+				m_fmfHeader.byChipHeight * 2),
+			CVector2D(m_fmfHeader.byChipWidth * 16,
+				m_fmfHeader.byChipHeight * 28)));
+
+		Base::Add(new AreaChange(33,
+			CRect(m_fmfHeader.byChipWidth * 27,
+				m_fmfHeader.byChipHeight * 41,
+				m_fmfHeader.byChipWidth * 2,
+				m_fmfHeader.byChipHeight * 2),
+			CVector2D(m_fmfHeader.byChipWidth * 16,
+				m_fmfHeader.byChipHeight * 28)));
+
 		break;
 		
 		
@@ -194,10 +309,43 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 				m_fmfHeader.byChipHeight * 8),
 			CVector2D(m_fmfHeader.byChipWidth * 47,
 				m_fmfHeader.byChipHeight * 41)));
+		Base::Add(new AreaChange(35,
+			CRect(m_fmfHeader.byChipWidth * 7,
+				m_fmfHeader.byChipHeight * 7,
+				m_fmfHeader.byChipWidth * 2,
+				m_fmfHeader.byChipHeight * 2),
+			CVector2D(m_fmfHeader.byChipWidth * 16,
+				m_fmfHeader.byChipHeight * 28)));
+
+		Base::Add(new AreaChange(36,
+			CRect(m_fmfHeader.byChipWidth * 22,
+				m_fmfHeader.byChipHeight * 7,
+				m_fmfHeader.byChipWidth * 2,
+				m_fmfHeader.byChipHeight * 2),
+			CVector2D(m_fmfHeader.byChipWidth * 16,
+				m_fmfHeader.byChipHeight * 28)));
+
+		Base::Add(new AreaChange(37,
+			CRect(m_fmfHeader.byChipWidth * 9,
+				m_fmfHeader.byChipHeight * 41,
+				m_fmfHeader.byChipWidth * 2,
+				m_fmfHeader.byChipHeight * 2),
+			CVector2D(m_fmfHeader.byChipWidth * 16,
+				m_fmfHeader.byChipHeight * 28)));
+
+		Base::Add(new AreaChange(38,
+			CRect(m_fmfHeader.byChipWidth * 27,
+				m_fmfHeader.byChipHeight * 41,
+				m_fmfHeader.byChipWidth * 2,
+				m_fmfHeader.byChipHeight * 2),
+			CVector2D(m_fmfHeader.byChipWidth * 16,
+				m_fmfHeader.byChipHeight * 28)));
+
 		break;
 
 	case 10:
 		Open("Map/教室.fmf");
+		Base::Add(new Fuda(CVector2D(600, 380)));
 		Base::Add(new AreaChange(1,
 			CRect(m_fmfHeader.byChipWidth * 16,
 				m_fmfHeader.byChipHeight * 28,
@@ -206,6 +354,8 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 			CVector2D(m_fmfHeader.byChipWidth * 23,
 				m_fmfHeader.byChipHeight * 7)));
 		break;
+
+	
 
 	case 11:
 		Open("Map/教室.fmf");
@@ -217,10 +367,32 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 			CVector2D(m_fmfHeader.byChipWidth * 8,
 				m_fmfHeader.byChipHeight * 7)));
 		break;
-	
+
+	case 12:
+		Open("Map/教室.fmf");
+		Base::Add(new AreaChange(1,
+			CRect(m_fmfHeader.byChipWidth * 16,
+				m_fmfHeader.byChipHeight * 28,
+				m_fmfHeader.byChipWidth * 6,
+				m_fmfHeader.byChipHeight * 4),
+			CVector2D(m_fmfHeader.byChipWidth * 9,
+				m_fmfHeader.byChipHeight * 43)));
+		break;
+
+	case 13:
+		Open("Map/教室.fmf");
+		Base::Add(new AreaChange(1,
+			CRect(m_fmfHeader.byChipWidth * 16,
+				m_fmfHeader.byChipHeight * 28,
+				m_fmfHeader.byChipWidth * 6,
+				m_fmfHeader.byChipHeight * 4),
+			CVector2D(m_fmfHeader.byChipWidth * 37,
+				m_fmfHeader.byChipHeight * 43)));
+		break;
 
 	case 15:
 		Open("Map/図書室.fmf");
+		Base::Add(new Fuda(CVector2D(300, 450)));
 		Base::Add(new AreaChange(2,
 			CRect(m_fmfHeader.byChipWidth * 16,
 				m_fmfHeader.byChipHeight * 28,
@@ -239,9 +411,30 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 			CVector2D(m_fmfHeader.byChipWidth * 23,
 				m_fmfHeader.byChipHeight * 7)));
 		break;
+	case 17:
+		Open("Map/図書室.fmf");
+		Base::Add(new AreaChange(2,
+			CRect(m_fmfHeader.byChipWidth * 16,
+				m_fmfHeader.byChipHeight * 28,
+				m_fmfHeader.byChipWidth * 6,
+				m_fmfHeader.byChipHeight * 4),
+			CVector2D(m_fmfHeader.byChipWidth * 9,
+				m_fmfHeader.byChipHeight * 43)));
+		break;
+	case 18:
+		Open("Map/図書室.fmf");
+		Base::Add(new AreaChange(2,
+			CRect(m_fmfHeader.byChipWidth * 16,
+				m_fmfHeader.byChipHeight * 28,
+				m_fmfHeader.byChipWidth * 6,
+				m_fmfHeader.byChipHeight * 4),
+			CVector2D(m_fmfHeader.byChipWidth * 27,
+				m_fmfHeader.byChipHeight * 43)));
+		break;
 
 	case 20:
 		Open("Map/地部屋.fmf");
+		Base::Add(new Fuda(CVector2D(700, 380)));
 		Base::Add(new AreaChange(3,
 			CRect(m_fmfHeader.byChipWidth * 16,
 				m_fmfHeader.byChipHeight * 28,
@@ -260,9 +453,158 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 			CVector2D(m_fmfHeader.byChipWidth * 23,
 				m_fmfHeader.byChipHeight * 7)));
 		break;
+	case 22:
+		Open("Map/地部屋.fmf");
+		Base::Add(new AreaChange(3,
+			CRect(m_fmfHeader.byChipWidth * 16,
+				m_fmfHeader.byChipHeight * 28,
+				m_fmfHeader.byChipWidth * 6,
+				m_fmfHeader.byChipHeight * 4),
+			CVector2D(m_fmfHeader.byChipWidth * 9,
+				m_fmfHeader.byChipHeight * 43)));
+		break;
+	case 23:
+		Open("Map/地部屋.fmf");
+		Base::Add(new AreaChange(3,
+			CRect(m_fmfHeader.byChipWidth * 16,
+				m_fmfHeader.byChipHeight * 28,
+				m_fmfHeader.byChipWidth * 6,
+				m_fmfHeader.byChipHeight * 4),
+			CVector2D(m_fmfHeader.byChipWidth * 27,
+				m_fmfHeader.byChipHeight * 43)));
+		break;
+		
 
+	case 25:
+		Open("Map/椅子部屋.fmf");
+		
+		Base::Add(new AreaChange(4,
+			CRect(m_fmfHeader.byChipWidth * 16,
+				m_fmfHeader.byChipHeight * 28,
+				m_fmfHeader.byChipWidth * 6,
+				m_fmfHeader.byChipHeight * 4),
+			CVector2D(m_fmfHeader.byChipWidth * 8,
+				m_fmfHeader.byChipHeight * 7)));
+		break;
+	case 26:
+		Open("Map/椅子部屋.fmf");
+		Base::Add(new Fuda(CVector2D(600, 380)));
+		Base::Add(new AreaChange(4,
+			CRect(m_fmfHeader.byChipWidth * 16,
+				m_fmfHeader.byChipHeight * 28,
+				m_fmfHeader.byChipWidth * 6,
+				m_fmfHeader.byChipHeight * 4),
+			CVector2D(m_fmfHeader.byChipWidth * 23,
+				m_fmfHeader.byChipHeight * 7)));
+		break;
+	case 27:
+		Open("Map/椅子部屋.fmf");
+		Base::Add(new AreaChange(4,
+			CRect(m_fmfHeader.byChipWidth * 16,
+				m_fmfHeader.byChipHeight * 28,
+				m_fmfHeader.byChipWidth * 6,
+				m_fmfHeader.byChipHeight * 4),
+			CVector2D(m_fmfHeader.byChipWidth * 9,
+				m_fmfHeader.byChipHeight * 43)));
+		break;
+	case 28:
+		Open("Map/椅子部屋.fmf");
+		Base::Add(new AreaChange(4,
+			CRect(m_fmfHeader.byChipWidth * 16,
+				m_fmfHeader.byChipHeight * 28,
+				m_fmfHeader.byChipWidth * 6,
+				m_fmfHeader.byChipHeight * 4),
+			CVector2D(m_fmfHeader.byChipWidth * 27,
+				m_fmfHeader.byChipHeight * 43)));
+		break;
+	
+	
+
+	case 30:
+		Open("Map/教室死体あり.fmf");
+		Base::Add(new AreaChange(5,
+			CRect(m_fmfHeader.byChipWidth * 16,
+				m_fmfHeader.byChipHeight * 28,
+				m_fmfHeader.byChipWidth * 6,
+				m_fmfHeader.byChipHeight * 4),
+			CVector2D(m_fmfHeader.byChipWidth * 8,
+				m_fmfHeader.byChipHeight * 7)));
+		break;
+	case 31:
+		Open("Map/教室死体あり.fmf");
+		Base::Add(new Fuda(CVector2D(950, 280)));
+		Base::Add(new AreaChange(5,
+			CRect(m_fmfHeader.byChipWidth * 16,
+				m_fmfHeader.byChipHeight * 28,
+				m_fmfHeader.byChipWidth * 6,
+				m_fmfHeader.byChipHeight * 4),
+			CVector2D(m_fmfHeader.byChipWidth * 23,
+				m_fmfHeader.byChipHeight * 7)));
 
 	
+		break;
+	case 32:
+		Open("Map/教室死体あり.fmf");
+		Base::Add(new AreaChange(5,
+			CRect(m_fmfHeader.byChipWidth * 16,
+				m_fmfHeader.byChipHeight * 28,
+				m_fmfHeader.byChipWidth * 6,
+				m_fmfHeader.byChipHeight * 4),
+			CVector2D(m_fmfHeader.byChipWidth * 9,
+				m_fmfHeader.byChipHeight * 43)));
+		break;
+	case 33:
+		Open("Map/教室死体あり.fmf");
+		Base::Add(new AreaChange(5,
+			CRect(m_fmfHeader.byChipWidth * 16,
+				m_fmfHeader.byChipHeight * 28,
+				m_fmfHeader.byChipWidth * 6,
+				m_fmfHeader.byChipHeight * 4),
+			CVector2D(m_fmfHeader.byChipWidth * 27,
+				m_fmfHeader.byChipHeight * 43)));
+		break;
+
+	case 35:
+		Open("Map/？？？.fmf");
+		Base::Add(new Fuda(CVector2D(950, 280)));
+		Base::Add(new AreaChange(6,
+			CRect(m_fmfHeader.byChipWidth * 16,
+				m_fmfHeader.byChipHeight * 28,
+				m_fmfHeader.byChipWidth * 6,
+				m_fmfHeader.byChipHeight * 4),
+			CVector2D(m_fmfHeader.byChipWidth * 8,
+				m_fmfHeader.byChipHeight * 7)));
+		break;
+	case 36:
+		Open("Map/？？？.fmf");
+		Base::Add(new AreaChange(6,
+			CRect(m_fmfHeader.byChipWidth * 16,
+				m_fmfHeader.byChipHeight * 28,
+				m_fmfHeader.byChipWidth * 6,
+				m_fmfHeader.byChipHeight * 4),
+			CVector2D(m_fmfHeader.byChipWidth * 23,
+				m_fmfHeader.byChipHeight * 7)));
+		break;
+
+	case 37:
+		Open("Map/？？？.fmf");
+		Base::Add(new AreaChange(6,
+			CRect(m_fmfHeader.byChipWidth * 16,
+				m_fmfHeader.byChipHeight * 28,
+				m_fmfHeader.byChipWidth * 6,
+				m_fmfHeader.byChipHeight * 4),
+			CVector2D(m_fmfHeader.byChipWidth * 9,
+				m_fmfHeader.byChipHeight * 43)));
+		break;
+	case 38:
+		Open("Map/？？？.fmf");
+		Base::Add(new AreaChange(6,
+			CRect(m_fmfHeader.byChipWidth * 16,
+				m_fmfHeader.byChipHeight * 28,
+				m_fmfHeader.byChipWidth * 6,
+				m_fmfHeader.byChipHeight * 4),
+			CVector2D(m_fmfHeader.byChipWidth * 27,
+				m_fmfHeader.byChipHeight * 43)));
 	}
 
 	

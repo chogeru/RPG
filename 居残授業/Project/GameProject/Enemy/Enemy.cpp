@@ -9,7 +9,7 @@ Enemy::Enemy(const CVector2D& p)
 		m_img.ChangeAnimation(0);
 		m_img.SetCenter(32, 32);
 		m_img.SetSize(64, 64);
-		m_rect = CRect(-30,-30, 30, 30);
+		m_rect = CRect(-26,-22, 26, 26);
 		m_damage_no = -10000;
 		m_hp = 50;
 		m_state = eState_Idle;
@@ -95,7 +95,7 @@ void Enemy::Draw()
 {
 	m_img.SetPos(GetScreenPos(m_pos));
 	m_img.Draw();
-	DrawRect();
+	//DrawRect();
 }
 
 void Enemy::Collision(Base* b)

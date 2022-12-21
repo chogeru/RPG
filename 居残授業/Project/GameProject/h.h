@@ -1,6 +1,7 @@
 #pragma once
 //ƒwƒbƒ_[‚Í‚±‚±‚É‚Ü‚Æ‚ß‚éby‚Í‚â‚µ
 #include "Maptip/Map.h"
+#include"Maptip/Fuda.h"
 #include"Base/Base.h"
 #include"Player/Player.h"
 #include"Enemy/Enemy.h"

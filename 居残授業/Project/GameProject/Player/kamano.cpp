@@ -24,7 +24,7 @@ kamano::kamano(const CVector2D& p, bool flip):
 	
 	//座標設定
 	m_pos_old = m_pos =p;
-    m_rect = CRect(-25, -25, 25, 25);
+    m_rect = CRect(-24, -22, 24, 24);
 	
 	m_state = eState_Idle;
 	//着地フラグ
@@ -43,15 +43,13 @@ kamano::kamano(const CVector2D& p, bool flip):
 	m_enable_area_change = true;
 	m_hit_area_change = false;
 
-
 }void kamano::StateIdle()
 {
 	//移動量/ 
-	const float move_speed = 10;
+	const float move_speed = 9;
 	//移動フラグ
 
 	bool move_flag = false;
-	//ジャンプ力
 	if (m_gauge)
 		m_gauge->SetKill();
 	
@@ -62,7 +60,7 @@ kamano::kamano(const CVector2D& p, bool flip):
 		m_img[Chara1].ChangeAnimation(1);
 		move_flag = true;
 		if (HOLD(CInput::eButton9)) {
-			m_pos.x += -move_speed * 0.8f;
+			m_pos.x += -move_speed * 0.7f;
 			move_flag = true;
 		}
 	}
@@ -72,7 +70,7 @@ kamano::kamano(const CVector2D& p, bool flip):
 		m_img[Chara1].ChangeAnimation(2);
 		move_flag = true;
 		if (HOLD(CInput::eButton9)) {
-			m_pos.y += -move_speed * 0.8f;
+			m_pos.y += -move_speed * 0.7f;
 			move_flag = true;
 		}
 	}
@@ -82,7 +80,7 @@ kamano::kamano(const CVector2D& p, bool flip):
 		m_img[Chara1].ChangeAnimation(3);
 		move_flag = true;
 		if (HOLD(CInput::eButton9)) {
-			m_pos.y -= -move_speed * 0.8f;
+			m_pos.y -= -move_speed * 0.7f;
 			move_flag = true;
 		}
 	}
@@ -93,22 +91,11 @@ kamano::kamano(const CVector2D& p, bool flip):
 		m_img[Chara1].ChangeAnimation(0);
 		move_flag = true;
 		if (HOLD(CInput::eButton9)) {
-			m_pos.x += move_speed * 0.8f;
+			m_pos.x += move_speed * 0.7f;
 			move_flag = true;
 		}
 	}
-	//使わない
-	/*Base* b = Base::FindObject(eType_kamano);
-	m_cnt++;
-	if (b) {
-		//ターゲットへのベクトル
-		CVector2D vec = b->m_pos - m_pos;
-		m_ang = atan2(vec.x, vec.y);
-	if (PUSH(CInput::eMouseL)) {
-		Base::Add(new Bullet(eType_Player_Bullet, m_pos, m_ang, 4));
-		m_cnt = 0;
-	}
-	}*/
+	
 
 	//動いているアニメーション
 	if (move_flag)
@@ -150,13 +137,7 @@ void kamano::Update() {
 		StateIdle();
 		break;
 	}
-	//落ちていたら落下中状態へ移行
-	/*if (m_is_ground && m_vec.y > GRAVITY * 4)
-		m_is_ground = false;
-	//重力による落下
-	m_vec.y += GRAVITY;
-	m_pos += m_vec;
-	*/
+	
 
 	//アニメーション更新
 	m_img[Chara1].UpdateAnimation();
@@ -173,7 +154,7 @@ void kamano::Draw() {
 	m_img[Chara1].SetPos(GetScreenPos(m_pos));
 	//描画
 	m_img[Chara1].Draw();
-	DrawRect();
+	//DrawRect();
 }
 void kamano::Collision(Base* b)
 {
@@ -224,17 +205,10 @@ void kamano::Collision(Base* b)
 		}
 		break;
 	}
-
+	
+	
 }
 
-/*	case eType_Enemy:
-		if (Base::CollisionRect(this, b)) {
-			SetKill();
-			Base::Add(new Gameover());
-		}
-		break;
-		
-	}
 
-}*/
+
 

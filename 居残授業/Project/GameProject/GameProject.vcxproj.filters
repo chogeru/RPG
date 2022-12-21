@@ -56,6 +56,9 @@
     <ClCompile Include="UI\Gameclear.cpp">
       <Filter>UI</Filter>
     </ClCompile>
+    <ClCompile Include="Maptip\Fuda.cpp">
+      <Filter>Maptip</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Base">
@@ -132,6 +135,9 @@
     </ClInclude>
     <ClInclude Include="Enemy\EnemyManager.h">
       <Filter>Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Maptip\Fuda.h">
+      <Filter>Maptip</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
