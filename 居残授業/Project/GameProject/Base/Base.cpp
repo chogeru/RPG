@@ -153,7 +153,7 @@ void Base::DrawRect()
 	Utility::DrawQuad(
 		CVector2D(rect.m_left, rect.m_top) - m_scroll,
 		CVector2D(rect.m_width, rect.m_height),
-		CVector4D(1, 0, 0, 0.5f));
+		CVector4D(0, 0, 0, 0.5f));
 }
 bool Base::CollisionRect(Base* b1, Base* b2)
 {
