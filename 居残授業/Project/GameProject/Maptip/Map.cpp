@@ -544,7 +544,7 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 	
 		break;
 	case 32:
-		Open("Map/‹³º€‘Ì‚ ‚è.fmf");
+		Open("Map/¶‹³º.fmf");
 		Base::Add(new AreaChange(5,
 			CRect(m_fmfHeader.byChipWidth * 16,
 				m_fmfHeader.byChipHeight * 28,
