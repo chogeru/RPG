@@ -422,7 +422,7 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 				m_fmfHeader.byChipHeight * 43)));
 		break;
 	case 18:
-		Open("Map/図書室.fmf");
+		Open("Map/部屋.fmf");
 		Base::Add(new AreaChange(2,
 			CRect(m_fmfHeader.byChipWidth * 16,
 				m_fmfHeader.byChipHeight * 28,
@@ -531,7 +531,7 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 				m_fmfHeader.byChipHeight * 7)));
 		break;
 	case 31:
-		Open("Map/教室死体あり.fmf");
+		Open("Map/椅子部屋２.fmf");
 		Base::Add(new Fuda(CVector2D(950, 280)));
 		Base::Add(new AreaChange(5,
 			CRect(m_fmfHeader.byChipWidth * 16,
@@ -554,7 +554,7 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 				m_fmfHeader.byChipHeight * 43)));
 		break;
 	case 33:
-		Open("Map/教室死体あり.fmf");
+		Open("Map/倉庫.fmf");
 		Base::Add(new AreaChange(5,
 			CRect(m_fmfHeader.byChipWidth * 16,
 				m_fmfHeader.byChipHeight * 28,
@@ -597,7 +597,7 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 				m_fmfHeader.byChipHeight * 43)));
 		break;
 	case 38:
-		Open("Map/？？？.fmf");
+		Open("Map/落とし部屋.fmf");
 		Base::Add(new AreaChange(6,
 			CRect(m_fmfHeader.byChipWidth * 16,
 				m_fmfHeader.byChipHeight * 28,
