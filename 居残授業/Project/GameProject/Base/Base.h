@@ -19,6 +19,7 @@ enum {
 	eType_AreaChange,
 	eType_Canvas,
 	eType_Gauge,
+	eType_kaisou,
 };
 
 
