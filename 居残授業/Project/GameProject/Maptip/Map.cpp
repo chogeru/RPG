@@ -17,6 +17,7 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 	case 1:
 		//fmfからマップデータを読み込む
 		Open("Map/1階メインホール裏.fmf");
+	//	Base::Add(new kaisou(CVector2D(100, 100)));
 		//廊下↑                   //左が横移動数値、右が縦移動数値
 		Base::Add(new Fuda(CVector2D(580, 380)));
 		Base::Add(new Enemy(CVector2D(700, 680)));
@@ -352,7 +353,8 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 	case 10:
 		Open("Map/教室.fmf");
 		Base::Add(new Fuda(CVector2D(600, 380)));
-		Base::Add(new Enemy(CVector2D(200, 680)));
+		Base::Add(new Enemy(CVector2D(340, 680)));
+		Base::Add(new Enemy(CVector2D(640, 580)));
 		Base::Add(new AreaChange(1,
 			CRect(m_fmfHeader.byChipWidth * 16,
 				m_fmfHeader.byChipHeight * 28,
@@ -366,6 +368,8 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 
 	case 11:
 		Open("Map/教室.fmf");
+		Base::Add(new Enemy(CVector2D(340, 680)));
+		Base::Add(new Enemy(CVector2D(640, 580)));
 		Base::Add(new AreaChange(1,
 			CRect(m_fmfHeader.byChipWidth * 16,
 				m_fmfHeader.byChipHeight * 28,
@@ -377,6 +381,8 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 
 	case 12:
 		Open("Map/教室.fmf");
+		Base::Add(new Enemy(CVector2D(340, 680)));
+		Base::Add(new Enemy(CVector2D(640, 580)));
 		Base::Add(new AreaChange(1,
 			CRect(m_fmfHeader.byChipWidth * 16,
 				m_fmfHeader.byChipHeight * 28,
@@ -388,6 +394,8 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 
 	case 13:
 		Open("Map/教室.fmf");
+		Base::Add(new Enemy(CVector2D(340, 680)));
+		Base::Add(new Enemy(CVector2D(640, 580)));
 		Base::Add(new AreaChange(1,
 			CRect(m_fmfHeader.byChipWidth * 16,
 				m_fmfHeader.byChipHeight * 28,
@@ -400,6 +408,9 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 	case 15:
 		Open("Map/図書室.fmf");
 		Base::Add(new Fuda(CVector2D(300, 450)));
+		Base::Add(new Enemy(CVector2D(340, 680)));
+		Base::Add(new Enemy(CVector2D(640, 580)));
+		Base::Add(new Enemy(CVector2D(840, 580)));
 		Base::Add(new AreaChange(2,
 			CRect(m_fmfHeader.byChipWidth * 16,
 				m_fmfHeader.byChipHeight * 28,
@@ -410,6 +421,9 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 		break;
 	case 16:
 		Open("Map/図書室.fmf");
+		Base::Add(new Enemy(CVector2D(340, 680)));
+		Base::Add(new Enemy(CVector2D(640, 580)));
+		Base::Add(new Enemy(CVector2D(840, 580)));
 		Base::Add(new AreaChange(2,
 			CRect(m_fmfHeader.byChipWidth * 16,
 				m_fmfHeader.byChipHeight * 28,
@@ -420,6 +434,9 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 		break;
 	case 17:
 		Open("Map/図書室.fmf");
+		Base::Add(new Enemy(CVector2D(340, 680)));
+		Base::Add(new Enemy(CVector2D(640, 580)));
+		Base::Add(new Enemy(CVector2D(840, 580)));
 		Base::Add(new AreaChange(2,
 			CRect(m_fmfHeader.byChipWidth * 16,
 				m_fmfHeader.byChipHeight * 28,
@@ -430,6 +447,12 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 		break;
 	case 18:
 		Open("Map/部屋.fmf");
+		Base::Add(new Enemy(CVector2D(340, 680)));
+		Base::Add(new Enemy(CVector2D(640, 580)));
+		Base::Add(new Enemy(CVector2D(840, 580)));
+		Base::Add(new Enemy(CVector2D(240, 680)));
+		Base::Add(new Enemy(CVector2D(740, 580)));
+		Base::Add(new Enemy(CVector2D(540, 580)));
 		Base::Add(new AreaChange(2,
 			CRect(m_fmfHeader.byChipWidth * 16,
 				m_fmfHeader.byChipHeight * 28,
@@ -442,6 +465,9 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 	case 20:
 		Open("Map/地部屋.fmf");
 		Base::Add(new Fuda(CVector2D(700, 380)));
+		Base::Add(new Enemy(CVector2D(340, 680)));
+		Base::Add(new Enemy(CVector2D(640, 580)));
+		Base::Add(new Enemy(CVector2D(840, 580)));
 		Base::Add(new AreaChange(3,
 			CRect(m_fmfHeader.byChipWidth * 16,
 				m_fmfHeader.byChipHeight * 28,
@@ -452,6 +478,9 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 		break;
 	case 21:
 		Open("Map/地部屋.fmf");
+		Base::Add(new Enemy(CVector2D(340, 680)));
+		Base::Add(new Enemy(CVector2D(640, 580)));
+		Base::Add(new Enemy(CVector2D(840, 580)));
 		Base::Add(new AreaChange(3,
 			CRect(m_fmfHeader.byChipWidth * 16,
 				m_fmfHeader.byChipHeight * 28,
@@ -462,6 +491,9 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 		break;
 	case 22:
 		Open("Map/地部屋.fmf");
+		Base::Add(new Enemy(CVector2D(340, 680)));
+		Base::Add(new Enemy(CVector2D(640, 580)));
+		Base::Add(new Enemy(CVector2D(840, 580)));
 		Base::Add(new AreaChange(3,
 			CRect(m_fmfHeader.byChipWidth * 16,
 				m_fmfHeader.byChipHeight * 28,
@@ -472,6 +504,9 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 		break;
 	case 23:
 		Open("Map/地部屋.fmf");
+		Base::Add(new Enemy(CVector2D(340, 680)));
+		Base::Add(new Enemy(CVector2D(640, 580)));
+		Base::Add(new Enemy(CVector2D(840, 580)));
 		Base::Add(new AreaChange(3,
 			CRect(m_fmfHeader.byChipWidth * 16,
 				m_fmfHeader.byChipHeight * 28,
@@ -484,7 +519,8 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 
 	case 25:
 		Open("Map/椅子部屋.fmf");
-		
+		Base::Add(new Enemy(CVector2D(340, 680)));
+		Base::Add(new Enemy(CVector2D(840, 580)));
 		Base::Add(new AreaChange(4,
 			CRect(m_fmfHeader.byChipWidth * 16,
 				m_fmfHeader.byChipHeight * 28,
@@ -496,6 +532,8 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 	case 26:
 		Open("Map/椅子部屋.fmf");
 		Base::Add(new Fuda(CVector2D(600, 380)));
+		Base::Add(new Enemy(CVector2D(340, 680)));
+		Base::Add(new Enemy(CVector2D(840, 580)));
 		Base::Add(new AreaChange(4,
 			CRect(m_fmfHeader.byChipWidth * 16,
 				m_fmfHeader.byChipHeight * 28,
@@ -506,6 +544,8 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 		break;
 	case 27:
 		Open("Map/椅子部屋.fmf");
+		Base::Add(new Enemy(CVector2D(340, 680)));
+		Base::Add(new Enemy(CVector2D(840, 580)));
 		Base::Add(new AreaChange(4,
 			CRect(m_fmfHeader.byChipWidth * 16,
 				m_fmfHeader.byChipHeight * 28,
@@ -516,6 +556,8 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 		break;
 	case 28:
 		Open("Map/椅子部屋.fmf");
+		Base::Add(new Enemy(CVector2D(340, 680)));
+		Base::Add(new Enemy(CVector2D(840, 580)));
 		Base::Add(new AreaChange(4,
 			CRect(m_fmfHeader.byChipWidth * 16,
 				m_fmfHeader.byChipHeight * 28,
@@ -529,6 +571,10 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 
 	case 30:
 		Open("Map/教室死体あり.fmf");
+		Base::Add(new Enemy(CVector2D(340, 680)));
+		Base::Add(new Enemy(CVector2D(840, 580)));
+		Base::Add(new Enemy(CVector2D(340, 380)));
+		Base::Add(new Enemy(CVector2D(840, 280)));
 		Base::Add(new AreaChange(5,
 			CRect(m_fmfHeader.byChipWidth * 16,
 				m_fmfHeader.byChipHeight * 28,
@@ -539,7 +585,7 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 		break;
 	case 31:
 		Open("Map/椅子部屋２.fmf");
-		Base::Add(new Fuda(CVector2D(950, 280)));
+	
 		Base::Add(new AreaChange(5,
 			CRect(m_fmfHeader.byChipWidth * 16,
 				m_fmfHeader.byChipHeight * 28,
@@ -573,6 +619,8 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 
 	case 35:
 		Open("Map/？？？.fmf");
+		Base::Add(new Enemy(CVector2D(340, 680)));
+		Base::Add(new Enemy(CVector2D(840, 580)));
 		Base::Add(new Fuda(CVector2D(950, 280)));
 		Base::Add(new AreaChange(6,
 			CRect(m_fmfHeader.byChipWidth * 16,
@@ -584,6 +632,8 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 		break;
 	case 36:
 		Open("Map/？？？.fmf");
+		Base::Add(new Enemy(CVector2D(340, 680)));
+		Base::Add(new Enemy(CVector2D(840, 580)));
 		Base::Add(new AreaChange(6,
 			CRect(m_fmfHeader.byChipWidth * 16,
 				m_fmfHeader.byChipHeight * 28,
@@ -595,6 +645,8 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 
 	case 37:
 		Open("Map/？？？.fmf");
+		Base::Add(new Enemy(CVector2D(340, 680)));
+		Base::Add(new Enemy(CVector2D(840, 580)));
 		Base::Add(new AreaChange(6,
 			CRect(m_fmfHeader.byChipWidth * 16,
 				m_fmfHeader.byChipHeight * 28,

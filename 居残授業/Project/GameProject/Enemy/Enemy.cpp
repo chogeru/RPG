@@ -14,7 +14,7 @@ Enemy::Enemy(const CVector2D& p)
 }
 void Enemy::StateIdle()
 {
-	const float movespeed = 3;
+	const float movespeed = 2;
 	bool move_flag = false;
 
 	auto list = Base::FindObjects(eType_kamano);
