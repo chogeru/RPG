@@ -4,14 +4,11 @@
 Enemy::Enemy(const CVector2D& p)
 	:Base(eType_Enemy)
 {
-
 		m_img = COPY_RESOURCE("Enemy", CImage);
 		m_img.ChangeAnimation(0);
 		m_img.SetCenter(32, 32);
 		m_img.SetSize(64, 64);
 		m_rect = CRect(-26,-22, 26, 26);
-		m_damage_no = -10000;
-		m_hp = 50;
 		m_state = eState_Idle;
 		m_pos_old = m_pos =p;
 }

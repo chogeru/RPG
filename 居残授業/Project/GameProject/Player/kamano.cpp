@@ -46,7 +46,7 @@ kamano::kamano(const CVector2D& p, bool flip):
 }void kamano::StateIdle()
 {
 	//ˆÚ“®—Ê/ 
-	const float move_speed = 9;
+	const float move_speed = 7;
 	//ˆÚ“®ƒtƒ‰ƒO
 
 	bool move_flag = false;
@@ -60,7 +60,7 @@ kamano::kamano(const CVector2D& p, bool flip):
 		m_img[Chara1].ChangeAnimation(1);
 		move_flag = true;
 		if (HOLD(CInput::eButton9)) {
-			m_pos.x += -move_speed * 0.7f;
+			m_pos.x += -move_speed * 0.5f;
 			move_flag = true;
 		}
 	}
@@ -70,7 +70,7 @@ kamano::kamano(const CVector2D& p, bool flip):
 		m_img[Chara1].ChangeAnimation(2);
 		move_flag = true;
 		if (HOLD(CInput::eButton9)) {
-			m_pos.y += -move_speed * 0.7f;
+			m_pos.y += -move_speed * 0.5f;
 			move_flag = true;
 		}
 	}
@@ -80,7 +80,7 @@ kamano::kamano(const CVector2D& p, bool flip):
 		m_img[Chara1].ChangeAnimation(3);
 		move_flag = true;
 		if (HOLD(CInput::eButton9)) {
-			m_pos.y -= -move_speed * 0.7f;
+			m_pos.y -= -move_speed * 0.5f;
 			move_flag = true;
 		}
 	}
@@ -91,7 +91,7 @@ kamano::kamano(const CVector2D& p, bool flip):
 		m_img[Chara1].ChangeAnimation(0);
 		move_flag = true;
 		if (HOLD(CInput::eButton9)) {
-			m_pos.x += move_speed * 0.7f;
+			m_pos.x += move_speed * 0.5f;
 			move_flag = true;
 		}
 	}

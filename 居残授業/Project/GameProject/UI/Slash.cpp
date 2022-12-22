@@ -1,4 +1,4 @@
-#include "Slash.h"
+/*#include "Slash.h"
 
 Slash::Slash(const CVector2D& pos, bool flip, int type, int attack_no) : Base(type)
 {
@@ -39,5 +39,5 @@ void Slash::Draw() {
 	m_img.SetFlipH(m_flip);
 	m_img.Draw();
 }
-
+*/
 

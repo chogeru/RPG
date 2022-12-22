@@ -13,8 +13,8 @@ class Enemy : public Base {
 	bool m_flip;
 	bool m_is_ground;
 
-	int m_attack_no;
-	int m_damage_no;
+	int m_attack;
+	int m_damage;
 	int m_hp;
 	void StateIdle();
 	//エリアチェンジフラグ

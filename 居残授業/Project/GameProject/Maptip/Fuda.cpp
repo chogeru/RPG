@@ -13,13 +13,9 @@ Fuda::Fuda(const CVector2D& p)
 
 void Fuda::Update()
 {
-	
 	m_pos_old = m_pos;
 	//Base::Add(new Fuda());
 }
-
-
-
 
 
 void Fuda::Draw()

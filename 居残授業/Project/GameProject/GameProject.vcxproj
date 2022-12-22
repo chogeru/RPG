@@ -29,7 +29,6 @@
     <ClCompile Include="UI\Gauge.cpp" />
     <ClCompile Include="UI\Goal.cpp" />
     <ClCompile Include="UI\Save.cpp" />
-    <ClCompile Include="UI\Slash.cpp" />
     <ClCompile Include="UI\Title.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -51,7 +50,6 @@
     <ClInclude Include="UI\Gauge.h" />
     <ClInclude Include="UI\Goal.h" />
     <ClInclude Include="UI\Save.h" />
-    <ClInclude Include="UI\Slash.h" />
     <ClInclude Include="UI\Title.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

@@ -20,9 +20,6 @@
     <ClCompile Include="UI\Goal.cpp">
       <Filter>UI</Filter>
     </ClCompile>
-    <ClCompile Include="UI\Slash.cpp">
-      <Filter>UI</Filter>
-    </ClCompile>
     <ClCompile Include="Player\kamano.cpp">
       <Filter>Player</Filter>
     </ClCompile>
@@ -97,9 +94,6 @@
       <Filter>UI</Filter>
     </ClInclude>
     <ClInclude Include="UI\Goal.h">
-      <Filter>UI</Filter>
-    </ClInclude>
-    <ClInclude Include="UI\Slash.h">
       <Filter>UI</Filter>
     </ClInclude>
     <ClInclude Include="Player\kamano.h">

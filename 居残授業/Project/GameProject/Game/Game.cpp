@@ -25,15 +25,7 @@ Game::~Game()
 		Base::Add(new Game());
 		printf("%d\n", SaveLoad::s_save_data.MapData);
 	}
-	/*else {
-		//全てのオブジェクトを破棄
-		Base::KillAll();
-		//タイトルシーンへ
-		Base::Add(new Title());
-		Base::Add(new EnemyManager());
-
-
-	}*/
+	
 	if (!Base::FindObject(eType_kamano)) {
 		KillAll();
 		Base::Add(new  Gameover);
@@ -44,24 +36,12 @@ Game::~Game()
 
 	void Game::Update()
 {
-	//ゴールがなければゲームシーン終了
-	//if(!Base::FindObject(eType_Goal))
-	 
 	
-		//if (GameOver_flag == false) {
-			
-		//}
-			
-		//GameOver_flag == true;
 		if (!Base::FindObject(eType_kamano))
 			SetKill();
 			
 		
-	/*if (!Base::FindObject(eType_Goal)) {
-		
-		if (PUSH(CInput::eButton1))
-			SetKill();
-	}*/
+	
 	
 	if (PUSH(CInput::eButton7)) {
 		Base* b = Base::FindObject(eType_kamano);
