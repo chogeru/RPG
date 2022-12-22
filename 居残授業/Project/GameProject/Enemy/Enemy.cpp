@@ -8,7 +8,7 @@ Enemy::Enemy(const CVector2D& p)
 		m_img.ChangeAnimation(0);
 		m_img.SetCenter(32, 32);
 		m_img.SetSize(64, 64);
-		m_rect = CRect(-26,-22, 26, 26);
+		m_rect = CRect(-2,-2, 2, 2);
 		m_state = eState_Idle;
 		m_pos_old = m_pos =p;
 }

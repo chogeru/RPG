@@ -1,9 +1,9 @@
 #pragma once
 //ÉwÉbÉ_Å[ÇÕÇ±Ç±Ç…Ç‹Ç∆ÇﬂÇÈbyÇÕÇ‚Çµ
-#include "Maptip/Map.h"
 #include"Maptip/Fuda.h"
 #include"Base/Base.h"
 #include"Player/Player.h"
+#include"Maptip/Map.h"
 #include"Enemy/Enemy.h"
 #include"Player/kamano.h"
 #include"Player/hayashi.h"
@@ -21,3 +21,4 @@
 #include"UI/Gauge.h"
 #include"Game/Game.h"
 #include"UI/Save.h"
+#include"Enemy/Dijkstra.h"

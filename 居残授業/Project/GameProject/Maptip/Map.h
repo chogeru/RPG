@@ -2,7 +2,6 @@
 
 #include"../Base/Base.h"
 #include "fmfmap.h"
-
 //“§–¾ƒ`ƒbƒv”Ô†
 #define NULL_TIP 121
 

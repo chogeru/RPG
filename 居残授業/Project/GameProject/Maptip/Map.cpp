@@ -19,6 +19,7 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 		Open("Map/1階メインホール裏.fmf");
 		//廊下↑                   //左が横移動数値、右が縦移動数値
 		Base::Add(new Fuda(CVector2D(580, 380)));
+		Base::Add(new Enemy(CVector2D(700, 680)));
 		Base::Add(new AreaChange(2,					//次のマップの番号
 			CRect(m_fmfHeader.byChipWidth * 48,		//横（数値が高いほど右に行く）
 				m_fmfHeader.byChipHeight * 7,		//高さ（数値が低いほど上に行く）
@@ -82,6 +83,7 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 	case 2:
 		Open("Map/2階メインホール.fmf");
 		//廊下　右上へ
+		Base::Add(new Enemy(CVector2D(1400, 680)));
 		Base::Add(new AreaChange(3,
 			CRect(m_fmfHeader.byChipWidth * 48,
 				m_fmfHeader.byChipHeight * 7,
@@ -133,6 +135,7 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 		break;
 	case 3:
 		Open("Map/3階メインホール.fmf");
+		Base::Add(new Enemy(CVector2D(1400, 680)));
 		//廊下　右へ
 		Base::Add(new AreaChange(4,
 			CRect(m_fmfHeader.byChipWidth * 48,
@@ -187,6 +190,7 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 	case 4:
 		Open("Map/4階メインホール.fmf");
 		//左上
+		Base::Add(new Enemy(CVector2D(1400, 680)));
 		Base::Add(new AreaChange(5,
 			CRect(m_fmfHeader.byChipWidth * 48,
 				m_fmfHeader.byChipHeight * 7,
@@ -240,6 +244,7 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 		break;
 	case 5:
 		Open("Map/5階メインホール.fmf");
+		Base::Add(new Enemy(CVector2D(1400, 680)));
 		//左へ
 		Base::Add(new AreaChange(6,
 			CRect(m_fmfHeader.byChipWidth * 48,
@@ -293,6 +298,7 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 		
 	case 6:
 		Open("Map/6階メインホール.fmf");
+		Base::Add(new Enemy(CVector2D(1400, 680)));
 
 		/*Base::Add(new AreaChange(7,
 			CRect(m_fmfHeader.byChipWidth * 49,
@@ -346,6 +352,7 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 	case 10:
 		Open("Map/教室.fmf");
 		Base::Add(new Fuda(CVector2D(600, 380)));
+		Base::Add(new Enemy(CVector2D(200, 680)));
 		Base::Add(new AreaChange(1,
 			CRect(m_fmfHeader.byChipWidth * 16,
 				m_fmfHeader.byChipHeight * 28,

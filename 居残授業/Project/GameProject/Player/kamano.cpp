@@ -170,6 +170,7 @@ void kamano::Collision(Base* b)
 				if (AreaChange* a = dynamic_cast<AreaChange*>(b)) {
 					//マップとエリアチェンジオブジェクトを削除
 					KillByType(eType_Field);
+					KillByType(eType_Fuda);
 					KillByType(eType_AreaChange);
 					KillByType(eType_Enemy);
 					KillByType(eType_EnemyManager);
