@@ -33,12 +33,14 @@ void Fuda::Collision(Base* b)
 	case eType_kamano:
 		if (m_type == eType_Fuda && Base::CollisionRect(this, b)) {
 			if (Base::CollisionRect(this, b)) {
+				//お札に触れるとカウント1される
 				m_cut+=1;
 				m_hit_fuda = true;
 				KillByType(eType_Fuda);
-				if (m_cut ==8) {
+				//お札が12回カウントされたらシーン切り替え
+				if (m_cut ==12) {
 					KillAll();
-					Base::Add(new Title());
+					Base::Add(new Title());//ゲームクリア画面がないのでいったんタイトルにもどします
 				}
 			}
 		}

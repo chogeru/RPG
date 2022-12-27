@@ -23,31 +23,35 @@ void Enemy::StateIdle()
 		float dist = FLT_MAX;
 		Base* player = Base::FindObject(eType_kamano);
 		if (player) {
+			//¨
 			if (player->m_pos.x < m_pos.x - 0) {
 				m_pos.x += -movespeed;
-				m_flip = false;
-				m_img.ChangeAnimation(1);
-				move_flag = true;
-				
-			}
-			if (player->m_pos.x > m_pos.x + 0) {
-				m_pos.x += movespeed;
 				m_flip = false;
 				m_img.ChangeAnimation(0);
 				move_flag = true;
 				
 			}
-			if (player->m_pos.y > m_pos.y - 0) {
-				m_pos.y += movespeed;
+			//©
+			if (player->m_pos.x > m_pos.x + 0) {
+				m_pos.x += movespeed;
 				m_flip = false;
-				m_img.ChangeAnimation(2);
+				m_img.ChangeAnimation(1);
 				move_flag = true;
 				
 			}
+			//ª
+			if (player->m_pos.y > m_pos.y - 0) {
+				m_pos.y += movespeed;
+				m_flip = false;
+				m_img.ChangeAnimation(3);
+				move_flag = true;
+				
+			}
+			//«
 			if (player->m_pos.y < m_pos.y + 0) {
 				m_pos.y -= movespeed;
 				m_flip = false;
-				m_img.ChangeAnimation(1);
+				m_img.ChangeAnimation(2);
 				move_flag = true;
 				
 			}

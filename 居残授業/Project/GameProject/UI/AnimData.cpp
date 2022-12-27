@@ -1,16 +1,5 @@
 #include "AnimData.h"
 
-
-
-
-
-
-
-
-
-
-
-
 static TexAnim(kamanoLeft)[] = {
 	{ 1,8 },
 	{ 5,8 },
@@ -39,18 +28,7 @@ static TexAnim kamanoDown[] = {
 
 
 	};
-/*static TexAnim playerWakeup[] = {
-	{ 112,4 },
-	
-};*/
 
-
-
-/*static TexAnim kamanoStep[] = {
-	{ 1,4 },
-	{ 5,4 },
-	{ 9,4 },
-};*/
 TexAnimData kamano_anim_data[] = {
 	//ANIMDATA(kamanoIdle),
 	
@@ -76,13 +54,13 @@ static TexAnim EnemyRight[] = {
 	{5,2},
 };
 static TexAnim EnemyUp[] = {
-	{0,2},
-	{4,2},
+	{3,2},
+	{7,2},
 };
 static TexAnim EnemyDown[] = {
 
-	{3,2},
-	{7,2},
+	{0,2},
+	{4,2},
 
 		
 	

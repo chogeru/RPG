@@ -28,7 +28,6 @@
     <ClCompile Include="UI\Gameclear.cpp" />
     <ClCompile Include="UI\Gameover.cpp" />
     <ClCompile Include="UI\Gauge.cpp" />
-    <ClCompile Include="UI\Goal.cpp" />
     <ClCompile Include="UI\Save.cpp" />
     <ClCompile Include="UI\Title.cpp" />
   </ItemGroup>
@@ -50,7 +49,6 @@
     <ClInclude Include="UI\Gameclear.h" />
     <ClInclude Include="UI\Gameover.h" />
     <ClInclude Include="UI\Gauge.h" />
-    <ClInclude Include="UI\Goal.h" />
     <ClInclude Include="UI\Save.h" />
     <ClInclude Include="UI\Title.h" />
   </ItemGroup>

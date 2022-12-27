@@ -31,6 +31,5 @@ void Title::Draw()
 	m_img.SetSize(1920, 1080);
 	//•¶š•\¦
 
-/*	m_title_text.Draw(64, 256, 1, 1, 0, "‹cö‹Æ");
-	m_title_text.Draw(64, 512, 0, 0, 0, "Push Z");*/
+
 }
