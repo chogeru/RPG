@@ -39,9 +39,6 @@ Game::~Game()
 	
 		if (!Base::FindObject(eType_kamano))
 			SetKill();
-			
-		
-	
 	
 	if (PUSH(CInput::eButton7)) {
 		Base* b = Base::FindObject(eType_kamano);
@@ -52,7 +49,5 @@ Game::~Game()
 		SetKill();
 		m_is_load = true;
 	}
-	
-
 }
 

@@ -38,11 +38,6 @@ TexAnimData kamano_anim_data[] = {
 	ANIMDATA(kamanoDown),
 	//ANIMDATA(kamanoStep),
 
-	
-		
-
-
-
 };
 static TexAnim EnemyLeft[] = {
 	{2,2},
@@ -76,22 +71,13 @@ TexAnimData Enemy_anim_data[] = {
 	ANIMDATA(EnemyDown),
 	//ANIMDATA(kamanoStep),
 
-
-
-
-
-
 };
 static TexAnim Title[] = {
 	{3,8},
 };
 TexAnimData Title_anim_data[] = {
 
-
 	ANIMDATA(Title)
-
-
-
 
 };
 static TexAnim _Gameover[] = {
