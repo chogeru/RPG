@@ -2,12 +2,9 @@
 //ÉwÉbÉ_Å[ÇÕÇ±Ç±Ç…Ç‹Ç∆ÇﬂÇÈbyÇÕÇ‚Çµ
 #include"Maptip/Fuda.h"
 #include"Base/Base.h"
-#include"Player/Player.h"
 #include"Maptip/Map.h"
 #include"Enemy/Enemy.h"
 #include"Player/kamano.h"
-#include"Player/hayashi.h"
-#include"Player/itihara.h"
 #include "UI/AnimData.h"
 #include"Enemy/EnemyManager.h"
 #include"UI/Gameover.h"
