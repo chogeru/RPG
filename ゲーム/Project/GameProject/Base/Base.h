@@ -5,23 +5,18 @@ enum {
 	eType_Player,
 	eType_Enemy,
 	eType_Fuda,
-	eType_Player_Attack,
-	eType_Enemy_Attack,
 	eType_UI,
 	eType_Goal,
 	eType_Scene,
 	eType_kamano,
 	eType_hayashi,
 	eType_itihara,
-	eType_Player_Bullet,
-	eType_Enemy_Bullet,
 	eType_EnemyManager,
 	eType_AreaChange,
 	eType_Canvas,
 	eType_Gauge,
 	eType_kaisou,
 	eType_Gameclear,
-	eType_EnemyS,
 };
 
 

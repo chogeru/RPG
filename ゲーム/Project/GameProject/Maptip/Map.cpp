@@ -17,6 +17,7 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 	case 1:
 		//fmfからマップデータを読み込む
 		Open("Map/1階メインホール裏.fmf");
+	
 	//	Base::Add(new kaisou(CVector2D(100, 100)));
 		//廊下↑                   //左が横移動数値、右が縦移動数値
 		Base::Add(new Fuda(CVector2D(580, 380)));

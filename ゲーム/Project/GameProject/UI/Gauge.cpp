@@ -11,7 +11,7 @@ void Gauge::Draw() {
 	//枠の表示
 	m_img.SetRect(0,0,256,64);
 	m_img.SetSize(256, 64);
-	m_img.SetPos(m_pos);
+	m_img.SetPos(GetScreenPos(m_pos));
 	m_img.Draw();
 
 	//ゲージの表示
@@ -21,7 +21,7 @@ void Gauge::Draw() {
 	int y = (m_gauge_type + 1);
 	m_img.SetRect(border, (64*y) + border, 4+width, (64 * (y+1)) - border);
 	m_img.SetSize(width, 64 - border - border);
-	m_img.SetPos(m_pos+CVector2D(border, border));
+	m_img.SetPos(GetScreenPos(m_pos+CVector2D(border, border)));
 	m_img.Draw();
 
 
