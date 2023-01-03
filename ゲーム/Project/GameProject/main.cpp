@@ -73,6 +73,7 @@ void Init(void)
 	ADD_RESOURCE("Enemy", CImage::CreateImage("Image/Enemy.png", Enemy_anim_data, 64, 64));
 	ADD_RESOURCE("Title", CImage::CreateImage("Image/Title.png"));
 	ADD_RESOURCE("Map1", CImage::CreateImage("Image/Map1.png"));
+	ADD_RESOURCE("Gameclear", CImage::CreateImage("Image/Gameclear.png"));
 	ADD_RESOURCE("itihara", CImage::CreateImage("Image/itihara.png", kamano_anim_data, 64, 64));
 	ADD_RESOURCE("kamano", CImage::CreateImage("Image/kamano.png",kamano_anim_data,64,64));
 	ADD_RESOURCE("hayashi", CImage::CreateImage("Image/hayashi.png", kamano_anim_data, 64, 64));
@@ -90,7 +91,7 @@ void Init(void)
 	//Base::Add(new Text("talk.txt", font));
 	
 	SOUND("BGM_Game")->Load("Sound/BGM/BGM_Game.wav");
-	
+	//SOUND("BGM_EnemyDestroy")->Load("Sound/BGM/EnemyDestroy.wav");
 	SOUND("BGM_GameOver")->Load("Sound/BGM/go2.wav");
 	SOUND("BGM_Title")->Load("Sound/BGM/Title true.wav");
 	SOUND("BGM_Title")->Play(true);

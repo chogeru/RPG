@@ -19,6 +19,8 @@ private:
 	int m_cnt;
 	int m_attack_no;
 	//ƒ_ƒ[ƒW”Ô†
+	int m_cut;
+	bool m_hit_fuda;
 	int m_damage_no;
 	int m_rad;
 	int m_hp;

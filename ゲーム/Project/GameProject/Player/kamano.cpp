@@ -35,8 +35,7 @@ kamano::kamano(const CVector2D& p, bool flip):
 	//ダメージ番号
 	m_damage_no = -1;
 	//
-	m_hp = 500;
-	m_hp = 1;
+	m_hp = 3;
 	m_rad=1;
 	//スクロール設定
 	m_scroll.x = m_pos.x - 1280 / 2;
@@ -95,8 +94,15 @@ kamano::kamano(const CVector2D& p, bool flip):
 			move_flag = true;
 		}
 	}
-	
-
+	if (Chara1 == 0) {
+		move_speed * 0.9f;
+	}
+	if (Chara1 == 1) {
+		move_speed * 0.1f;
+	}
+	if (Chara1 == 2) {
+		move_speed * 1.4f;
+	}
 	//動いているアニメーション
 	if (move_flag)
 	{
@@ -205,8 +211,40 @@ void kamano::Collision(Base* b)
 			}
 		}
 		break;
+
+
+	case eType_Fuda:
+		if (m_type == eType_kamano && Base::CollisionRect(this, b)) {
+			if (Base::CollisionRect(this, b)) {
+				//お札に触れるとカウント1される
+				m_cut += 1;
+				KillByType(eType_Fuda);
+				//お札が12回カウントされたらシーン切り替え
+				//確認しやすいように２回に変更しております
+				if (m_cut == 2) {
+					KillAll();
+					Base::Add(new Gameclear());//ゲームクリア画面がないのでいったんタイトルにもどします
+				}
+			}
+
+		}
+		break;
+
+	case eType_Enemy:
+		if (m_type == eType_kamano && Base::CollisionRect(this, b)) {
+			if (Base::CollisionRect(this, b)) {
+				m_hp -= 1;
+				//敵の削除
+				KillByType(eType_Enemy);
+				if (m_hp == 0) {
+				//	SOUND("BGM_EnemyDestroy")->Play();
+					SetKill();
+					b->SetKill();
+				}
+			}
+			break;
+		}
 	}
-	
 	
 }
 

@@ -23,3 +23,4 @@
 #include"UI/Save.h"
 #include"Enemy/Dijkstra.h"
 #include"Maptip/kaisou.h"
+#include"UI/Gameclear.h"

@@ -20,6 +20,8 @@ enum {
 	eType_Canvas,
 	eType_Gauge,
 	eType_kaisou,
+	eType_Gameclear,
+	eType_EnemyS,
 };
 
 

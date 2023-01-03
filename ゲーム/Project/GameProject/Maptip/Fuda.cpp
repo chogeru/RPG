@@ -23,29 +23,10 @@ void Fuda::Draw()
 	m_img.SetSize(64, 64);
 	m_img.SetPos(GetScreenPos(m_pos));
 	m_img.Draw();
-	//DrawRect();
+	DrawRect();
 
 }
 void Fuda::Collision(Base* b)
 {
-	switch (b->m_type) {
-
-	case eType_kamano:
-		if (m_type == eType_Fuda && Base::CollisionRect(this, b)) {
-			if (Base::CollisionRect(this, b)) {
-				//お札に触れるとカウント1される
-				m_cut+=1;
-				m_hit_fuda = true;
-				KillByType(eType_Fuda);
-				//お札が12回カウントされたらシーン切り替え
-				if (m_cut ==12) {
-					KillAll();
-					Base::Add(new Title());//ゲームクリア画面がないのでいったんタイトルにもどします
-				}
-			}
-		}
-		break;
-
-	}
 
 }

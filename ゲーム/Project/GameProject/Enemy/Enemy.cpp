@@ -123,17 +123,9 @@ void Enemy::Collision(Base* b)
 			}
 		}
 		break;
-	
-	
-	case eType_kamano:
-		if (m_type == eType_Enemy && Base::CollisionRect(this, b)) {
-			SetKill();
-			b->SetKill();
 
-		}
-		break;
+
 	}
-
 
 }
 
