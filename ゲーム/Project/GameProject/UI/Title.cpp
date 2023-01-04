@@ -29,7 +29,5 @@ void Title::Draw()
 {
 	m_img.Draw();
 	m_img.SetSize(1920, 1080);
-	//•¶Žš•\Ž¦
-
-
+//	m_title_text.Draw(64, 500, 1, 0, 0, "GAMEOVER");
 }

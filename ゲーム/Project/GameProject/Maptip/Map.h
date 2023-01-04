@@ -14,7 +14,7 @@ private:
 
 	CImage m_map_tip[40];		//画像オブジェクト
 	CImage m_backGround;
-	
+	CFont m_Map_text;
 public:
 	/// <summary>
 	/// コンストラクタ

@@ -23,7 +23,7 @@ void Fuda::Draw()
 	m_img.SetSize(64, 64);
 	m_img.SetPos(GetScreenPos(m_pos));
 	m_img.Draw();
-	DrawRect();
+	//DrawRect();
 
 }
 void Fuda::Collision(Base* b)

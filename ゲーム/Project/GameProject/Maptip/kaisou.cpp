@@ -1,9 +1,9 @@
-/*#include "Fuda.h"
+#include "Fuda.h"
 #include"../Game/Game.h"
 #include"../h.h"
 kaisou::kaisou(const CVector2D& p)
 	:Base(eType_kaisou) {
-	m_img = COPY_RESOURCE("ˆêŠK", CImage);
+	m_img = COPY_RESOURCE("kaisou1", CImage);
 	m_img.SetCenter(32, 32);
 	m_img.SetSize(64, 64);
 	m_rect = CRect(-30, -30, 30, 30);
@@ -26,4 +26,3 @@ void kaisou::Draw()
 	//DrawRect();
 
 }
-*/

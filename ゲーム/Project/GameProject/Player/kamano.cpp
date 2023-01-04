@@ -221,7 +221,7 @@ void kamano::Collision(Base* b)
 				KillByType(eType_Fuda);
 				//お札が12回カウントされたらシーン切り替え
 				//確認しやすいように２回に変更しております
-				if (m_cut == 2) {
+				if (m_cut == 12) {
 					KillAll();
 					Base::Add(new Gameclear());//ゲームクリア画面がないのでいったんタイトルにもどします
 				}
@@ -229,7 +229,7 @@ void kamano::Collision(Base* b)
 
 		}
 		break;
-
+		//敵に３回当たったら死ぬ処理
 	case eType_Enemy:
 		if (m_type == eType_kamano && Base::CollisionRect(this, b)) {
 			if (Base::CollisionRect(this, b)) {

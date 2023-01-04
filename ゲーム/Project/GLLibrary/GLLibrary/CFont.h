@@ -22,7 +22,7 @@ public:
 	@param	font			[in]	フォント
 	@param	size			[in]	サイズ
 	**/
-	CFont(const char *font_path = "C:\\Windows\\Fonts\\msgothic.ttc", int size=24);
+	CFont(const char *font_path = "C:\\Windows\\Fonts\\msgothic.ttc", int size=28);
 	/*!
 	@brief	文字の表示
 	@param	x				[in]	横位置
@@ -41,7 +41,7 @@ public:
 	void Release();
 
 	static CFont* GetInstance(std::string name);
-	static void CreateInstance(std::string name, const char* font = "ＭＳゴシック", int size = 2400);
+	static void CreateInstance(std::string name, const char* font = "HGゴシック", int size = 2400);
 };
 
 #define FONT_T()	CFont::GetInstance("default")

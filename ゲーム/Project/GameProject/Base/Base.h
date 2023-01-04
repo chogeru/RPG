@@ -17,6 +17,7 @@ enum {
 	eType_Gauge,
 	eType_kaisou,
 	eType_Gameclear,
+	eType_Text,
 };
 
 

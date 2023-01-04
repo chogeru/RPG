@@ -66,6 +66,7 @@ void Init(void)
 	////
 	//タイトル
 	ADD_RESOURCE("Fuda", CImage::CreateImage("Image/Fuda.png"));
+	ADD_RESOURCE("kaisou1", CImage::CreateImage("Image/kaisou1.png"));
 	ADD_RESOURCE("一階", CImage::CreateImage("Image/一階.png"));
 	ADD_RESOURCE("Gameover", CImage::CreateImage("Image/gameover.png"));
 	ADD_RESOURCE("mmm", CImage::CreateImage("Image/mmm.bmp"));

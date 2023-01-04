@@ -1,4 +1,4 @@
-/*#pragma once
+#pragma once
 #include "../Base/Base.h"
 class kaisou :public Base {
 private:
@@ -12,5 +12,5 @@ public:
 	void Update();
 	void Draw();
 
-};*/
+};
 
