@@ -22,7 +22,7 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 		//廊下↑                   //左が横移動数値、右が縦移動数値
 		m_Map_text.Draw(64, 500, 1, 0, 0, "1階");
 		Base::Add(new Fuda(CVector2D(580, 380)));
-		Base::Add(new Enemy(CVector2D(700, 680)));
+		//Base::Add(new Enemy(CVector2D(700, 680)));
 		Base::Add(new AreaChange(2,					//次のマップの番号
 			CRect(m_fmfHeader.byChipWidth * 48,		//横（数値が高いほど右に行く）
 				m_fmfHeader.byChipHeight * 7,		//高さ（数値が低いほど上に行く）
@@ -72,6 +72,13 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 			CVector2D(m_fmfHeader.byChipWidth * 16,
 				m_fmfHeader.byChipHeight * 28)));
 
+		Base::Add(new AreaChange(14,
+			CRect(m_fmfHeader.byChipWidth * 32,
+				m_fmfHeader.byChipHeight * 7,
+				m_fmfHeader.byChipWidth * 2,
+				m_fmfHeader.byChipHeight * 2),
+			CVector2D(m_fmfHeader.byChipWidth * 18,
+				m_fmfHeader.byChipHeight * 28)));
 	
 
 	/*	Base::Add(new AreaChange(99,
@@ -135,6 +142,14 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 				m_fmfHeader.byChipHeight * 2),
 			CVector2D(m_fmfHeader.byChipWidth * 16,
 				m_fmfHeader.byChipHeight * 28)));
+
+		Base::Add(new AreaChange(19,
+			CRect(m_fmfHeader.byChipWidth * 31,
+				m_fmfHeader.byChipHeight * 7,
+				m_fmfHeader.byChipWidth * 2,
+				m_fmfHeader.byChipHeight * 2),
+			CVector2D(m_fmfHeader.byChipWidth * 18,
+				m_fmfHeader.byChipHeight * 28)));
 		break;
 	case 3:
 		Open("Map/3階メインホール.fmf");
@@ -188,6 +203,13 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 			CVector2D(m_fmfHeader.byChipWidth * 16,
 				m_fmfHeader.byChipHeight * 28)));
 
+		Base::Add(new AreaChange(24,
+			CRect(m_fmfHeader.byChipWidth * 31,
+				m_fmfHeader.byChipHeight * 7,
+				m_fmfHeader.byChipWidth * 2,
+				m_fmfHeader.byChipHeight * 2),
+			CVector2D(m_fmfHeader.byChipWidth * 18,
+				m_fmfHeader.byChipHeight * 28)));
 		break;
 
 	case 4:
@@ -243,6 +265,13 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 			CVector2D(m_fmfHeader.byChipWidth * 16,
 				m_fmfHeader.byChipHeight * 28)));
 
+		Base::Add(new AreaChange(29,
+			CRect(m_fmfHeader.byChipWidth * 31,
+				m_fmfHeader.byChipHeight * 7,
+				m_fmfHeader.byChipWidth * 2,
+				m_fmfHeader.byChipHeight * 2),
+			CVector2D(m_fmfHeader.byChipWidth * 18,
+				m_fmfHeader.byChipHeight * 28)));
 
 		break;
 	case 5:
@@ -294,6 +323,14 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 				m_fmfHeader.byChipWidth * 2,
 				m_fmfHeader.byChipHeight * 2),
 			CVector2D(m_fmfHeader.byChipWidth * 16,
+				m_fmfHeader.byChipHeight * 28)));
+
+		Base::Add(new AreaChange(34,
+			CRect(m_fmfHeader.byChipWidth * 31,
+				m_fmfHeader.byChipHeight * 7,
+				m_fmfHeader.byChipWidth * 2,
+				m_fmfHeader.byChipHeight * 2),
+			CVector2D(m_fmfHeader.byChipWidth * 18,
 				m_fmfHeader.byChipHeight * 28)));
 
 		break;
@@ -348,6 +385,14 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 				m_fmfHeader.byChipWidth * 2,
 				m_fmfHeader.byChipHeight * 2),
 			CVector2D(m_fmfHeader.byChipWidth * 16,
+				m_fmfHeader.byChipHeight * 28)));
+
+		Base::Add(new AreaChange(39,
+			CRect(m_fmfHeader.byChipWidth * 31,
+				m_fmfHeader.byChipHeight * 7,
+				m_fmfHeader.byChipWidth * 2,
+				m_fmfHeader.byChipHeight * 2),
+			CVector2D(m_fmfHeader.byChipWidth * 18,
 				m_fmfHeader.byChipHeight * 28)));
 
 		break;
@@ -406,7 +451,16 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 			CVector2D(m_fmfHeader.byChipWidth * 37,
 				m_fmfHeader.byChipHeight * 43)));
 		break;
-
+	case 14:
+		Open("Map/トイレ.fmf");
+		Base::Add(new AreaChange(1,
+			CRect(m_fmfHeader.byChipWidth * 16,
+				m_fmfHeader.byChipHeight * 25,
+				m_fmfHeader.byChipWidth * 6,
+				m_fmfHeader.byChipHeight * 4),
+			CVector2D(m_fmfHeader.byChipWidth * 32,
+				m_fmfHeader.byChipHeight * 7)));
+		break;
 	case 15:
 		Open("Map/図書室.fmf");
 		Base::Add(new Fuda(CVector2D(300, 450)));
@@ -464,6 +518,17 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 				m_fmfHeader.byChipHeight * 43)));
 		break;
 
+	case 19:
+		Open("Map/トイレ.fmf");
+		Base::Add(new AreaChange(2,
+			CRect(m_fmfHeader.byChipWidth * 16,
+				m_fmfHeader.byChipHeight * 25,
+				m_fmfHeader.byChipWidth * 6,
+				m_fmfHeader.byChipHeight * 4),
+			CVector2D(m_fmfHeader.byChipWidth * 31,
+				m_fmfHeader.byChipHeight * 7)));
+		break;
+
 	case 20:
 		Open("Map/地部屋.fmf");
 		Base::Add(new Fuda(CVector2D(700, 380)));
@@ -517,7 +582,16 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 			CVector2D(m_fmfHeader.byChipWidth * 27,
 				m_fmfHeader.byChipHeight * 43)));
 		break;
-		
+	case 24:
+		Open("Map/トイレ2.fmf");
+		Base::Add(new AreaChange(3,
+			CRect(m_fmfHeader.byChipWidth * 16,
+				m_fmfHeader.byChipHeight * 25,
+				m_fmfHeader.byChipWidth * 6,
+				m_fmfHeader.byChipHeight * 4),
+			CVector2D(m_fmfHeader.byChipWidth * 32,
+				m_fmfHeader.byChipHeight * 7)));
+		break;
 
 	case 25:
 		Open("Map/椅子部屋.fmf");
@@ -569,7 +643,16 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 				m_fmfHeader.byChipHeight * 43)));
 		break;
 	
-	
+	case 29:
+		Open("Map/トイレ2.fmf");
+		Base::Add(new AreaChange(4,
+			CRect(m_fmfHeader.byChipWidth * 16,
+				m_fmfHeader.byChipHeight * 25,
+				m_fmfHeader.byChipWidth * 6,
+				m_fmfHeader.byChipHeight * 4),
+			CVector2D(m_fmfHeader.byChipWidth * 32,
+				m_fmfHeader.byChipHeight * 7)));
+		break;
 
 	case 30:
 		Open("Map/教室死体あり.fmf");
@@ -619,6 +702,17 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 				m_fmfHeader.byChipHeight * 43)));
 		break;
 
+	case 34:
+		Open("Map/トイレ2.fmf");
+		Base::Add(new AreaChange(5,
+			CRect(m_fmfHeader.byChipWidth * 16,
+				m_fmfHeader.byChipHeight * 25,
+				m_fmfHeader.byChipWidth * 6,
+				m_fmfHeader.byChipHeight * 4),
+			CVector2D(m_fmfHeader.byChipWidth * 32,
+				m_fmfHeader.byChipHeight * 7)));
+		break;
+
 	case 35:
 		Open("Map/？？？.fmf");
 		Base::Add(new Enemy(CVector2D(340, 680)));
@@ -666,6 +760,18 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 				m_fmfHeader.byChipHeight * 4),
 			CVector2D(m_fmfHeader.byChipWidth * 27,
 				m_fmfHeader.byChipHeight * 43)));
+
+	case 39:
+		Open("Map/トイレ3.fmf");
+		Base::Add(new AreaChange(6,
+			CRect(m_fmfHeader.byChipWidth * 16,
+				m_fmfHeader.byChipHeight * 25,
+				m_fmfHeader.byChipWidth * 6,
+				m_fmfHeader.byChipHeight * 4),
+			CVector2D(m_fmfHeader.byChipWidth * 32,
+				m_fmfHeader.byChipHeight * 7)));
+		break;
+
 	}
 
 	
