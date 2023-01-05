@@ -20,7 +20,7 @@ void MainLoop(void) {
 	Base::UpdateAll();
 	Base::CollisionAll();
 	Base::DrawAll();
-	FONT_T()->Draw(306, 62, 0, 1, 0, "Z:決定　Shiftキー:ダッシュ　←→:移動　X:ジャンプ　");
+	FONT_T()->Draw(306, 62, 0, 1, 0, "HP:3 Shiftキー:ダッシュ　←→:移動");
 
 }
 void Init(void)
