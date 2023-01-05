@@ -254,7 +254,7 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 				m_fmfHeader.byChipHeight * 41,
 				m_fmfHeader.byChipWidth * 2,
 				m_fmfHeader.byChipHeight * 2),
-			CVector2D(m_fmfHeader.byChipWidth * 16,
+			CVector2D(m_fmfHeader.byChipWidth * 18,
 				m_fmfHeader.byChipHeight * 28)));
 
 		Base::Add(new AreaChange(27,
