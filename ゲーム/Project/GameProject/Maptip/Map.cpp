@@ -755,6 +755,7 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 				m_fmfHeader.byChipHeight * 4),
 			CVector2D(m_fmfHeader.byChipWidth * 27,
 				m_fmfHeader.byChipHeight * 43)));
+		break;
 
 	case 39:
 		Open("Map/ƒgƒCƒŒ3.fmf");
