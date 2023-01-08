@@ -23,6 +23,7 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 		m_Map_text.Draw(64, 500, 1, 0, 0, "1階");
 		Base::Add(new Fuda(CVector2D(580, 380)));
 		//Base::Add(new Enemy(CVector2D(700, 680)));
+		
 		Base::Add(new AreaChange(2,					//次のマップの番号
 			CRect(m_fmfHeader.byChipWidth * 48,		//横（数値が高いほど右に行く）
 				m_fmfHeader.byChipHeight * 7,		//高さ（数値が低いほど上に行く）
