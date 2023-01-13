@@ -155,6 +155,8 @@ void Base::DrawRect()
 		CVector2D(rect.m_width, rect.m_height),
 		CVector4D(0, 0, 0, 0.5f));
 }
+
+
 bool Base::CollisionRect(Base* b1, Base* b2)
 {
 	//b1‚Ì‹éŒ`

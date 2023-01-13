@@ -21,6 +21,11 @@ class Enemy : public Base {
 	bool m_enable_area_change;
 	//エリアチェンジオブジェクトに触れているフラグ
 	bool m_hit_area_change;
+private:
+	float m_viewLength;		// 視野距離 
+	float m_viewAngle;		// 視野角度
+	bool m_isChase;			// 追跡中かどうか
+	CVector2D m_moveDir;	// 移動ベクトル
 public:
 	Enemy(const CVector2D& p);
 	void Update();

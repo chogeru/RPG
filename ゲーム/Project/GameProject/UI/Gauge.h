@@ -2,11 +2,12 @@
 #include "../Base/Base.h"
 class Gauge :public Base {
 private:
-	float m_par;
-	int m_gauge_type;
+	CVector2D pos;
 	CImage m_img;
 public:
-	Gauge(int gauge_type);
+	
+	Gauge(const CVector2D& p);
+	void Update();
 	void Draw();
-	void SetValue(float par);
+	
 };

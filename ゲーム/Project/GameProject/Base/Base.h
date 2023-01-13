@@ -77,6 +77,7 @@ public:
 	static bool CollisionRect(Base* b1, Base* b2);
 	/// ‹éŒ`‚Ì•\Ž¦
 	void DrawRect();
+	void DrawAI();
 
 	static Base* FindObject(int type);
 	static std::list<Base*> FindObjects(int type);
