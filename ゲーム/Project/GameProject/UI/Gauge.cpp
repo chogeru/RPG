@@ -1,33 +1,25 @@
 #include "Gauge.h"
-Gauge::Gauge(int gauge_type):Base(eType_UI) {
-	m_img = COPY_RESOURCE("Fuda", CImage);
-	m_par = 0;
-	m_gauge_type = gauge_type;
+Gauge::Gauge(const CVector2D& p):Base(eType_UI) {
+	m_img = COPY_RESOURCE("HP", CImage);
+	m_pos_old = m_pos = p;
+	m_img.SetCenter(32, 32);
+	m_img.SetSize(256, 64);
+}
+
+void Gauge::Update()
+{
+	m_pos_old = m_pos;
 
 }
+
 
 void Gauge::Draw() {
 
 	//ògÇÃï\é¶
-	m_img.SetRect(0,0,256,64);
+	//m_img.SetRect(0,0,256,64);
 	m_img.SetSize(256, 64);
 	m_img.SetPos(GetScreenPos(m_pos));
 	m_img.Draw();
 
-	//ÉQÅ[ÉWÇÃï\é¶
-	//ÉQÅ[ÉWÇÃí∑Ç≥ 4ÇÕògÇÃëæÇ≥
-	int border=4;
-	int width = (256 - border - border)*m_par;
-	int y = (m_gauge_type + 1);
-	m_img.SetRect(border, (64*y) + border, 4+width, (64 * (y+1)) - border);
-	m_img.SetSize(width, 64 - border - border);
-	m_img.SetPos(GetScreenPos(m_pos+CVector2D(border, border)));
-	m_img.Draw();
-
-
 }
 
-void Gauge::SetValue(float par)
-{
-	m_par = par;
-}

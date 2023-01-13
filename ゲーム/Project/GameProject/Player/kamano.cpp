@@ -5,6 +5,7 @@ kamano::kamano(const CVector2D& p, bool flip):
 	Base(eType_kamano) {
 	//画像複製
 
+
 	Chara1 = 0;
 	m_img[0] = COPY_RESOURCE("kamano", CImage);
 	
@@ -29,7 +30,7 @@ kamano::kamano(const CVector2D& p, bool flip):
 	m_state = eState_Idle;
 	//着地フラグ
 	m_is_ground = true;
-	Base::Add(m_gauge = new Gauge(0));
+	
 	//攻撃番号
 	m_attack_no = rand();
 	//ダメージ番号
@@ -42,7 +43,9 @@ kamano::kamano(const CVector2D& p, bool flip):
 	m_enable_area_change = true;
 	m_hit_area_change = false;
 
-}void kamano::StateIdle()
+}
+
+void kamano::StateIdle()
 {
 	//移動量/ 
 	const float move_speed = 7;
@@ -160,7 +163,12 @@ void kamano::Draw() {
 	m_img[Chara1].SetPos(GetScreenPos(m_pos));
 	//描画
 	m_img[Chara1].Draw();
+	
 	//DrawRect();
+
+
+
+
 }
 void kamano::Collision(Base* b)
 {
@@ -221,7 +229,7 @@ void kamano::Collision(Base* b)
 				KillByType(eType_Fuda);
 				//お札が12回カウントされたらシーン切り替え
 				//確認しやすいように２回に変更しております
-				if (m_cut == 12) {
+				if (m_cut == 2) {
 					KillAll();
 					Base::Add(new Gameclear());//ゲームクリア画面がないのでいったんタイトルにもどします
 				}

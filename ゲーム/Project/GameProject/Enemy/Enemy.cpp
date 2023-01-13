@@ -1,5 +1,6 @@
 #include "Enemy.h"
 #include"../h.h"
+#include "../Utility.cpp"
 
 Enemy::Enemy(const CVector2D& p)
 	:Base(eType_Enemy)
@@ -97,7 +98,23 @@ void Enemy::Draw()
 	m_img.SetPos(GetScreenPos(m_pos));
 	m_img.Draw();
 
-	//DrawRect();
+	DrawRect();
+
+	float alpha = 0.5f;
+	// 視野範囲の色（追跡していない場合は緑色）
+	CVector4D color(0.0f, 1.0f, 1.0f, alpha);
+	// 追跡中であれば赤色
+	if (m_isChase)
+	{
+		color = CVector4D(1.0f, 1.0f, 0.0f, alpha);
+	}
+
+	// 移動ベクトルからatan2で角度を求める
+	float angle = atan2f(m_moveDir.y, m_moveDir.x);
+	// 視野範囲を描画
+	MyUtility::DrawSector(m_pos, angle - m_viewAngle, angle + m_viewAngle, m_viewLength, color);
+
+
 }
 
 void Enemy::Collision(Base* b)
@@ -129,4 +146,3 @@ void Enemy::Collision(Base* b)
 	}
 
 }
-

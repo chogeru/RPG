@@ -65,6 +65,7 @@ void Init(void)
 	//画像の出力
 	////
 	//タイトル
+	ADD_RESOURCE("HP", CImage::CreateImage("Image/HP.png"));
 	ADD_RESOURCE("Fuda", CImage::CreateImage("Image/Fuda.png"));
 	ADD_RESOURCE("kaisou1", CImage::CreateImage("Image/kaisou1.png"));
 	ADD_RESOURCE("一階", CImage::CreateImage("Image/一階.png"));
