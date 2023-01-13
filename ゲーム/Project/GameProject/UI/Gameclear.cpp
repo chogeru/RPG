@@ -5,7 +5,16 @@
 Gameclear::Gameclear() :Base(eType_Scene),
 m_title_text("C:\\Windows\\Fonts\\msgothic.ttc", 64)
 {
+
 	m_img = COPY_RESOURCE("GameClear", CImage);
+
+	SOUND("BGM_ura")->Stop();
+	SOUND("BGM_Title")->Stop();
+	//SOUND("BGM_ending")->Play(true);
+	//SOUND("BGM_omote")->Play(true);
+	SOUND("BGM_—Ñ‚É‘¡‚é—Ö•‘")->Play(true);
+	m_img = COPY_RESOURCE("Gameclear", CImage);
+
 
 }
 
