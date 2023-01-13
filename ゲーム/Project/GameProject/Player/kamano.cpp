@@ -233,7 +233,7 @@ void kamano::Collision(Base* b)
 				KillByType(eType_Fuda);
 				//お札が12回カウントされたらシーン切り替え
 				//確認しやすいように２回に変更しております
-				if (m_cut == 2) {
+				if (m_cut == 7) {
 					KillAll();
 					Base::Add(new Gameclear());//ゲームクリア画面がないのでいったんタイトルにもどします
 				}
