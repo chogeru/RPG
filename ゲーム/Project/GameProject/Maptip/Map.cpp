@@ -601,6 +601,7 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 		break;
 	case 24:
 		Open("Map/トイレ2.fmf");
+		Base::Add(new aya(CVector2D(600, 680)));
 		SOUND("BGM_ura")->Stop();
 		SOUND("BGM_TTT")->Play(true);
 		Base::Add(new AreaChange(3,
@@ -660,6 +661,7 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 	
 	case 29:
 		Open("Map/トイレ2.fmf");
+		Base::Add(new aya(CVector2D(600, 680)));
 		SOUND("BGM_ura")->Stop();
 		SOUND("BGM_TTT")->Play(true);
 		Base::Add(new AreaChange(4,
@@ -721,6 +723,7 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 
 	case 34:
 		Open("Map/トイレ2.fmf");
+		Base::Add(new aya(CVector2D(600, 680)));
 		SOUND("BGM_ura")->Stop();
 		SOUND("BGM_TTT")->Play(true);
 		Base::Add(new AreaChange(5,
@@ -782,6 +785,7 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 
 	case 39:
 		Open("Map/トイレ3.fmf");
+		Base::Add(new aya(CVector2D(600, 680)));
 		SOUND("BGM_ura")->Stop();
 		SOUND("BGM_TTT")->Play(true);
 		Base::Add(new AreaChange(6,
