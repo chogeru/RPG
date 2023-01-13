@@ -5,7 +5,7 @@
 Gameclear::Gameclear() :Base(eType_Scene),
 m_title_text("C:\\Windows\\Fonts\\msgothic.ttc", 64)
 {
-	m_img = COPY_RESOURCE("Gameclear", CImage);
+	m_img = COPY_RESOURCE("GameClear", CImage);
 
 }
 

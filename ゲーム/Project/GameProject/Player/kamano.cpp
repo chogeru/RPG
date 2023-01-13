@@ -4,6 +4,8 @@
 kamano::kamano(const CVector2D& p, bool flip):
 	Base(eType_kamano) {
 	//âÊëúï°êª
+	
+	Base::Add(new Gauge(CVector2D(m_pos)));
 
 	Chara1 = 0;
 	m_img[0] = COPY_RESOURCE("kamano", CImage);
@@ -133,6 +135,7 @@ void kamano::Update() {
 
 		if (HOLD(CInput::eButton2)) {
 			Chara1 = 0;
+
 		}
 
 		if (HOLD(CInput::eButton3)) {
@@ -166,7 +169,6 @@ void kamano::Draw() {
 	m_img[Chara1].Draw();
 	
 	//DrawRect();
-
 
 
 

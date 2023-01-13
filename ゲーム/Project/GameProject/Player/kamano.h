@@ -25,6 +25,7 @@ private:
 	int m_rad;
 	int m_hp;
 	//エリアチェンジフラグ
+	CVector2D PlayerPos;
 	bool m_enable_area_change;
 	//エリアチェンジオブジェクトに触れているフラグ
 	bool m_hit_area_change;
