@@ -39,6 +39,22 @@ TexAnimData kamano_anim_data[] = {
 	//ANIMDATA(kamanoStep),
 
 };
+static TexAnim(hp1)[] = {
+	{ 1 },
+};
+static TexAnim(hp2)[] = {
+	{ 2 },
+};
+static TexAnim(hp3)[] = {
+	{ 3 },
+};
+TexAnimData hp_anim_data[] = {
+
+
+	ANIMDATA(hp1),
+	ANIMDATA(hp2),
+	ANIMDATA(hp3),
+};
 static TexAnim EnemyLeft[] = {
 	{2,2},
 	{6,2},

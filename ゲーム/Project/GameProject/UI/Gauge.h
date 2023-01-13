@@ -4,6 +4,8 @@ class Gauge :public Base {
 private:
 	CVector2D pos;
 	CImage m_img;
+	int m_hit[3];
+
 public:
 	
 	Gauge(const CVector2D& p);

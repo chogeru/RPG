@@ -4,8 +4,9 @@
 kamano::kamano(const CVector2D& p, bool flip):
 	Base(eType_kamano) {
 	//‰æ‘œ•¡»
+	Base::Add(new Gauge(CVector2D(p)));
 	
-	Base::Add(new Gauge(CVector2D(m_pos)));
+	//m_img2[0].ChangeAnimation(0);
 
 	Chara1 = 0;
 	m_img[0] = COPY_RESOURCE("kamano", CImage);
@@ -246,6 +247,10 @@ void kamano::Collision(Base* b)
 			if (Base::CollisionRect(this, b)) {
 				m_hp -= 1;
 				//“G‚Ìíœ
+			//	if (m_hp==3)
+				//{
+					
+				//}
 				KillByType(eType_Enemy);
 				if (m_hp == 0) {
 				//	SOUND("BGM_EnemyDestroy")->Play();
@@ -255,6 +260,9 @@ void kamano::Collision(Base* b)
 			}
 			break;
 		}
+
+
+
 	}
 	
 }

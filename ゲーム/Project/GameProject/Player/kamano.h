@@ -9,9 +9,11 @@ private:
 	};
 	//ó‘Ô•Ï”
 	int m_state;
-	CImage m_img[4];
+	CImage m_img[3];
+	CImage m_img2[3];
 	Gauge* m_gauge;
 	int Chara1;
+	int hp;
 	bool	m_flip;
 	//’…’nƒtƒ‰ƒO
 	bool	m_is_ground;

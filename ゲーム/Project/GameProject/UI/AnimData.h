@@ -36,6 +36,8 @@ extern TexAnimData player_anim_data[];
 extern TexAnimData enemy_anim_data[];
 //	鎌野のアニメーションデータ
 extern TexAnimData kamano_anim_data[];
+extern TexAnimData hp_anim_data[];
+
 //タイトルのアニメーションデータ
 extern TexAnimData Enemy_anim_data[];
 extern TexAnimData Title_anime_data[];
