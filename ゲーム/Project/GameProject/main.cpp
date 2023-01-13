@@ -97,6 +97,7 @@ void Init(void)
 	SOUND("BGM_Title")->Load("Sound/BGM/Title true.wav");
 	SOUND("BGM_Title")->Play(true);
 	SOUND("BGM_ura")->Load("Sound/BGM/ura.wav");
+	SOUND("BGM_TTT")->Load("Sound/BGM/TTT.wav");
 }
 
 
