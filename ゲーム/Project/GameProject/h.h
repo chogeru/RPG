@@ -22,5 +22,5 @@
 #include"Maptip/kaisou.h"
 #include"UI/Gameclear.h"
 #include"UI/MyUtility.h"
-
+#include"Maptip/aya.h"
 

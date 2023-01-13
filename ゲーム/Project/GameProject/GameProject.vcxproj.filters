@@ -59,6 +59,9 @@
     <ClCompile Include="UI\Myutility.cpp">
       <Filter>UI</Filter>
     </ClCompile>
+    <ClCompile Include="Maptip\aya.cpp">
+      <Filter>Maptip</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Base">
@@ -138,6 +141,9 @@
     </ClInclude>
     <ClInclude Include="UI\MyUtility.h">
       <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Maptip\aya.h">
+      <Filter>Maptip</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -246,11 +246,7 @@ void kamano::Collision(Base* b)
 		if (m_type == eType_kamano && Base::CollisionRect(this, b)) {
 			if (Base::CollisionRect(this, b)) {
 				m_hp -= 1;
-				//“G‚Ìíœ
-			//	if (m_hp==3)
-				//{
-					
-				//}
+				
 				KillByType(eType_Enemy);
 				if (m_hp == 0) {
 				//	SOUND("BGM_EnemyDestroy")->Play();
@@ -260,7 +256,18 @@ void kamano::Collision(Base* b)
 			}
 			break;
 		}
+	case eType_aya:
+		if (m_type == eType_kamano && Base::CollisionRect(this, b)) {
+			if (Base::CollisionRect(this, b)) {
+				if (m_hp < 3) {
+					m_hp += 1;
+				}
+				KillByType(eType_aya);
+				
+			}
 
+		}
+		break;
 
 
 	}

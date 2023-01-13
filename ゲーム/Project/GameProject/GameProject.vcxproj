@@ -18,6 +18,7 @@
     <ClCompile Include="Game\Text.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Maptip\AreaChange.cpp" />
+    <ClCompile Include="Maptip\aya.cpp" />
     <ClCompile Include="Maptip\fmfmap.cpp" />
     <ClCompile Include="Maptip\Fuda.cpp" />
     <ClCompile Include="Maptip\kaisou.cpp" />
@@ -40,6 +41,7 @@
     <ClInclude Include="Game\Text.h" />
     <ClInclude Include="h.h" />
     <ClInclude Include="Maptip\AreaChange.h" />
+    <ClInclude Include="Maptip\aya.h" />
     <ClInclude Include="Maptip\fmfmap.h" />
     <ClInclude Include="Maptip\Fuda.h" />
     <ClInclude Include="Maptip\kaisou.h" />

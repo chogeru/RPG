@@ -465,6 +465,7 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 		break;
 	case 14:
 		Open("Map/ƒgƒCƒŒ.fmf");
+		Base::Add(new aya(CVector2D(600, 680)));
 		SOUND("BGM_ura")->Stop();
 		SOUND("BGM_TTT")->Play(true);
 		Base::Add(new AreaChange(1,

@@ -18,6 +18,7 @@ enum {
 	eType_kaisou,
 	eType_Gameclear,
 	eType_Text,
+	eType_aya,
 };
 
 
