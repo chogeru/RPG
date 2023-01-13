@@ -9,7 +9,7 @@ private:
 	};
 	//ó‘Ô•Ï”
 	int m_state;
-	CImage m_img[3];
+	CImage m_img[4];
 	Gauge* m_gauge;
 	int Chara1;
 	bool	m_flip;

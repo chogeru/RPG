@@ -5,7 +5,6 @@ kamano::kamano(const CVector2D& p, bool flip):
 	Base(eType_kamano) {
 	//画像複製
 
-
 	Chara1 = 0;
 	m_img[0] = COPY_RESOURCE("kamano", CImage);
 	
@@ -14,6 +13,7 @@ kamano::kamano(const CVector2D& p, bool flip):
 	m_img[0].SetCenter(31, 31);
 	
 	m_img[1] = COPY_RESOURCE("hayashi", CImage);
+	
 	//再生アニメーション設定
 	m_img[1].ChangeAnimation(0);
 	m_img[1].SetCenter(31, 31);
@@ -22,6 +22,7 @@ kamano::kamano(const CVector2D& p, bool flip):
 	//再生アニメーション設定
 	m_img[2].ChangeAnimation(0);
 	m_img[2].SetCenter(31, 31);
+	
 	
 	//座標設定
 	m_pos_old = m_pos =p;

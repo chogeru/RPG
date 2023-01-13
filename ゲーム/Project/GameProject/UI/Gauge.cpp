@@ -1,7 +1,7 @@
 #include "Gauge.h"
 Gauge::Gauge(const CVector2D& p):Base(eType_UI) {
-//	m_img = COPY_RESOURCE("HP", CImage);
-	m_img.Load("hp/UI.png");
+	m_img = COPY_RESOURCE("HP", CImage);
+	
 
 	m_pos_old = m_pos = p;
 	m_img.SetCenter(32, 32);
