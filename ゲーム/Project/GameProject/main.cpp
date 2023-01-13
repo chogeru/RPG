@@ -98,6 +98,9 @@ void Init(void)
 	SOUND("BGM_Title")->Play(true);
 	SOUND("BGM_ura")->Load("Sound/BGM/ura.wav");
 	SOUND("BGM_TTT")->Load("Sound/BGM/TTT.wav");
+	SOUND("BGM_ending")->Load("Sound/BGM/ending.wav");
+	SOUND("BGM_omote")->Load("Sound/BGM/omote.wav");
+	SOUND("BGM_林に贈る輪舞")->Load("Sound/BGM/林に贈る輪舞.wav");
 }
 
 

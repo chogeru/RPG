@@ -7,6 +7,9 @@ m_title_text("C:\\Windows\\Fonts\\msgothic.ttc", 64)
 	m_img = COPY_RESOURCE("Title",CImage);
 	SOUND("BGM_ura")->Stop();
 	SOUND("BGM_Gameover")->Stop();
+	SOUND("BGM_ending")->Stop();
+	SOUND("BGM_omote")->Stop();
+	SOUND("BGM_—Ñ‚É‘¡‚é—Ö•‘")->Stop();
 	if (!SOUND("BGM_Title")->Play(true))
 		SOUND("BGM_Title")->Play(true);
 }
