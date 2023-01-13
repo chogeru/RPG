@@ -25,7 +25,7 @@ private:
 	bool m_hit_fuda;
 	int m_damage_no;
 	int m_rad;
-	int m_hp;
+	//int m_hp;
 	//エリアチェンジフラグ
 	CVector2D PlayerPos;
 	bool m_enable_area_change;

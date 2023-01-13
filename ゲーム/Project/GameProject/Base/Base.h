@@ -24,7 +24,7 @@ enum {
 #define GRAVITY (9.8f/20)
 class Base {
 public:
-
+	int m_hp;
 	//オブジェクトの種類
 	int m_type;
 	//座標データ
