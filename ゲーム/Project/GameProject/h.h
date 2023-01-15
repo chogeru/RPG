@@ -23,4 +23,5 @@
 #include"UI/Gameclear.h"
 #include"UI/MyUtility.h"
 #include"Maptip/aya.h"
+#include"Maptip/kai.h"
 

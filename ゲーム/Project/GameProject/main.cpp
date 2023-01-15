@@ -70,7 +70,7 @@ void Init(void)
 	//ADD_RESOURCE("hp", CImage::CreateImage("Image/hp.png", hp_anim_data, 64, 64));
 	ADD_RESOURCE("Fuda", CImage::CreateImage("Image/Fuda.png"));
 	ADD_RESOURCE("kaisou1", CImage::CreateImage("Image/kaisou1.png"));
-	ADD_RESOURCE("一階", CImage::CreateImage("Image/一階.png"));
+	ADD_RESOURCE("1階", CImage::CreateImage("Image/1階.png"));
 	ADD_RESOURCE("Gameover", CImage::CreateImage("Image/gameover.png"));
 	ADD_RESOURCE("mmm", CImage::CreateImage("Image/mmm.bmp"));
 	ADD_RESOURCE("Enemy", CImage::CreateImage("Image/Enemy.png", Enemy_anim_data, 64, 64));

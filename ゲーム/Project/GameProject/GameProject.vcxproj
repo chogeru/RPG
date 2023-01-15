@@ -21,7 +21,6 @@
     <ClCompile Include="Maptip\aya.cpp" />
     <ClCompile Include="Maptip\fmfmap.cpp" />
     <ClCompile Include="Maptip\Fuda.cpp" />
-    <ClCompile Include="Maptip\kaisou.cpp" />
     <ClCompile Include="Maptip\Map.cpp" />
     <ClCompile Include="Player\kamano.cpp" />
     <ClCompile Include="UI\AnimData.cpp" />
@@ -44,7 +43,6 @@
     <ClInclude Include="Maptip\aya.h" />
     <ClInclude Include="Maptip\fmfmap.h" />
     <ClInclude Include="Maptip\Fuda.h" />
-    <ClInclude Include="Maptip\kaisou.h" />
     <ClInclude Include="Maptip\Map.h" />
     <ClInclude Include="Player\kamano.h" />
     <ClInclude Include="UI\AnimData.h" />

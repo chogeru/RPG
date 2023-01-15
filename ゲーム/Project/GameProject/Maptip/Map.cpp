@@ -21,7 +21,7 @@ Map::Map(int nextArea,const CVector2D& nextplayerpos) : Base(eType_Field) {
 		SOUND("BGM_ura")->Play(true);
 	//	Base::Add(new kaisou(CVector2D(100, 100)));
 		//廊下↑                   //左が横移動数値、右が縦移動数値
-		m_Map_text.Draw(64, 500, 1, 0, 0, "1階");
+	
 		Base::Add(new Fuda(CVector2D(580, 380)));
 		//Base::Add(new Enemy(CVector2D(700, 680)));
 		
@@ -818,7 +818,7 @@ void Map::Draw() {
 		m_scroll.x = p->m_pos.x - 600;
 		m_scroll.y = p->m_pos.y - 500;
 	}
-	//8
+
 
 	//チップの数　一行１６列か　１行２５６列か
 	int s = pow(16, (GetLayerBitCount() / 8));
