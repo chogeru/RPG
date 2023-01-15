@@ -1,6 +1,6 @@
 #pragma once
 #include "../Base/Base.h"
-
+#include"../h.h"
 class Enemy : public Base {
 	enum {
 		eState_Idle,

@@ -53,9 +53,6 @@
     <ClCompile Include="Maptip\Fuda.cpp">
       <Filter>Maptip</Filter>
     </ClCompile>
-    <ClCompile Include="Maptip\kaisou.cpp">
-      <Filter>Maptip</Filter>
-    </ClCompile>
     <ClCompile Include="UI\Myutility.cpp">
       <Filter>UI</Filter>
     </ClCompile>
@@ -134,9 +131,6 @@
       <Filter>Enemy</Filter>
     </ClInclude>
     <ClInclude Include="Maptip\Fuda.h">
-      <Filter>Maptip</Filter>
-    </ClInclude>
-    <ClInclude Include="Maptip\kaisou.h">
       <Filter>Maptip</Filter>
     </ClInclude>
     <ClInclude Include="UI\MyUtility.h">

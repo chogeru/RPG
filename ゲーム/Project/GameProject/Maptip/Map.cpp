@@ -818,7 +818,7 @@ void Map::Draw() {
 		m_scroll.x = p->m_pos.x - 600;
 		m_scroll.y = p->m_pos.y - 500;
 	}
-	//8
+
 
 	//チップの数　一行１６列か　１行２５６列か
 	int s = pow(16, (GetLayerBitCount() / 8));

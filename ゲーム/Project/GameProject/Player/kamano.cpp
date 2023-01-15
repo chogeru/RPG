@@ -192,6 +192,7 @@ void kamano::Collision(Base* b)
 					KillByType(eType_AreaChange);
 					KillByType(eType_Enemy);
 					KillByType(eType_EnemyManager);
+					KillByType(eType_aya);
 					//ŽŸ‚Ìƒ}ƒbƒv‚ð¶¬
 					Base::Add(new Map(a->m_nextArea, a->m_nextplayerpos));
 					Base::Add(new EnemyManager());
