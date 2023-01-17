@@ -15,11 +15,11 @@ enum {
 	eType_AreaChange,
 	eType_Canvas,
 	eType_Gauge,
-	eType_kaisou,
+	eType_K,
 	eType_Gameclear,
 	eType_Text,
 	eType_aya,
-	eType_kai,
+	
 };
 
 
@@ -29,6 +29,9 @@ public:
 	int m_hp;
 	//オブジェクトの種類
 	int m_type;
+	int m_Ecnt;
+	int m_cut;
+	int m_kcut;
 	//座標データ
 	CVector2D m_pos;
 	//半径

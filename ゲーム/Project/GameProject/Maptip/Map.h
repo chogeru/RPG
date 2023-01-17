@@ -2,6 +2,7 @@
 
 #include"../Base/Base.h"
 #include "fmfmap.h"
+
 //透明チップ番号
 #define NULL_TIP 121
 
@@ -10,11 +11,9 @@
 /// </summary>
 class Map : public Base, CFmfMap {
 private:
-	
 
 	CImage m_map_tip[40];		//画像オブジェクト
 	CImage m_backGround;
-	CFont m_Map_text;
 public:
 	/// <summary>
 	/// コンストラクタ
