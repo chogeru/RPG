@@ -59,6 +59,9 @@
     <ClCompile Include="Maptip\aya.cpp">
       <Filter>Maptip</Filter>
     </ClCompile>
+    <ClCompile Include="Maptip\K.cpp">
+      <Filter>Maptip</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Base">
@@ -115,9 +118,6 @@
     <ClInclude Include="Maptip\fmfmap.h">
       <Filter>Maptip</Filter>
     </ClInclude>
-    <ClInclude Include="Maptip\Map.h">
-      <Filter>Maptip</Filter>
-    </ClInclude>
     <ClInclude Include="UI\Canvas.h">
       <Filter>UI</Filter>
     </ClInclude>
@@ -137,6 +137,12 @@
       <Filter>UI</Filter>
     </ClInclude>
     <ClInclude Include="Maptip\aya.h">
+      <Filter>Maptip</Filter>
+    </ClInclude>
+    <ClInclude Include="Maptip\Map.h">
+      <Filter>Maptip</Filter>
+    </ClInclude>
+    <ClInclude Include="Maptip\K.h">
       <Filter>Maptip</Filter>
     </ClInclude>
   </ItemGroup>
