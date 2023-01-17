@@ -11,6 +11,9 @@ Game::Game() :Base(eType_Scene)
 	Base::Add(new kamano(SaveLoad::s_save_data.PlayerPos, false));
 	Base::Add(new Map(SaveLoad::s_save_data.MapData, CVector2D(16 * 20, 16 * 23)));
 	Base::Add(new EnemyManager());
+
+
+
 	m_is_load = false;
 	
 
@@ -37,7 +40,7 @@ Game::~Game()
 
 	void Game::Update()
 {
-	
+		
 		if (!Base::FindObject(eType_kamano))
 			SetKill();
 	
@@ -50,5 +53,6 @@ Game::~Game()
 		SetKill();
 		m_is_load = true;
 	}
+
 }
 

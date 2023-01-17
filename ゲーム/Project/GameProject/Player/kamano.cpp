@@ -193,6 +193,7 @@ void kamano::Collision(Base* b)
 					KillByType(eType_Enemy);
 					KillByType(eType_EnemyManager);
 					KillByType(eType_aya);
+					KillByType(eType_K);
 					//Ÿ‚Ìƒ}ƒbƒv‚ğ¶¬
 					Base::Add(new Map(a->m_nextArea, a->m_nextplayerpos));
 					Base::Add(new EnemyManager());
@@ -242,6 +243,22 @@ void kamano::Collision(Base* b)
 
 		}
 		break;
+
+	case eType_K://‰B‚µƒGƒ“ƒfƒBƒ“ƒO—p
+		if (m_type == eType_kamano && Base::CollisionRect(this, b)) {
+			if (Base::CollisionRect(this, b)) {
+				//‚¨D‚ÉG‚ê‚é‚ÆƒJƒEƒ“ƒg1‚³‚ê‚é
+				m_kcut += 1;
+				KillByType(eType_K);
+				
+				if (m_kcut ==1) {
+					KillAll();
+					Base::Add(new Gameclear());
+				}
+			}
+
+		}
+		break;
 		//“G‚É‚R‰ñ“–‚½‚Á‚½‚ç€‚Êˆ—
 	case eType_Enemy:
 		if (m_type == eType_kamano && Base::CollisionRect(this, b)) {
@@ -250,9 +267,11 @@ void kamano::Collision(Base* b)
 				
 				KillByType(eType_Enemy);
 				if (m_hp == 0) {
-				//	SOUND("BGM_EnemyDestroy")->Play();
-					SetKill();
+			
+					
+					 SetKill();
 					b->SetKill();
+					
 				}
 			}
 			break;

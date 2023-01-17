@@ -19,9 +19,7 @@
 #include"Game/Game.h"
 #include"UI/Save.h"
 #include"Enemy/Dijkstra.h"
-#include"Maptip/kaisou.h"
 #include"UI/Gameclear.h"
 #include"UI/MyUtility.h"
 #include"Maptip/aya.h"
-#include"Maptip/kai.h"
-
+#include"Maptip/K.h"

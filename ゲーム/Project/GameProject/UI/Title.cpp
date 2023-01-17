@@ -1,5 +1,5 @@
 #include "Title.h"
-#include "../Game/Game.h"
+#include"../h.h"
 #include"../Maptip/Map.h"
 Title::Title():Base(eType_Scene),
 m_title_text("C:\\Windows\\Fonts\\msgothic.ttc", 64)
@@ -16,7 +16,8 @@ m_title_text("C:\\Windows\\Fonts\\msgothic.ttc", 64)
 
 Title::~Title()
 {
-
+	
+	KillAll();
 	Base::Add(new Game());
 }
 
@@ -25,6 +26,7 @@ void Title::Update()
 	//ボタン１でタイトル破棄
 	if (PUSH(CInput::eButton1)) {
 		m_kill = true;
+		
 	}
 }
 
