@@ -32,6 +32,7 @@ public:
 	int m_Ecnt;
 	int m_cut;
 	int m_kcut;
+	int Chara1;
 	//座標データ
 	CVector2D m_pos;
 	//半径

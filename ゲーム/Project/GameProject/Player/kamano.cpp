@@ -133,18 +133,26 @@ void kamano::StateIdle()
 
 void kamano::Update() {
 	m_pos_old = m_pos;
-
-		if (HOLD(CInput::eButton2)) {
+	if (m_hp == 3) {
+		Chara1 = 0;
+	}
+	if (m_hp == 2)
+	{
+		Chara1 = 1;
+	}
+	if (m_hp == 1)
+	{
+		Chara1 = 2;
+	}
+		/*if (HOLD(CInput::eButton2)) {
 			Chara1 = 0;
-
 		}
-
 		if (HOLD(CInput::eButton3)) {
 			Chara1 = 1;
 		}
 		if (HOLD(CInput::eButton4)) {
 			Chara1 = 2;
-		}
+		}*/
 	switch (m_state) {
 		//í èÌèÛë‘
 	case eState_Idle:

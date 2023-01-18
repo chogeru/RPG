@@ -83,6 +83,9 @@ void Init(void)
 	//ADD_RESOURCE("Gameover", CImage::CreateImage("Image/hayasi_over.png"));
 	///ADD_RESOURCE("Gameover", CImage::CreateImage("Image/gameover_itihara.png"));
 	ADD_RESOURCE("Gameover", CImage::CreateImage("Image/gameover.png"));
+	ADD_RESOURCE("gameover_itihara", CImage::CreateImage("Image/gameover_itihara.png"));
+	ADD_RESOURCE("hayasi_over", CImage::CreateImage("Image/hayasi_over.png"));
+
 	//ADD_RESOURCE("Gameclear", CImage::CreateImage("Image/Gameover.png"));
 	Base::Add(new Title());
 	Base::Add(new Canvas(CVector2D(SCREEN_WIDTH, SCREEN_HEIGHT)));

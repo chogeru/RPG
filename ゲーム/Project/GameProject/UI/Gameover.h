@@ -8,7 +8,8 @@ private:
 		eState_Gameover
 	};
 	//画像オブジェクト
-	CImage m_img;
+	CImage m_img[3];
+	int m_gcnt;
 	//文字表示オブジェクト
 	CFont m_Gameover_text;
 public:
