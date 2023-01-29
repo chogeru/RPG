@@ -146,4 +146,7 @@
       <Filter>Maptip</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="アイコン.ico" />
+  </ItemGroup>
 </Project>
