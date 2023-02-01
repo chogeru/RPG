@@ -23,3 +23,4 @@
 #include"UI/MyUtility.h"
 #include"Maptip/aya.h"
 #include"Maptip/K.h"
+#include"UI/FudaUI.h"

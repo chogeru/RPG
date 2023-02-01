@@ -26,6 +26,7 @@
     <ClCompile Include="Player\kamano.cpp" />
     <ClCompile Include="UI\AnimData.cpp" />
     <ClCompile Include="UI\Canvas.cpp" />
+    <ClCompile Include="UI\FudaUI.cpp" />
     <ClCompile Include="UI\Gameclear.cpp" />
     <ClCompile Include="UI\Gameover.cpp" />
     <ClCompile Include="UI\Gauge.cpp" />
@@ -49,6 +50,7 @@
     <ClInclude Include="Player\kamano.h" />
     <ClInclude Include="UI\AnimData.h" />
     <ClInclude Include="UI\Canvas.h" />
+    <ClInclude Include="UI\FudaUI.h" />
     <ClInclude Include="UI\Gameclear.h" />
     <ClInclude Include="UI\Gameover.h" />
     <ClInclude Include="UI\Gauge.h" />

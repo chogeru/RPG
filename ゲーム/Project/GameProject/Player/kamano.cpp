@@ -5,6 +5,7 @@ kamano::kamano(const CVector2D& p, bool flip):
 	Base(eType_kamano) {
 	//‰æ‘œ•¡»
 	Base::Add(new Gauge(CVector2D(p)));
+	Base::Add(new FudaUI(CVector2D(p)));
 	
 	//m_img2[0].ChangeAnimation(0);
 
@@ -58,7 +59,8 @@ void kamano::StateIdle()
 	bool move_flag = false;
 	if (m_gauge)
 		m_gauge->SetKill();
-	
+	if (m_fudaUI)
+		m_fudaUI->SetKill();
 	//¶ˆÚ“®
 	if (HOLD(CInput::eLeft)) {
 		//ˆÚ“®—Ê‚ğİ’è

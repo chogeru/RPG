@@ -65,6 +65,7 @@ void Init(void)
 	//画像の出力
 	////
 	//タイトル
+	ADD_RESOURCE("FudaUI", CImage::CreateImage("Image/FudaUI.png"));
 	ADD_RESOURCE("aya", CImage::CreateImage("Image/aya.png"));
 	ADD_RESOURCE("hp", CImage::CreateImage("Image/hp.png"));
 	//ADD_RESOURCE("hp", CImage::CreateImage("Image/hp.png", hp_anim_data, 64, 64));

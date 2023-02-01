@@ -27,6 +27,7 @@ enum {
 class Base {
 public:
 	int m_hp;
+
 	//オブジェクトの種類
 	int m_type;
 	int m_Ecnt;

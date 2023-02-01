@@ -62,6 +62,9 @@
     <ClCompile Include="Maptip\K.cpp">
       <Filter>Maptip</Filter>
     </ClCompile>
+    <ClCompile Include="UI\FudaUI.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Base">
@@ -144,6 +147,9 @@
     </ClInclude>
     <ClInclude Include="Maptip\K.h">
       <Filter>Maptip</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\FudaUI.h">
+      <Filter>UI</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

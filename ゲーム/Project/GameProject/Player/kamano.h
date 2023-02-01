@@ -1,6 +1,7 @@
 #pragma once
 #include"../Base/Base.h"
 class Gauge;
+class FudaUI;
 class kamano : public Base {
 private:
 	//ó‘Ô
@@ -12,6 +13,7 @@ private:
 	CImage m_img[3];
 	CImage m_img2[3];
 	Gauge* m_gauge;
+	Gauge* m_fudaUI;
 	int Chara1;
 	int hp;
 	bool	m_flip;
