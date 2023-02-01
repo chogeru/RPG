@@ -255,7 +255,6 @@ void kamano::Collision(Base* b)
 	case eType_K://隠しエンディング用
 		if (m_type == eType_kamano && Base::CollisionRect(this, b)) {
 			if (Base::CollisionRect(this, b)) {
-				//お札に触れるとカウント1される
 				m_kcut += 1;
 				KillByType(eType_K);
 				

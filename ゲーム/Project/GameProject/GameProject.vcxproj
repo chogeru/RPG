@@ -57,6 +57,7 @@
     <ClInclude Include="UI\Title.h" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="icon.ico" />
     <Image Include="アイコン.ico" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

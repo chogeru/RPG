@@ -148,5 +148,6 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="アイコン.ico" />
+    <Image Include="icon.ico" />
   </ItemGroup>
 </Project>
